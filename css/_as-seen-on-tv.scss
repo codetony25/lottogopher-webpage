@@ -1,0 +1,63 @@
+.main-seen-on-tv {
+  .container {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 30px 5px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Gotham', sans-serif;
+    color: #a6abaf;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .tv-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+
+    .tv-icon {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 55px;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        text-align: center;
+        img {
+          transform: scale(1.5);
+        }
+      }
+
+      @media (min-width: 992px) {
+        padding-bottom: 0;
+        img {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+  }
+  //.tv-categories {
+  //  display: flex;
+  //  padding: 30px 50px;
+  //  width: 100%;
+  //  justify-content: space-between;
+  //  align-items: center;
+  //}
+}

@@ -3,25 +3,214 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>LottoGopher - Home Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <!-- Bootstrap Minified CSS-->
+        <!-- Vendors -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/vendors/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/vendors/owl.theme.default.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
 
-        <h1 style="text-align: center;">Welcome to the beginning of Lottogopher Front Page</h1>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="top-header">
+                    <div class="main-logo">
+                        <img class="logo" src="./img/logos/logo.svg" alt="main lottogopher logo">
+                        <img class="mobile-logo" src="./img/icons/mini-logo.png" alt="main lottogopher logo">
+                        <img class="slogan" src="./img/logos/slogan.svg" alt="main lottogopher slogan">
+                    </div>
+                    <div class="actions">
+                        <div class="shopping-cart">
+                            <p class="shopping-cart-msg">Your shopping cart is empty, <span>order some tickets</span></p>
+                            <div class="icon-container">
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                <span class="amount">0</span>
+                            </div>
+                        </div>
+                        <button class="btn secondary login-btn">Login</button>
+                        <button class="btn primary signup-btn">Sign up free</button>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <ul class="desktop-nav">
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Order lottery tickets</a></li>
+                        <li><a href="#">Play in groups</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                    <div class="help-nav">
+                        <a href="#">Help <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </div>
+                    <ul class="mobile-nav">
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                                <span>How it<br /> Works</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-list-alt"></i>
+                                <span>Order Lottery <br /> Tickets</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span>Play in <br /> Groups</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-usd"></i>
+                                <span>About <br />Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                                <span>Need <br />Help?</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <div class="main-hero container">
+            <div class="hero-container">
+                <div class="hero-message">
+                    <h1>Order your California lottery tickets online.</h1>
+                    <p>100% Secure - 256 bit SSL encryption for all transactions</p>
+                    <div class="residents-only">
+                        <p class="cali-residents-only-msg">California Residents Only</p>
+                    </div>
+                    <div class="hero-down-icon-container">
+                        <i class="glyphicon glyphicon-menu-down"></i>
+                    </div>
+                </div>
+                <div class="hero-content owl-carousel">
+                    <div class="ticket-holder">
+                        <div class="lottery-ticket">
+                            <img src="./img/bg/left-hero-ticket.png" alt="">
+                            <div class="lottery-description">
+                                <img class="lottery-ball-img" src="./img/icons/pb-lottery-ball.png" alt="">
+                                <h3 class="winnings">$50 Million</h3>
+                                <div class="time-remaining">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    <p>1day 14h 05m 56s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn hero-btn">Order your tickets</button>
+                    </div>
+                    <div class="ticket-holder">
+                        <div class="lottery-ticket">
+                            <img src="./img/bg/middle-hero-ticket.png" alt="">
+                            <div class="lottery-description">
+                                <img class="lottery-ball-img" src="./img/icons/mm-lottery-ball.png" alt="">
+                                <h3 class="winnings">$20 Million</h3>
+                                <div class="time-remaining">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    <p>1day 14h 05m 56s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn hero-btn">Order your tickets</button>
+                    </div>
+                    <div class="ticket-holder">
+                        <div class="lottery-ticket">
+                            <img src="./img/bg/right-hero-ticket.png" alt="">
+                            <div class="lottery-description">
+                                <img class="lottery-ball-img" src="./img/icons/slp-lottery-ball.png" alt="">
+                                <h3 class="winnings">$27 Million</h3>
+                                <div class="time-remaining">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    <p>1day 14h 05m 56s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn hero-btn">Order your tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security & Trust -->
+        <div class="row">
+            <div class="main-security container">
+                <div class="security-content col-xs-12 col-sm-12 col-md-6">
+                    <div class="main-security-img">
+                        <img class="authorize-img" src="./img/icons/authorizenet.png" alt="">
+                    </div>
+                    <div class="security-description">
+                        <div class="verified">
+                            <h6>Safe and Secure</h6>
+                            <img src="./img/icons/verified-and-secured.png" alt="">
+                        </div>
+                        <p>As a LottoGopher member, you can safely order lottery tickets for each jackpot. 100% Secure. 256-BIT SSL Encryption.</p>
+                    </div>
+                    <div class="horizontal-border-line"></div>
+                </div>
+                <div class="vertical-border-line"></div>
+                <div class="security-content col-xs-12 col-sm-12 col-md-6">
+                    <div class="main-security-img">
+                        <img class="bbb-img" src="./img/icons/bbb.png" alt="">
+                    </div>
+                    <div class="security-description">
+                        <div class="verified">
+                            <h6>Safe and Secure</h6>
+                            <p class="verified-icon-text"><i class="glyphicon glyphicon-ok"></i> Verified</p>
+                        </div>
+                        <p>LottoGopher meets BBB accreditation standards, a commitment to trust, honesty, transparency and responsiveness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- As Seen On TV -->
+        <div class="main-seen-on-tv">
+            <div class="container">
+                <div class="horizontal-border-line"></div>
+                <h5 class="title">As seen on</h5>
+                <div class="tv-categories row">
+                    <div class="tv-icon">
+                        <img src="./img/tv/nbc.svg" alt="">
+                        <img src="./img/tv/cbs-news.svg" alt="">
+                    </div>
+                    <div class="tv-icon">
+                        <img src="./img/tv/abc.svg" alt="">
+                        <img src="./img/tv/fox-news.svg" alt="">
+                    </div>
+                    <div class="tv-icon">
+                        <img src="./img/tv/forbes.svg" alt="">
+                        <img src="./img/tv/time.svg" alt="">
+                    </div>
+                    <div class="tv-icon">
+                        <img src="./img/tv/los-angeles-time.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Bootstrap Minified JavaScript -->
+        <script
+                src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="js/vendors/owl.carousel.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
