@@ -37,6 +37,7 @@
       font-weight: 100;
       color: white;
       margin-bottom: 45px;
+      font-weight: 300;
 
       &.first-testimonial {
         background: rgba(#fff, 0.25);
@@ -129,11 +130,13 @@
     font-family: 'Gotham', sans-serif;
     color: white;
     font-size: 16px;
+    text-shadow: 0 0 6px rgba(37, 102, 185, 0.13);
     padding: 15px;
     font-style: italic;
     text-align: center;
     margin: 0 auto;
     max-width: 662px;
+
     .name {
       display: flex;
       justify-content: center;
@@ -144,7 +147,12 @@
         right: 9px;
       }
       p {
-        font-weight: bold;
+        font-family: 'Gotham', sans-serif;
+        font-weight: 300;
+      }
+      strong {
+        font-family: 'Gotham', sans-serif;
+        font-weight: bolder;
       }
     }
   }
