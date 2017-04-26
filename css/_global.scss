@@ -116,6 +116,10 @@ ul {
     font-family: "Open Sans", sans-serif;
 }
 
+a {
+    color: #2796fd;
+}
+
 // Button Styles
 .btn.secondary {
     background: none;
@@ -139,7 +143,7 @@ ul {
 
 /* Lines */
 .horizontal-border-line {
-    width: 90%;
+    width: 95%;
     height: 1px;
     background: #d4dadf;
     display: inline-block;
