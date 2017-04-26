@@ -1480,7 +1480,7 @@ header {
     .main-support-and-questions .logo-divider img {
       position: relative;
       bottom: 45px;
-      left: 10px; }
+      left: 5px; }
     .main-support-and-questions .logo-divider::after {
       content: ' ';
       background: white;
@@ -1492,6 +1492,10 @@ header {
       width: 100px;
       height: 100px;
       border-radius: 50%; }
+      @media (min-width: 992px) {
+        .main-support-and-questions .logo-divider::after {
+          width: 130px;
+          height: 130px; } }
   .main-support-and-questions .get-started {
     display: flex;
     flex-direction: column;
@@ -1503,7 +1507,8 @@ header {
       font-family: 'Gotham', sans-serif;
       color: #212121;
       font-size: 28px;
-      font-weight: 700; }
+      font-weight: 700;
+      padding: 0 15px; }
     .main-support-and-questions .get-started p {
       text-align: center;
       font-family: 'Gotham', sans-serif;
@@ -1579,8 +1584,12 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
-    flex-direction: column;
-    position: relative; }
+    position: relative;
+    flex-direction: column; }
+    .main-footer .top-footer .footer-form .input-email {
+      flex-direction: column;
+      position: relative;
+      width: 52%; }
     @media (min-width: 768px) {
       .main-footer .top-footer .footer-form {
         justify-content: center;
@@ -1590,7 +1599,8 @@ header {
     .main-footer .top-footer .footer-form .input-icon {
       position: absolute;
       font-size: 20px;
-      left: 13px; }
+      margin-top: 12px;
+      margin-left: 13px; }
     .main-footer .top-footer .footer-form input {
       width: 100%;
       max-width: 304px;
