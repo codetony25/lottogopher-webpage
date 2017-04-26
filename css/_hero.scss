@@ -44,6 +44,12 @@
     }
   }
 
+  .hero-down-icon-container {
+    a {
+      padding: 25px;
+    }
+  }
+
   .hero-content {
     display: flex;
     justify-content: space-between;
@@ -55,6 +61,10 @@
       transform: scale(.8);
       position: relative;
       bottom: 30px;
+
+      @media (min-width: 992px) {
+        bottom: 0;
+      }
 
       .lottery-ball-img {
         transform: scale(.7);

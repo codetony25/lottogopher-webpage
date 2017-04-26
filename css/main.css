@@ -710,10 +710,7 @@ header {
           position: relative; }
           header .top-header .actions .shopping-cart .icon-container i {
             color: #777777;
-            font-size: 27px; }
-            @media (min-width: 768px) {
-              header .top-header .actions .shopping-cart .icon-container i {
-                font-size: 20px; } }
+            font-size: 20px; }
           header .top-header .actions .shopping-cart .icon-container .amount {
             position: absolute;
             top: -7px;
@@ -728,7 +725,8 @@ header {
   header .main-nav {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding-bottom: 5px; }
     header .main-nav .mobile-nav {
       display: flex;
       justify-content: space-between;
@@ -746,15 +744,21 @@ header {
           font-size: 20px; }
         header .main-nav .mobile-nav li a {
           font-family: 'Gotham', sans-serif;
+          text-decoration: none;
           font-size: 10px;
           color: #777;
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-direction: column; }
+          flex-direction: column;
+          transition: .3s;
+          border-bottom: 2px solid #fff; }
           @media (min-width: 480px) {
             header .main-nav .mobile-nav li a {
               font-size: 13px; } }
+          header .main-nav .mobile-nav li a:hover {
+            color: #212121;
+            border-bottom: 2px solid #e6eaee; }
         header .main-nav .mobile-nav li span {
           margin-top: 8px; }
     header .main-nav .desktop-nav {
@@ -765,10 +769,21 @@ header {
           margin-top: 17px;
           justify-content: space-between;
           align-items: center; } }
+      header .main-nav .desktop-nav li:hover a,
+      header .main-nav .desktop-nav li:active a {
+        box-shadow: inset 0 4px 0 #8bdd0b;
+        border-radius: 6px 6px 0 0;
+        border: 1px solid #e6eaee;
+        background-color: #ffffff;
+        color: #212121; }
       header .main-nav .desktop-nav li a {
+        transition: .3s;
+        text-decoration: none;
         font-size: 14px;
+        border: 1px solid #fff;
         color: #777;
-        font-family: 'Gotham', sans-serif; }
+        font-family: 'Gotham', sans-serif;
+        padding: 15px; }
         @media (min-width: 768px) {
           header .main-nav .desktop-nav li a {
             justify-content: flex-start;
@@ -824,6 +839,8 @@ header {
     .hero-container .hero-message i {
       color: white;
       font-size: 11px; }
+  .hero-container .hero-down-icon-container a {
+    padding: 25px; }
   .hero-container .hero-content {
     display: flex;
     justify-content: space-between;
@@ -834,6 +851,9 @@ header {
       transform: scale(0.8);
       position: relative;
       bottom: 30px; }
+      @media (min-width: 992px) {
+        .hero-container .hero-content .ticket-holder {
+          bottom: 0; } }
       .hero-container .hero-content .ticket-holder .lottery-ball-img {
         transform: scale(0.7); }
       @media (min-width: 768px) {
@@ -938,7 +958,13 @@ header {
         justify-content: space-between; } }
     .main-security .security-content .main-security-img {
       width: 230px;
+      padding-top: 10px;
       text-align: center; }
+      @media (min-width: 992px) {
+        .main-security .security-content .main-security-img {
+          padding-top: 0;
+          position: relative;
+          bottom: 10px; } }
   .main-security .horizontal-border-line {
     display: inline-block; }
     @media (min-width: 992px) {
@@ -998,7 +1024,8 @@ header {
       margin-bottom: 0;
       width: 76px;
       height: 18px;
-      font-family: 'Open Sans', sans-serif; }
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 3px; }
       .main-security .security-description .verified-icon-text i {
         margin-bottom: 2.5px;
         margin-right: 8px; }
@@ -1018,13 +1045,13 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 30px 5px; }
+  padding: 0px 5px 30px 5px; }
 
 .main-seen-on-tv .title {
   text-align: center;
   font-size: 18px;
   font-family: 'Gotham', sans-serif;
-  color: #a6abaf;
+  color: #d4dadf;
   padding-top: 15px;
   padding-bottom: 15px; }
 
@@ -1072,6 +1099,7 @@ header {
   .main-how-does-it-work .title h3 {
     text-align: center;
     font-size: 24px;
+    padding-bottom: 15px;
     color: #212121; }
   .main-how-does-it-work .title p {
     font-size: 14px;
@@ -1120,12 +1148,16 @@ header {
           flex-direction: column;
           width: 220px;
           align-self: flex-start; } }
-    .main-how-does-it-work .middle-container .navigation li.active {
-      background: #d4dadf; }
+    .main-how-does-it-work .middle-container .navigation li.hiw-active,
+    .main-how-does-it-work .middle-container .navigation li:hover {
+      background: #e6e9ec; }
       @media (min-width: 992px) {
-        .main-how-does-it-work .middle-container .navigation li.active {
+        .main-how-does-it-work .middle-container .navigation li.hiw-active,
+        .main-how-does-it-work .middle-container .navigation li:hover {
           position: relative; }
-          .main-how-does-it-work .middle-container .navigation li.active:after, .main-how-does-it-work .middle-container .navigation li.active:before {
+          .main-how-does-it-work .middle-container .navigation li.hiw-active:after, .main-how-does-it-work .middle-container .navigation li.hiw-active:before,
+          .main-how-does-it-work .middle-container .navigation li:hover:after,
+          .main-how-does-it-work .middle-container .navigation li:hover:before {
             left: 100%;
             top: 50%;
             border: solid transparent;
@@ -1134,20 +1166,24 @@ header {
             width: 0;
             position: absolute;
             pointer-events: none; }
-          .main-how-does-it-work .middle-container .navigation li.active:after {
+          .main-how-does-it-work .middle-container .navigation li.hiw-active:after,
+          .main-how-does-it-work .middle-container .navigation li:hover:after {
             border-color: rgba(136, 183, 213, 0);
-            border-left-color: #d4dadf;
+            border-left-color: #e6e9ec;
             border-width: 25px;
             margin-top: -25px; }
-          .main-how-does-it-work .middle-container .navigation li.active:before {
+          .main-how-does-it-work .middle-container .navigation li.hiw-active:before,
+          .main-how-does-it-work .middle-container .navigation li:hover:before {
             border-color: rgba(194, 225, 245, 0);
-            border-left-color: #d4dadf;
+            border-left-color: #e6e9ec;
             border-width: 25px;
             margin-top: -25px; } }
-      .main-how-does-it-work .middle-container .navigation li.active a {
+      .main-how-does-it-work .middle-container .navigation li.hiw-active a,
+      .main-how-does-it-work .middle-container .navigation li:hover a {
         color: #060000;
         font-weight: bold; }
-      .main-how-does-it-work .middle-container .navigation li.active span {
+      .main-how-does-it-work .middle-container .navigation li.hiw-active span,
+      .main-how-does-it-work .middle-container .navigation li:hover span {
         background: #ffc80a;
         color: #060000; }
     .main-how-does-it-work .middle-container .navigation li:not(:last-child) a {
@@ -1173,7 +1209,9 @@ header {
       font-size: 10px;
       color: #b2b2b2;
       font-family: 'Gotham', sans-serif;
-      padding: 10px; }
+      padding: 10px;
+      transition: .3s;
+      text-decoration: none; }
       @media (min-width: 480px) {
         .main-how-does-it-work .middle-container .navigation li a {
           border-right: none;
@@ -1191,7 +1229,8 @@ header {
           justify-content: flex-start;
           align-items: center;
           padding: 15px;
-          font-size: 12px; } }
+          font-size: 12px;
+          min-width: 219px; } }
       .main-how-does-it-work .middle-container .navigation li a span {
         display: inline-block;
         margin-bottom: 6px;
@@ -1207,12 +1246,29 @@ header {
             margin-bottom: 0px; } }
   .main-how-does-it-work .middle-container .demonstration {
     order: 2;
-    padding-top: 35px; }
+    padding-top: 35px;
+    position: relative;
+    text-align: center; }
     @media (min-width: 992px) {
       .main-how-does-it-work .middle-container .demonstration {
         order: 0; } }
     .main-how-does-it-work .middle-container .demonstration img {
-      width: 100%; }
+      width: 466px;
+      display: none; }
+      @media (min-width: 768px) {
+        .main-how-does-it-work .middle-container .demonstration img {
+          display: inline-block; } }
+      @media (min-width: 992px) {
+        .main-how-does-it-work .middle-container .demonstration img {
+          display: inline-block; } }
+    .main-how-does-it-work .middle-container .demonstration .laptop-content {
+      position: absolute;
+      top: 85px;
+      left: 184px;
+      width: 353px; }
+      @media (min-width: 992px) {
+        .main-how-does-it-work .middle-container .demonstration .laptop-content {
+          left: 57px; } }
   .main-how-does-it-work .middle-container .instructions {
     display: flex;
     flex-direction: column;
@@ -1220,7 +1276,13 @@ header {
     order: 1;
     font-family: 'Gotham', sans-serif;
     padding-top: 25px;
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    display: none; }
+    .main-how-does-it-work .middle-container .instructions.hiw-active {
+      display: block; }
+    .main-how-does-it-work .middle-container .instructions.step-4 {
+      margin-top: -65px; }
     @media (min-width: 992px) {
       .main-how-does-it-work .middle-container .instructions {
         order: 0;
@@ -1231,6 +1293,15 @@ header {
       font-size: 18px;
       color: #212121;
       font-weight: 100; }
+    .main-how-does-it-work .middle-container .instructions img {
+      display: none; }
+      @media (min-width: 1200px) {
+        .main-how-does-it-work .middle-container .instructions img {
+          display: inline-block;
+          width: 89px;
+          right: 305px;
+          top: 70px;
+          position: absolute; } }
     .main-how-does-it-work .middle-container .instructions p {
       padding: 0 15px;
       font-size: 14px;
@@ -1242,7 +1313,8 @@ header {
 
 .main-how-does-it-work .lower-container {
   position: relative;
-  bottom: 60px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   @media (min-width: 992px) {
     .main-how-does-it-work .lower-container {
       display: flex;
@@ -1265,9 +1337,7 @@ header {
       .main-how-does-it-work .lower-container .satisfaction {
         flex-direction: row;
         max-width: 481px;
-        text-align: left;
-        position: relative;
-        bottom: 85px; }
+        text-align: left; }
         .main-how-does-it-work .lower-container .satisfaction img {
           padding-right: 25px; } }
     @media (min-width: 1200px) {
@@ -1301,8 +1371,8 @@ header {
         text-align: left;
         margin-top: 0;
         position: relative;
-        z-index: 1;
-        bottom: 44px; }
+        margin-right: 18px;
+        z-index: 1; }
         .main-how-does-it-work .lower-container .did-you-know:before {
           content: ' ';
           width: 209px;
@@ -1310,14 +1380,12 @@ header {
           border-radius: 50%;
           background: #b2f71d;
           position: absolute;
-          top: -55px;
+          top: -40px;
           left: -66px;
           z-index: -1; } }
   @media (min-width: 992px) and (min-width: 1200px) {
     .main-how-does-it-work .lower-container .did-you-know {
-      width: 300px;
-      bottom: 64px;
-      margin-right: 5px; } }
+      width: 252px; } }
     .main-how-does-it-work .lower-container .did-you-know h5 {
       font-family: 'Gotham', sans-serif;
       font-size: 18px;
@@ -1549,7 +1617,8 @@ header {
     max-width: 658px; }
     @media (min-width: 1200px) {
       .main-footer .top-footer .top-content {
-        padding-left: 50px; } }
+        padding-left: 50px;
+        margin-left: 125px; } }
   .main-footer .top-footer h3 {
     font-size: 24px;
     font-family: 'Gotham', sans-serif;
@@ -1577,9 +1646,9 @@ header {
     @media (min-width: 1200px) {
       .main-footer .top-footer img {
         display: initial;
-        width: 395px;
+        width: 430px;
         left: -30px;
-        bottom: -100px; } }
+        bottom: -160px; } }
   .main-footer .top-footer .footer-form {
     display: flex;
     align-items: center;
@@ -1589,10 +1658,13 @@ header {
     .main-footer .top-footer .footer-form .input-email {
       flex-direction: column;
       position: relative;
-      width: 52%; }
+      width: 100%; }
+      @media (min-width: 768px) {
+        .main-footer .top-footer .footer-form .input-email {
+          width: 50%; } }
     @media (min-width: 768px) {
       .main-footer .top-footer .footer-form {
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-direction: row;
         text-align: left; } }
@@ -1635,7 +1707,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   padding: 55px 15px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .main-footer .middle-footer {
       flex-direction: row;
       padding: 45px 55px; } }

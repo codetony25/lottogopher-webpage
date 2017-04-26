@@ -44,4 +44,27 @@ $(document).ready(function(){
       }
     }
   });
+
+  /* Animate scroll down to how it works on arrow down click */
+  $('.hero-down-icon-container a').click(function(event) {
+    $('html, body').animate({ scrollTop: 981 }, 'slow');
+  })
+
+  /* Change the 'how does it work' states */
+  $('.main-how-does-it-work .navigation a').click(function(event) {
+    event.preventDefault();
+
+    // Change image according to step number
+    $('.laptop-content').attr('src', './img/bg/step-' + $(this).attr('itemStep') + '.png');
+
+    // Remove all active classes
+    $('.hiw-active').removeClass('hiw-active');
+
+    // Add to instructions
+    $('.instructions.step-' + $(this).attr('itemStep')).addClass('hiw-active');
+
+    // Add active class
+    $(this).parent().addClass('hiw-active');
+  })
+
 });

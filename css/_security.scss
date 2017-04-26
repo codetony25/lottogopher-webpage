@@ -16,7 +16,13 @@
 
     .main-security-img {
       width: 230px;
+      padding-top: 10px;
       text-align: center;
+      @media (min-width: 992px) {
+       padding-top: 0;
+        position: relative;
+        bottom: 10px;
+      }
     }
   }
 
@@ -95,6 +101,7 @@
       width: 76px;
       height: 18px;
       font-family: 'Open Sans', sans-serif;
+      margin-top: 3px;
 
       i {
         margin-bottom: 2.5px;

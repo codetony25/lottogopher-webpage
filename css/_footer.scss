@@ -24,6 +24,7 @@
 
       @media (min-width: 1200px) {
         padding-left: 50px;
+        margin-left: 125px;
       }
     }
 
@@ -57,9 +58,9 @@
       z-index: -1;
       @media (min-width: 1200px) {
         display: initial;
-        width: 395px;
+        width: 430px;
         left: -30px;
-        bottom: -100px;
+        bottom: -160px;
       }
     }
 
@@ -73,11 +74,15 @@
       .input-email {
         flex-direction: column;
         position: relative;
-        width: 52%;
+        width: 100%;
+
+        @media (min-width: 768px) {
+          width: 50%;
+        }
       }
 
       @media (min-width: 768px) {
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-direction: row;
         text-align: left;
@@ -129,7 +134,7 @@
     justify-content: space-between;
     padding: 55px 15px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       flex-direction: row;
       padding: 45px 55px;
     }
