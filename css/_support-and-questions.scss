@@ -1,0 +1,88 @@
+.main-support-and-questions {
+  position: relative;
+
+  .get-started-free .horizontal-border-line, .must-show .horizontal-border-line {
+    @media (min-width: 992px) {
+      display: inline-block !important;
+      background: #d4dadf;
+    }
+  }
+
+  .get-started-free h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #3d3d3d;
+    font-family: 'Gotham', sans-serif;
+    padding: 15px;
+    a {
+      text-decoration: underline;
+    }
+  }
+  .vertical-border-line {
+    top: 120px;
+  }
+  .border-holder {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-divider {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    img {
+      position: relative;
+      bottom: 45px;
+      left: 10px;
+    }
+
+    &::after {
+      content: ' ';
+      background: white;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-45%);
+      bottom: 35px;
+      z-index: -1;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+
+  .get-started {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+
+    h2 {
+      text-align: center;
+      font-family: 'Gotham', sans-serif;
+      color: #212121;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    p {
+      text-align: center;
+      font-family: 'Gotham', sans-serif;
+      color: #212121;
+      font-size: 16px;
+      font-weight: 300;
+      max-width: 542px;
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .no-commitment {
+      padding: 0;
+      font-size: 12px;
+      font-style: italic;
+      color: #b4b4b4;
+      padding-top: 5px;
+      font-family: 'Gotham', sans-serif;
+    }
+  }
+}

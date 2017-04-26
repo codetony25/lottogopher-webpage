@@ -2,6 +2,7 @@
   .container {
     background: url(../img/bg/big-blue-bg.jpg) no-repeat;
     background-size: cover;
+    padding-bottom: 35px;
   }
 
   .title {
@@ -20,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     @media (min-width: 992px) {
       flex-direction: row;
@@ -28,18 +30,62 @@
 
     .testimonial-box {
       font-family: 'Gotham', sans-serif;
-      background: rgba(#fff, 0.25);
+      background: rgba(#fff, 0.4);
       padding: 25px;
       border-radius: 20px;
       font-size: 16px;
       font-weight: 100;
       color: white;
-      margin-bottom: 25px;
+      margin-bottom: 45px;
+
+      &.first-testimonial {
+        background: rgba(#fff, 0.25);
+      }
+
       @media (min-width: 992px) {
+        margin-bottom: 0;
         max-width: 361px;
         line-height: 26px;
         padding: 15px;
+        position: relative;
+        z-index: 2;
+
+        &.second-testimonial {
+          margin-bottom: 45px;
+
+          &::after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: -20px;
+            top: 177px;
+            bottom: auto;
+            border: 10px solid;
+            transform: rotate(-90deg);
+            border-color: rgba(255, 255, 255, 0.4) transparent transparent rgba(255, 255, 255, 0.4);
+          }
+        }
+
+        &.first-testimonial {
+          &::after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -20px;
+            right: auto;
+            top: 177px;
+            bottom: auto;
+            border: 10px solid;
+            transform: rotate(180deg);
+            border-color: rgba(255, 255, 255, 0.25) transparent transparent rgba(255, 255, 255, 0.25);
+          }
+        }
+
       }
+
       p {
         font-style: italic;
         text-align: center;
@@ -63,7 +109,19 @@
 
       @media (min-width: 992px) {
         display: inline-block;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        top: 85px;
       }
+      @media (min-width: 1200px) {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .second-img {
+      top: 75px;
     }
   }
 
