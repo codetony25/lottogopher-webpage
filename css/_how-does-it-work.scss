@@ -233,12 +233,12 @@
     padding-bottom: 35px;
     position: relative;
     bottom: 60px;
-    padding-right: 15px;
 
     @media (min-width: 992px) {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-right: 15px;
       bottom: 0;
     }
     .satisfaction {
@@ -256,12 +256,15 @@
         flex-direction: row;
         max-width: 481px;
         text-align: left;
-        margin-left: 15px;
         position: relative;
         bottom: 85px;
         img {
           padding-right: 25px;
         }
+      }
+
+      @media (min-width: 1200px) {
+        margin-left: 30px;
       }
 
       h5 {
@@ -311,6 +314,7 @@
         @media(min-width: 1200px) {
           width: 300px;
           bottom: 64px;
+          margin-right: 5px;
         }
       }
       h5 {
