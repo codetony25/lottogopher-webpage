@@ -3,9 +3,8 @@ header {
   padding: 20px 5px 5px 5px;
 
   @media (min-width: 768px) {
-    padding: 15px;
-    min-height: 111px;
-    max-height: 111px;
+    padding: 15px 15px 0 15px;
+    min-height: 117px;
   }
 
   .top-header {
@@ -16,6 +15,17 @@ header {
 
     @media (min-width: 768px) {
       padding-bottom: 0;
+    }
+
+    .user-dropdown {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+      i {
+        color: #9fa9ba;
+        font-size: 11px;
+      }
     }
 
     .main-logo {
@@ -215,17 +225,38 @@ header {
       }
     }
 
-    .help-nav {
+    .more-nav {
       display: none;
 
       @media (min-width: 768px) {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        position: relative;
+        top: 10px;
+
+        .account {
+          padding: 22px;
+          top: 13px;
+        }
+        .help {
+          line-height: 16px;
+        }
         a {
           font-size: 14px;
           line-height: 0;
           color: #777;
           font-family: 'Gotham', sans-serif;
+          border: 1px solid #fff;
+          padding: 15px;
+          transition: .3s;
+          text-decoration: none;
+          &:hover {
+            box-shadow: inset 0 4px 0 #269eff;
+            border-radius: 6px 6px 0 0;
+            border: 1px solid #e6eaee;
+            background-color: #ffffff;
+            color: #212121;
+          }
         }
       }
     }
