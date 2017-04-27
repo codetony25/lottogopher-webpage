@@ -1406,7 +1406,7 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       padding-right: 15px;
       bottom: 0; } }
   .main-how-does-it-work .lower-container .satisfaction {
