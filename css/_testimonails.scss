@@ -1,3 +1,5 @@
+@import '_mixins.scss';
+
 .main-testimonal {
   .container {
     background: url(../img/bg/big-blue-bg.jpg) no-repeat;
@@ -7,7 +9,7 @@
 
   .title {
     h2 {
-      font-family: 'Gotham', sans-serif;
+      @include font-gotham-medium;
       font-size: 24px;
       text-align: center;
       color: white;
@@ -29,7 +31,7 @@
     }
 
     .testimonial-box {
-      font-family: 'Gotham', sans-serif;
+      @include font-gotham-book;
       background: rgba(#fff, 0.4);
       padding: 25px;
       border-radius: 20px;
@@ -38,6 +40,7 @@
       color: white;
       margin-bottom: 45px;
       font-weight: 300;
+      position: relative;
 
       &.first-testimonial {
         background: rgba(#fff, 0.25);
@@ -47,9 +50,29 @@
         margin-bottom: 0;
         max-width: 361px;
         line-height: 26px;
-        padding: 15px;
+        padding: 25px 40px;
         position: relative;
         z-index: 2;
+
+        img {
+          width: 17px;
+          height: 14px;
+          display: inline-block;
+        }
+
+        .left-quote {
+          position: absolute;
+          left: 15px;
+          top: 30px;
+        }
+
+        .right-quote {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin-right: 22px;
+          margin-top: 50px;
+        }
 
         &.second-testimonial {
           margin-bottom: 45px;
@@ -102,6 +125,8 @@
         font-size: 12px;
         text-align: center;
         margin: 0;
+        @include font-gotham-book;
+        font-style: italic;
       }
     }
 
@@ -127,12 +152,10 @@
   }
 
   .testimonial-highlight {
-    font-family: 'Gotham', sans-serif;
     color: white;
     font-size: 16px;
     text-shadow: 0 0 6px rgba(37, 102, 185, 0.13);
     padding: 15px;
-    font-style: italic;
     text-align: center;
     margin: 0 auto;
     max-width: 662px;
@@ -146,14 +169,16 @@
         bottom: 8px;
         right: 9px;
       }
-      p {
-        font-family: 'Gotham', sans-serif;
-        font-weight: 300;
-      }
-      strong {
-        font-family: 'Gotham', sans-serif;
-        font-weight: bolder;
-      }
+    }
+
+    p {
+      @include font-gotham-book;
+      font-style: italic;
+      font-weight: 100;
+    }
+    strong {
+      @include font-gotham-bold;
+      font-style: italic;
     }
   }
 

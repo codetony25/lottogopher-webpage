@@ -1,0 +1,17 @@
+@mixin font-gotham-bold {
+  font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin font-gotham-book {
+  font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-style: normal;
+  font-weight: 100;
+}
+
+@mixin font-gotham-medium {
+  font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-style: normal;
+  font-weight: 500;
+}

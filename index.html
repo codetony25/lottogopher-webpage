@@ -33,9 +33,9 @@
                     </div>
                     <div class="actions">
                         <div class="shopping-cart">
-                            <p class="shopping-cart-msg">Your shopping cart is empty, <span>order some tickets</span></p>
+                            <p class="shopping-cart-msg">Your shopping cart is empty, <a href="#">order some tickets</a></p>
                             <div class="icon-container">
-                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                <a href="#"><img src="./img/icons/cart.svg" alt=""></a>
                                 <span class="amount">0</span>
                             </div>
                         </div>
@@ -57,8 +57,8 @@
                         <li><a href="#">About us</a></li>
                     </ul>
                     <div class="more-nav">
-                        <a href="#" class="account">Account</a>
-                        <a href="#" class="help">Help <i class="glyphicon glyphicon-question-sign"></i></a>
+                        <a href="#" class="account" style="display: none">Account</a>
+                        <a href="#" class="help">Help <img src="./img/icons/help.svg" alt=""></a>
                     </div>
                     <ul class="mobile-nav">
                         <li>
@@ -103,7 +103,7 @@
                     <h1>Order your California lottery tickets online.</h1>
                     <p>100% Secure - 256 bit SSL encryption for all transactions</p>
                     <div class="residents-only">
-                        <p class="cali-residents-only-msg">California Residents Only</p>
+                        <p class="cali-residents-only-msg"><a href="#">California Residents Only</a></p>
                     </div>
                     <div class="hero-down-icon-container">
                         <a href="#"><i class="glyphicon glyphicon-menu-down"></i></a>
@@ -112,40 +112,40 @@
                 <div class="hero-content owl-carousel">
                     <div class="ticket-holder">
                         <div class="lottery-ticket">
-                            <img src="./img/bg/left-hero-ticket.png" alt="">
+                            <img src="./img/bg/pb-tix.png" alt="">
                             <div class="lottery-description">
-                                <img class="lottery-ball-img" src="./img/icons/pb-lottery-ball.png" alt="">
+                                <img class="lottery-ball-img" src="./img/icons/pb-ball.png" alt="">
                                 <h3 class="winnings">$50 Million</h3>
                                 <div class="time-remaining">
-                                    <i class="glyphicon glyphicon-time"></i>
+                                    <img class="timer-icon" src="./img/icons/timer.svg" alt="">
                                     <p>1day 14h 05m 56s</p>
                                 </div>
                             </div>
                         </div>
                         <button class="btn hero-btn">Order your tickets</button>
                     </div>
-                    <div class="ticket-holder">
+                    <div class="ticket-holder mega-ball">
                         <div class="lottery-ticket">
-                            <img src="./img/bg/middle-hero-ticket.png" alt="">
+                            <img class="lotto-image" src="./img/bg/mega-tix.png" alt="">
                             <div class="lottery-description">
-                                <img class="lottery-ball-img" src="./img/icons/mm-lottery-ball.png" alt="">
+                                <img class="lottery-ball-img" src="./img/icons/mega-ball.png" alt="">
                                 <h3 class="winnings">$20 Million</h3>
                                 <div class="time-remaining">
-                                    <i class="glyphicon glyphicon-time"></i>
+                                    <img class="timer-icon" src="./img/icons/timer.svg" alt="">
                                     <p>1day 14h 05m 56s</p>
                                 </div>
                             </div>
                         </div>
                         <button class="btn hero-btn">Order your tickets</button>
                     </div>
-                    <div class="ticket-holder">
+                    <div class="ticket-holder super-ball">
                         <div class="lottery-ticket">
-                            <img src="./img/bg/right-hero-ticket.png" alt="">
+                            <img src="./img/bg/super-tix.png" alt="">
                             <div class="lottery-description">
-                                <img class="lottery-ball-img" src="./img/icons/slp-lottery-ball.png" alt="">
+                                <img class="lottery-ball-img" src="./img/icons/super-ball.png" alt="">
                                 <h3 class="winnings">$27 Million</h3>
                                 <div class="time-remaining">
-                                    <i class="glyphicon glyphicon-time"></i>
+                                    <img class="timer-icon" src="./img/icons/timer.svg" alt="">
                                     <p>1day 14h 05m 56s</p>
                                 </div>
                             </div>
@@ -157,32 +157,34 @@
         </div>
 
         <!-- Security & Trust -->
-        <div class="row">
-            <div class="main-security container">
-                <div class="security-content col-xs-12 col-sm-12 col-md-6">
-                    <div class="main-security-img">
-                        <img class="authorize-img" src="./img/icons/authorizenet.png" alt="">
-                    </div>
-                    <div class="security-description">
-                        <div class="verified">
-                            <h6>Safe and Secure</h6>
-                            <img src="./img/icons/verified-and-secured.png" alt="">
+        <div class="container">
+            <div class="main-security row">
+                <div>
+                    <div class="security-content col-xs-12 col-sm-12 col-md-6">
+                        <div class="main-security-img">
+                            <img class="authorize-img" src="./img/icons/authorizenet.png" alt="">
                         </div>
-                        <p>As a LottoGopher member, you can safely order lottery tickets for each jackpot. 100% Secure. 256-BIT SSL Encryption.</p>
-                    </div>
-                    <div class="horizontal-border-line"></div>
-                </div>
-                <div class="vertical-border-line"></div>
-                <div class="security-content col-xs-12 col-sm-12 col-md-6">
-                    <div class="main-security-img">
-                        <img class="bbb-img" src="./img/icons/bbb.png" alt="">
-                    </div>
-                    <div class="security-description">
-                        <div class="verified">
-                            <h6>Safe and Secure</h6>
-                            <p class="verified-icon-text"><i class="glyphicon glyphicon-ok"></i> Verified</p>
+                        <div class="security-description">
+                            <div class="verified">
+                                <h6>Safe and Secure</h6>
+                                <img src="./img/icons/go-daddy.png" alt="">
+                            </div>
+                            <p>As a LottoGopher member, you can safely order lottery tickets for each jackpot. 100% Secure. 256-BIT SSL Encryption.</p>
                         </div>
-                        <p>LottoGopher meets BBB accreditation standards, a commitment to trust, honesty, transparency and responsiveness.</p>
+                        <div class="horizontal-border-line"></div>
+                    </div>
+                    <div class="vertical-border-line"></div>
+                    <div class="security-content col-xs-12 col-sm-12 col-md-6">
+                        <div class="main-security-img">
+                            <img class="bbb-img" src="./img/icons/bbb.png" alt="">
+                        </div>
+                        <div class="security-description">
+                            <div class="verified">
+                                <h6>Safe and Secure</h6>
+                                <p class="verified-icon-text"><img src="./img/icons/checkmark.svg" alt=""></i> Verified</p>
+                            </div>
+                            <p>LottoGopher meets BBB accreditation standards, a commitment to trust, honesty, transparency and responsiveness.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,7 +226,7 @@
                 <div class="title">
                     <h3>How does it work?</h3>
                     <p>
-                        <i class="glyphicon glyphicon-lock"></i>
+                        <img src="./img/icons/lock-mini.svg" alt="">
                         LottoGopher is 100% secure, with 224-BIT SSL encryption on all transactions
                     </p>
                 </div>
@@ -238,48 +240,66 @@
                         </ul>
                     </div>
                     <div class="demonstration">
-                        <img class="blank-laptop" src="./img/bg/flat-laptop.png" alt="">
                         <img class="laptop-content" src="./img/bg/step-1.png" alt="">
                     </div>
                     <div class="instructions step-1 hiw-active">
-                        <img src="./img/icons/callout.png" alt="">
                         <h5>California lottery</h5>
-                        <p>Select the lottery you want to purchase tickets for: Powerball, Megamillions or SuperLottoPlus. If you want to purchase tickets to multiple lotteries, you can add more at the end.</p>
+                        <p>Select Powerball, MEGA Millions or SuperLotto Plus… for the SAME PRICE AS THE STORE!</p>
                         <a href="#">&#8594; Sign up today</a>
                     </div>
                     <div class="instructions step-2">
-                        <img src="./img/icons/callout.png" alt="">
                         <h5>Single or Sets</h5>
-                        <p>Select if you would like to order tickets for a single drawing or for 8 drawings. Ordering a set of 8 allows you to play a ticket in each of the next 8 draws of this lottery.</p>
+                        <p>Choose tickets for just the next drawing or order a set that plays for the next 8 drawings.</p>
                         <a href="#">&#8594; Sign up today</a>
                     </div>
                     <div class="instructions step-3">
-                        <img src="./img/icons/callout.png" alt="">
                         <h5>Play your lucky numbers</h5>
-                        <p>Select the number of tickets (or the number of ticket sets) you wish to buy.</p>
-                        <p>Select the numbers you wish to play for each ticket or ticket set. When you are finished you can add other lotteries by selecting "Add to Cart and Order More" or complete for purchase by selecting "Checkout Now"</p>
+                        <p>Select the number of tickets you want to order.</p>
+                        <p>Select the exact numbers you want or use the "Quick Pick" button. </p>
                         <a href="#">&#8594; Sign up today</a>
                     </div>
                     <div class="instructions step-4">
-                        <img src="./img/icons/callout.png" alt="">
                         <h5>Checkout online</h5>
-                        <p>Review your ticket selections and confirm your purchase and membership level. Multiple ticket purchases will automatically default to the day pass level $3.00, but you can change to a monthly or annual membership.</p>
-                        <p>Once you confirm your order and select "Checkout", you will be prompted to create your email/password login and provide payment details. Upon completion of these steps your order is complete!</p>
+                        <p>Review your order and select your membership: choose a one-day pass, a monthly or a yearly membership plan.</p>
+                        <p>Once you check out, you will see your customized personal lottery dashboard to manage all of your tickets and winnings!</p>
                         <a href="#">&#8594; Sign up today</a>
                     </div>
                 </div>
                 <div class="lower-container">
                     <div class="satisfaction">
-                        <img src="./img/icons/new-seal.png" alt="">
+                        <img src="./img/icons/guarantee.svg" alt="">
                         <div class="description">
                             <h5>100% satisfaction guaranteed</h5>
                             <p>If you are not completely satisfied with our service, you may cancel at any time for a full refund.</p>
                         </div>
                     </div>
-                    <div class="did-you-know">
-                        <img src="./img/icons/lightbulb.png" alt="">
+                    <div class="did-you-know step-1 hiw-active">
+                        <div>
+                            <img src="./img/icons/lightbulb.svg" alt="">
+                        </div>
                         <h5>Did you know?</h5>
-                        <p>Ordering a set of 8 ensures you don't miss the chance to play the next 8 draws. Great when you're going on vacation or don't have time to drive to the store. If you want to play more than one ticket, you can order multiple sets of 8.</p>
+                        <p>There’s a LottoGopher winner in every drawing!</p>
+                    </div>
+                    <div class="did-you-know step-2">
+                        <div>
+                            <img src="./img/icons/lightbulb.svg" alt="">
+                        </div>
+                        <h5>Did you know?</h5>
+                        <p>Ordering a “Set of 8” ensures you don't miss the chance to play over the entire next month. Great when you're going on vacation or don't have time to drive to the store.</p>
+                    </div>
+                    <div class="did-you-know step-3">
+                        <div>
+                            <img src="./img/icons/lightbulb.svg" alt="">
+                        </div>
+                        <h5>Did you know?</h5>
+                        <p>You can use our "Quick Pick" feature for random numbers, or check out our "Expert Player Strategies" page for more lottery insights.</p>
+                    </div>
+                    <div class="did-you-know step-4">
+                        <div>
+                            <img src="./img/icons/lightbulb.svg" alt="">
+                        </div>
+                        <h5>Did you know?</h5>
+                        <p>Monthly and yearly memberships are cost-effective and provide unlimited access to LottoGopher features, including ordering tickets, playing in online pools and sending lottery tickets as gifts to friends!</p>
                     </div>
                 </div>
             </div>
@@ -292,9 +312,9 @@
                     <h2>Testimonials from a fiew of our many happy customers</h2>
                 </div>
                 <div class="testimonial-holder">
-                    <img class="first-img" src="./img/icons/left-quote-icon.png" alt="">
+                    <img class="first-img" src="./img/icons/green-gopher.png" alt="">
                     <div class="testimonial-box first-testimonial">
-                        <p><span>&#8220;</span>Ordering tickets on LottoGopher is a lot easier than standing in line behind 10 or more people, especially when the winning figure is out of this world! <span>&#8221;</span></p>
+                        <p><img class="left-quote" src="./img/icons/left-quote.svg" alt="" />Ordering tickets on LottoGopher is a lot easier than standing in line behind 10 or more people, especially when the winning figure is out of this world! <img src="./img/icons/right-quote.svg" class="right-quote" alt="" /></p>
                         <div class="border-holder">
                             <div class="small-bottom-border"></div>
                         </div>
@@ -302,14 +322,14 @@
                         <p class="city">Newport Beach, CA</p>
                     </div>
                     <div class="testimonial-box second-testimonial">
-                        <p><span>&#8221;</span>Recurring ticket plays means if you play the SAME numbers over and over. You don’t have to worry about stopping in to the store when your tickets expire…  <span>&#8221;</span></p>
+                        <p><img class="left-quote" src="./img/icons/left-quote.svg" alt="" />Recurring ticket plays means if you play the SAME numbers over and over. You don’t have to worry about stopping in to the store when your tickets expire…  <img src="./img/icons/right-quote.svg" class="right-quote" alt="" /></p>
                         <div class="border-holder">
                             <div class="small-bottom-border"></div>
                         </div>
                         <h6>Coe L.</h6>
                         <p class="city">San Diego, CA</p>
                     </div>
-                    <img class="second-img" src="./img/icons/right-quote-icon.png" alt="">
+                    <img class="second-img" src="./img/icons/yellow-gopher.png" alt="">
                 </div>
                 <div class="testimonial-highlight">
                     <p>I think your program is a great idea.  <strong>I love it.</strong>  It's especially great for me because I am a home-bound senior, I do not drive, and I can't stand in long lines to buy tickets, so being able to buy lottery tickets on-line is really a great idea, and a service much appreciated.</p>
@@ -325,49 +345,51 @@
         </div>
 
         <!-- Support And Questions -->
-        <div class="row">
-            <div class="main-support-and-questions main-security container">
-                <div class="get-started-free">
-                    <h2>Ready to play your lucky numbers? <a href="#">Get started free</a></h2>
-                    <div class="border-holder">
+        <div class="container">
+            <div class="row main-support-and-questions main-security">
+                <div>
+                    <div class="get-started-free">
+                        <h2>Ready to play your lucky numbers? <a href="#">Get started free</a></h2>
+                        <div class="border-holder">
+                            <div class="horizontal-border-line"></div>
+                        </div>
+                    </div>
+                    <div class="security-content col-xs-12 col-sm-12 col-md-6">
+                        <div class="main-security-img">
+                            <img class="authorize-img" src="./img/icons/24-7.svg" alt="">
+                        </div>
+                        <div class="security-description">
+                            <div class="verified">
+                                <h6>Customer Support</h6>
+                            </div>
+                            <p>Contact us 24 hours a day, seven days a week at <a href="">866-LOTTO-GO</a> or <a href="">service@lottogopher.com</a></p>
+                        </div>
                         <div class="horizontal-border-line"></div>
                     </div>
-                </div>
-                <div class="security-content col-xs-12 col-sm-12 col-md-6">
-                    <div class="main-security-img">
-                        <img class="authorize-img" src="./img/icons/24_7.png" alt="">
-                    </div>
-                    <div class="security-description">
-                        <div class="verified">
-                            <h6>Customer Support</h6>
+                    <div class="vertical-border-line"></div>
+                    <div class="security-content col-xs-12 col-sm-12 col-md-6">
+                        <div class="main-security-img">
+                            <img class="bbb-img" src="./img/icons/questions.svg" alt="">
                         </div>
-                        <p>Contact us 24 hours a day, seven days a week at <a href="">866-LOTTO-GO</a> or <a href="">service@lottogopher.com</a></p>
-                    </div>
-                    <div class="horizontal-border-line"></div>
-                </div>
-                <div class="vertical-border-line"></div>
-                <div class="security-content col-xs-12 col-sm-12 col-md-6">
-                    <div class="main-security-img">
-                        <img class="bbb-img" src="./img/icons/question.png" alt="">
-                    </div>
-                    <div class="security-description">
-                        <div class="verified">
-                            <h6>Questions? We got answers.</h6>
+                        <div class="security-description">
+                            <div class="verified">
+                                <h6>Questions? We got answers.</h6>
+                            </div>
+                            <p>Want to learn more about LottoGopher. Browse our <a href="#">FAQ</a> section or read our privacy policy <a href="#">here.</a></p>
                         </div>
-                        <p>Want to learn more about LottoGopher. Browse our <a href="#">FAQ</a> section or read our privacy policy <a href="#">here.</a></p>
                     </div>
-                </div>
-                <div class="must-show border-holder">
-                    <div class="horizontal-border-line"></div>
-                </div>
-                <div class="logo-divider">
-                    <img src="./img/icons/mini-logo.png" alt="">
-                </div>
-                <div class="get-started">
-                    <h2>Get Started!</h2>
-                    <p>Play the lottery like you never played before. Never miss a big jackpot or go to the store for lottery tickets again.</p>
-                    <button class="btn primary">Try it for free</button>
-                    <p class="no-commitment">No commitment.</p>
+                    <div class="must-show border-holder">
+                        <div class="horizontal-border-line"></div>
+                    </div>
+                    <div class="logo-divider">
+                        <img src="./img/icons/money-icon.svg" alt="">
+                    </div>
+                    <div class="get-started">
+                        <h2>Get Started!</h2>
+                        <p>Play the lottery like you never played before. Never miss a big jackpot or go to the store for lottery tickets again.</p>
+                        <button class="btn primary">Try it for free</button>
+                        <p class="no-commitment">No commitment.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -382,7 +404,7 @@
                         <p>Receive jackpot alerts, winning numbers, lottery news and special offers!</p>
                         <div class="footer-form">
                             <div class="input-email">
-                                <i class="fa fa-envelope input-icon"></i>
+                                <img class="input-icon" src="./img/icons/mail-icon.svg" alt="">
                                 <input type="email" placeholder="enter email address" />
                             </div>
                             <button class="btn btn-black-white">Get updates</button>

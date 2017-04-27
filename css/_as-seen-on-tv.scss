@@ -1,3 +1,5 @@
+@import '_mixins.scss';
+
 .main-seen-on-tv {
   .container {
     background: #fff;
@@ -12,7 +14,7 @@
   .title {
     text-align: center;
     font-size: 18px;
-    font-family: 'Gotham', sans-serif;
+    @include font-gotham-medium;
     color: #d4dadf;
     padding-top: 15px;
     padding-bottom: 15px;

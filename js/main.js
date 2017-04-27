@@ -2,7 +2,7 @@ $(document).ready(function(){
   var owl = $(".owl-carousel"),
       owlOptions = {
         loop: true,
-        margin: 35,
+        margin: 5,
         items:1,
         stagePadding:30,
         autoHeight:true,
@@ -62,6 +62,9 @@ $(document).ready(function(){
 
     // Add to instructions
     $('.instructions.step-' + $(this).attr('itemStep')).addClass('hiw-active');
+
+    // Add to Did you know?
+    $('.did-you-know.step-' + $(this).attr('itemStep')).addClass('hiw-active');
 
     // Add active class
     $(this).parent().addClass('hiw-active');

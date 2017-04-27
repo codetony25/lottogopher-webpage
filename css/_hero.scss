@@ -1,3 +1,5 @@
+@import '_mixins.scss';
+
 .main-hero.container {
   padding-right: 0;
   padding-left: 0;
@@ -6,34 +8,33 @@
 .hero-container {
   width: 100%;
   min-height: 524px;
-  background: url(../img/bg/hero-bg.jpg) no-repeat;
   position: relative;
-  background-position: 50% 100%;
+  background: url(../img/bg/hero-bg.jpg) no-repeat;
+  background-size: cover;
 
   .hero-message {
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 22px;
     h1 {
       color: white;
-      font-weight: bold;
       font-size: 22px;
-      font-family: 'Gotham', sans-serif;
       margin: 0;
       padding-top: 37px;
       padding-bottom: 24px;
+      @include font-gotham-bold;
       @media (min-width: 480px) {
         font-size: 26px;
       }
       @media (min-width: 768px) {
-        font-size: 36px;
+        font-size: 28px;
       }
     }
     p {
       color: white;
       font-size: 12px;
-      font-family: 'Gotham', sans-serif;
       margin: 0;
       padding-bottom: 15px;
+      @include font-gotham-medium;
       @media (min-width: 768px) {
         font-size: 14px;
       }
@@ -52,15 +53,41 @@
 
   .hero-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
-    width: 764px;
+    width: 100%;
     align-items: center;
+    padding-top: 20px;
+
+    .timer-icon {
+      width: 22px;
+      height: 22px;
+    }
 
     .ticket-holder {
       transform: scale(.8);
       position: relative;
-      bottom: 30px;
+      bottom: 45px;
+
+      @media (min-width: 768px) {
+        bottom: 0;
+      }
+
+      &.super-ball {
+        .lottery-ticket  {
+          height: 289px;
+        }
+      }
+
+      &.mega-ball {
+        .lottery-ticket .lotto-image {
+
+          @media (min-width: 992px) {
+            position: relative;
+            bottom: 32px;
+          }
+        }
+      }
 
       @media (min-width: 992px) {
         bottom: 0;
@@ -74,7 +101,7 @@
         transform: scale(.85);
 
         .lottery-ball-img {
-          transform: scale(.8);
+          transform: scale(.7);
         }
       }
 
@@ -83,15 +110,6 @@
 
         .lottery-ball-img {
           transform: scale(1);
-        }
-      }
-
-      &:nth-child(even) {
-        position: relative;
-        bottom: 12px;
-
-        .lottery-ball-img {
-          top: 110px;
         }
       }
     }
@@ -106,32 +124,37 @@
 
     .lottery-ball-img {
       position: absolute;
-      left: 10px;
-      top: 70px;
+      left: 0;
+      top: -118px;
       z-index: 100;
 
       @media (min-width: 992px) {
         left: 35px;
-        top: 88px;
+        top: -90px;
       }
     }
 
     .lottery-description {
-      background: rgba(116, 206, 0, 1);
+      background: rgba(#74ce00, 0.9);
       border-radius: 6px;
-      min-width: 214px;
+      max-width: 234px;
+      width: 215px;
       text-align: center;
       color: white;
-      font-family: 'Gotham', sans-serif;
       padding: 20px 24px;
+      left: 16px;
+      position: absolute;
+      bottom: 16px;
       p {
         margin: 0;
+        @include font-gotham-medium;
       }
       h3 {
         font-weight: bold;
         margin: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         padding-bottom: 8px;
+        @include font-gotham-bold;
       }
       .time-remaining {
         display: flex;
@@ -141,13 +164,10 @@
         p {
           font-size: 12px;
           color: #212121;
-          font-family: 'Gotham', sans-serif;
           line-height: 0;
+          @include font-gotham-medium;
         }
-        i {
-          font-size: 16px;
-          position: relative;
-          color: #ffe242;
+        img {
           padding-right: 7px;
         }
       }
@@ -157,7 +177,15 @@
       background: #269eff;
       color: white;
       width: 214px;
-      margin-top: 5px;
+      margin-left: 14px;
+      transition: .3s;
+      padding: 9px 0;
+      margin-left: 16px;
+      margin-top: -15px;
+      @include font-gotham-bold;
+      &:hover {
+        background: #008dff;
+      }
     }
   }
 
@@ -176,12 +204,20 @@
       top: 50%;
     }
     .cali-residents-only-msg {
-      font-size: 10px;
-      padding-bottom: 0;
-      font-family: 'Gotham', sans-serif;
-      color: #fff;
-      opacity: .6;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+      a {
+        font-size: 10px;
+        padding-bottom: 0;
+        @include font-gotham-book;
+        font-style: italic;
+        text-decoration: none;
+        color: #fff;
+        opacity: .6;
+        transition: .3s;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+@import '_mixins.scss';
+
 header {
   background: #fff;
   padding: 20px 5px 5px 5px;
@@ -89,7 +91,7 @@ header {
         align-items: center;
         margin: 0;
         padding-left: 20px;
-        font-family: 'Gotham', sans-serif;
+        @include font-gotham-medium;
 
         @media (min-width: 768px) {
           padding-left: 0;
@@ -98,7 +100,7 @@ header {
 
         .shopping-cart-msg {
           display: none;
-          font-family: 'Gotham', sans-serif;
+          @include font-gotham-medium;
 
           @media (min-width: 992px) {
             font-size: 12px;
@@ -108,9 +110,14 @@ header {
             margin: 0;
           }
 
-          span {
-            font-family: 'Gotham', sans-serif;
+          a {
+            color: #777777;
+            @include font-gotham-medium;
             border-bottom: 1px dotted #777;
+            text-decoration: none;
+            &:hover {
+              color: #212121;
+            }
           }
         }
 
@@ -151,7 +158,7 @@ header {
       width: 100%;
       padding-top: 15px;
       border-top: 1px solid #d4dadf;
-      font-family: 'Gotham', sans-serif;
+      @include font-gotham-medium;
 
       @media (min-width: 768px) {
         display: none;
@@ -163,7 +170,7 @@ header {
           font-size: 20px;
         }
         a {
-          font-family: 'Gotham', sans-serif;
+          @include font-gotham-medium;
           text-decoration: none;
           font-size: 10px;
           color: #777;
@@ -178,7 +185,6 @@ header {
           }
           &:hover {
             color: #212121;
-            border-bottom: 2px solid #e6eaee;
           }
         }
         span {
@@ -197,26 +203,27 @@ header {
         align-items: center;
       }
 
-      li:hover,
-      li:active {
+      li:hover {
         a {
-          box-shadow: inset 0 4px 0 #8bdd0b;
-          border-radius: 6px 6px 0 0;
-          border: 1px solid #e6eaee;
-          background-color: #ffffff;
           color: #212121;
-
         }
+      }
+
+      li.active {
+        box-shadow: inset 0 4px 0 #8bdd0b;
+        border-radius: 6px 6px 0 0;
+        border: 1px solid #e6eaee;
+        background-color: #ffffff;
+        color: #212121;
       }
 
       li a {
         transition: .3s;
         text-decoration: none;
         font-size: 14px;
-        border: 1px solid #fff;
         color: #777;
-        font-family: 'Gotham', sans-serif;
         padding: 15px;
+        @include font-gotham-medium;
 
         @media (min-width: 768px) {
           justify-content: flex-start;
@@ -245,16 +252,11 @@ header {
           font-size: 14px;
           line-height: 0;
           color: #777;
-          font-family: 'Gotham', sans-serif;
-          border: 1px solid #fff;
+          @include font-gotham-medium;
           padding: 15px;
           transition: .3s;
           text-decoration: none;
           &:hover {
-            box-shadow: inset 0 4px 0 #269eff;
-            border-radius: 6px 6px 0 0;
-            border: 1px solid #e6eaee;
-            background-color: #ffffff;
             color: #212121;
           }
         }
