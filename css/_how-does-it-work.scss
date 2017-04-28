@@ -76,15 +76,17 @@
       li:hover {
         //background: #e6e9ec;
         background: url(../img/icons/selected-state.svg) no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: 50% 50%;
         font-size: 15px;
 
         @media (min-width: 992px) {
           position: relative;
+          background-size: contain;
         }
 
         a {
+          @include font-gotham-bold;
           color: #060000;
         }
         span {
@@ -248,11 +250,20 @@
       }
       p {
         padding: 0 15px;
+        line-height: 24px;
         font-size: 14px;
         font-family: 'Open Sans', sans-serif;
         color: #3d3d3d;
+        position: relative;
         @media (min-width: 992px) {
           padding: 0;
+        }
+        .svg {
+          position: absolute;
+          left: -22px;
+          top: 6px;
+          width: 14px;
+          height: 14px;
         }
       }
     }
@@ -317,6 +328,7 @@
       p {
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
+        line-height: 24px;
         color: #3d3d3d;
       }
     }
@@ -346,7 +358,7 @@
         margin-right: 18px;
         z-index: 1;
         position: relative;
-        bottom: 30px;
+        bottom: 6px;
         &:before {
           content: ' ';
           width: 209px;
@@ -371,6 +383,7 @@
       p {
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
+        line-height: 24px;
         color: #3d3d3d;
       }
     }

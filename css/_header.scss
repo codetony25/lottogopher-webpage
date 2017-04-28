@@ -182,8 +182,8 @@ header {
             color: #212121;
             border-top: 3px solid #8bdd0b;
             font-weight: bold;
-            img path {
-              fill: black !important;
+            svg path {
+              fill: #212121 !important;
             }
           }
         }
@@ -220,7 +220,7 @@ header {
       li {
         padding: 10px 0 10px 0;
         position: relative;
-        top: 4px;
+        top: 6px;
       }
 
       li a {

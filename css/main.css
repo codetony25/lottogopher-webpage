@@ -776,8 +776,8 @@ header {
             color: #212121;
             border-top: 3px solid #8bdd0b;
             font-weight: bold; }
-            header .main-nav .mobile-nav li a:hover img path, header .main-nav .mobile-nav li a.mobile-active img path {
-              fill: black !important; }
+            header .main-nav .mobile-nav li a:hover svg path, header .main-nav .mobile-nav li a.mobile-active svg path {
+              fill: #212121 !important; }
         header .main-nav .mobile-nav li span {
           margin-top: 8px; }
     header .main-nav .desktop-nav {
@@ -799,7 +799,7 @@ header {
       header .main-nav .desktop-nav li {
         padding: 10px 0 10px 0;
         position: relative;
-        top: 4px; }
+        top: 6px; }
       header .main-nav .desktop-nav li a {
         transition: .3s;
         text-decoration: none;
@@ -1247,15 +1247,19 @@ header {
     .main-how-does-it-work .middle-container .navigation li.hiw-active,
     .main-how-does-it-work .middle-container .navigation li:hover {
       background: url(../img/icons/selected-state.svg) no-repeat;
-      background-size: contain;
+      background-size: cover;
       background-position: 50% 50%;
       font-size: 15px; }
       @media (min-width: 992px) {
         .main-how-does-it-work .middle-container .navigation li.hiw-active,
         .main-how-does-it-work .middle-container .navigation li:hover {
-          position: relative; } }
+          position: relative;
+          background-size: contain; } }
       .main-how-does-it-work .middle-container .navigation li.hiw-active a,
       .main-how-does-it-work .middle-container .navigation li:hover a {
+        font-family: "Gotham A", "Gotham B";
+        font-style: normal;
+        font-weight: 700;
         color: #060000; }
       .main-how-does-it-work .middle-container .navigation li.hiw-active span,
       .main-how-does-it-work .middle-container .navigation li:hover span {
@@ -1393,12 +1397,20 @@ header {
           position: absolute; } }
     .main-how-does-it-work .middle-container .instructions p {
       padding: 0 15px;
+      line-height: 24px;
       font-size: 14px;
       font-family: 'Open Sans', sans-serif;
-      color: #3d3d3d; }
+      color: #3d3d3d;
+      position: relative; }
       @media (min-width: 992px) {
         .main-how-does-it-work .middle-container .instructions p {
           padding: 0; } }
+      .main-how-does-it-work .middle-container .instructions p .svg {
+        position: absolute;
+        left: -22px;
+        top: 6px;
+        width: 14px;
+        height: 14px; }
 
 .main-how-does-it-work .lower-container {
   position: relative;
@@ -1454,6 +1466,7 @@ header {
     .main-how-does-it-work .lower-container .satisfaction p {
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
+      line-height: 24px;
       color: #3d3d3d; }
   .main-how-does-it-work .lower-container .did-you-know {
     background: #b2f71d;
@@ -1478,7 +1491,7 @@ header {
         margin-right: 18px;
         z-index: 1;
         position: relative;
-        bottom: 30px; }
+        bottom: 6px; }
         .main-how-does-it-work .lower-container .did-you-know:before {
           content: ' ';
           width: 209px;
@@ -1502,6 +1515,7 @@ header {
     .main-how-does-it-work .lower-container .did-you-know p {
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
+      line-height: 24px;
       color: #3d3d3d; }
 
 .main-testimonal .container {
@@ -1671,10 +1685,12 @@ header {
       display: inline-block !important;
       background: #d4dadf; } }
   .main-support-and-questions .get-started-free h2 {
+    font-family: "Gotham A", "Gotham B";
+    font-style: normal;
+    font-weight: 400;
     text-align: center;
     font-size: 22px;
     color: #3d3d3d;
-    font-weight: 400;
     padding: 15px; }
     .main-support-and-questions .get-started-free h2 a {
       text-decoration: underline; }

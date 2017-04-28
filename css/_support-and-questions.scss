@@ -11,10 +11,10 @@
   }
 
   .get-started-free h2 {
+    @include font-gotham-book;
     text-align: center;
     font-size: 22px;
     color: #3d3d3d;
-    font-weight: 400;
     padding: 15px;
     a {
       text-decoration: underline;
