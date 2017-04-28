@@ -172,14 +172,33 @@ $(document).ready(function() {
   })
 
   // user dropdown menu shown on hover
-  $('.user-dropdown').hover(function(event) {
-    $('.inner-dropdown').css("display", "inline-block");
-  }, function(event) {
-    $('.inner-dropdown').css("display", "none");
+  // $('.user-dropdown').hover(function(event) {
+  //   $('.inner-dropdown').css("display", "inline-block");
+  // }, function(event) {
+  //   $('.inner-dropdown').css("display", "none");
+  // });
+
+
+  // Menus
+  $('.inner-dropdown').hide();
+
+  $('.user-dropdown').mouseenter(function() {
+    $('.inner-dropdown', this).animate({opacity: 'show'}, 'slow');
   });
 
+  $('.user-dropdown').mouseleave(function() {
+    $('.inner-dropdown', this).animate({opacity: 'hide'}, 'fast');
+  });
 
-
+  // $('.user-dropdown').hover(function() {
+  //   $(this).find('.inner-dropdown').animate({
+  //     opacity: 'show'
+  //   }, 'slow');
+  // }, function() {
+  //   $(this).find('.inner-dropdown').animate({
+  //     opacity: 'hide'
+  //   }, 'fast');
+  // })
 
 
 });

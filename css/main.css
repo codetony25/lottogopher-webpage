@@ -653,11 +653,12 @@ header {
           margin-right: 10px;
           width: 36px;
           height: 36px; }
-      header .top-header .user-dropdown ul {
+      header .top-header .user-dropdown .show-dropdown {
+        position: relative; }
+      header .top-header .user-dropdown .inner-dropdown {
         font-family: "Gotham A", "Gotham B";
         font-style: normal;
         font-weight: 500;
-        display: none;
         font-size: 14px;
         width: 164px;
         min-height: 136px;
@@ -668,18 +669,18 @@ header {
         position: absolute;
         right: 0;
         padding-top: 15px;
-        top: 41px;
+        top: 36px;
         z-index: 3; }
-        header .top-header .user-dropdown ul li {
+        header .top-header .user-dropdown .inner-dropdown li {
           height: 33px; }
-        header .top-header .user-dropdown ul a {
+        header .top-header .user-dropdown .inner-dropdown a {
           display: inline-block;
           width: 100%;
           height: 33px;
           transition: .3s;
           color: #777777;
           padding-top: 6px; }
-          header .top-header .user-dropdown ul a:hover {
+          header .top-header .user-dropdown .inner-dropdown a:hover {
             background-color: #efefef;
             color: #212121; }
     header .top-header .main-logo {
@@ -829,7 +830,7 @@ header {
       header .main-nav .desktop-nav li {
         padding: 10px 0 10px 0;
         position: relative;
-        top: 6px; }
+        top: 8px; }
       header .main-nav .desktop-nav li a {
         transition: .3s;
         text-decoration: none;
@@ -873,7 +874,9 @@ header {
               color: #212121;
               box-shadow: inset 0 4px 0 #269eff;
               border: 1px solid #e6eaee;
-              background-color: #ffffff; } }
+              background-color: #ffffff; }
+            header .main-nav .more-nav a:hover {
+              color: #212121; } }
 
 .main-hero.container {
   padding-right: 0;
@@ -925,7 +928,7 @@ header {
     margin: 0 auto;
     width: 100%;
     align-items: center;
-    padding-top: 20px; }
+    padding-top: 10px; }
     .hero-container .hero-content .owl-dots {
       position: absolute;
       left: 50%;
@@ -979,6 +982,9 @@ header {
       @media (min-width: 768px) {
         .hero-container .hero-content .ticket-holder {
           bottom: 0; } }
+      .hero-container .hero-content .ticket-holder .lottery-ticket .lotto-image {
+        width: 248px;
+        height: 289px; }
       .hero-container .hero-content .ticket-holder.super-ball .lottery-ticket {
         height: 289px; }
       @media (min-width: 992px) {
@@ -989,6 +995,8 @@ header {
         .hero-container .hero-content .ticket-holder {
           bottom: 0; } }
       .hero-container .hero-content .ticket-holder .lottery-ball-img {
+        width: 150px;
+        height: 121px;
         transform: scale(0.7); }
       @media (min-width: 768px) {
         .hero-container .hero-content .ticket-holder {
@@ -1008,8 +1016,8 @@ header {
       border-bottom-right-radius: 6px; }
     .hero-container .hero-content .lottery-ball-img {
       position: absolute;
-      left: 0;
-      top: -118px;
+      left: 30px;
+      top: -80px;
       z-index: 100; }
       @media (min-width: 992px) {
         .hero-container .hero-content .lottery-ball-img {
@@ -1070,11 +1078,12 @@ header {
       .hero-container .hero-content .hero-btn:hover {
         background: #008dff; }
   .hero-container .residents-only {
-    display: inline-block; }
+    display: none; }
     @media (min-width: 768px) {
       .hero-container .residents-only {
+        display: inline-block;
         position: absolute;
-        top: 35%;
+        top: 25%;
         right: 20px;
         z-index: 2; } }
     @media (min-width: 992px) {
@@ -1115,6 +1124,8 @@ header {
       width: 230px;
       padding-top: 10px;
       text-align: center; }
+      .main-security .security-content .main-security-img img {
+        height: 92px; }
       @media (min-width: 992px) {
         .main-security .security-content .main-security-img {
           padding-top: 0;
@@ -1874,6 +1885,8 @@ header {
   .main-support-and-questions .security-content .main-security-img {
     width: 135px;
     bottom: 20px; }
+    .main-support-and-questions .security-content .main-security-img .img-247, .main-support-and-questions .security-content .main-security-img .questions-img {
+      height: 55px; }
   .main-support-and-questions .security-description .verified h6 {
     font-family: "Gotham A", "Gotham B";
     font-style: normal;
@@ -1955,7 +1968,7 @@ header {
           width: 63%;
           margin-right: 15px; } }
     .main-footer .top-footer .footer-form .input-name {
-      margin-top: -10px; }
+      margin-top: 5px; }
       @media (min-width: 768px) {
         .main-footer .top-footer .footer-form .input-name {
           margin-top: 0; } }
@@ -1998,18 +2011,6 @@ header {
         .main-footer .top-footer .footer-form input {
           margin-right: 17px;
           margin-bottom: 0; } }
-    .main-footer .top-footer .footer-form span {
-      color: white;
-      margin-top: 17px;
-      font-size: 12px;
-      font-family: "Gotham A", "Gotham B";
-      font-style: normal;
-      font-weight: 400;
-      font-style: italic; }
-      @media (min-width: 768px) {
-        .main-footer .top-footer .footer-form span {
-          margin-left: 17px;
-          margin-top: 0; } }
 
 .main-footer .middle-footer {
   background: #f3f3f3;

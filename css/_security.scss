@@ -20,6 +20,10 @@
       width: 230px;
       padding-top: 10px;
       text-align: center;
+
+      img {
+        height: 92px;
+      }
       @media (min-width: 992px) {
        padding-top: 0;
         position: relative;
