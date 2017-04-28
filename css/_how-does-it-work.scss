@@ -88,12 +88,17 @@
         }
 
         a {
-          @include font-gotham-bold;
           color: #060000;
         }
         span {
           background: #ffc80a;
           color: #060000;
+        }
+      }
+
+      li.hiw-active {
+        a {
+          @include font-gotham-bold;
         }
       }
 
@@ -130,6 +135,7 @@
       }
 
       li a {
+        @include font-gotham-medium;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -139,7 +145,6 @@
         margin-bottom: -1px;
         margin-top: -1px;
         color: #b2b2b2;
-        @include font-gotham-medium;
         padding: 10px;
         transition: .3s;
         text-decoration: none;
@@ -166,7 +171,6 @@
           padding: 15px;
           font-size: 14px;
           min-width: 242px;
-          @include font-gotham-bold;
         }
 
         span {

@@ -1,12 +1,25 @@
 var gulp = require('gulp');
 var scssPlugin = require('gulp-sass');
 var connect = require('gulp-connect');
+var autoprefixer = require('gulp-autoprefixer');
+
+var autoprefixerOptions = {
+  browsers: ['last 4 versions', '> 5%', 'Firefox ESR']
+};
 
 gulp.task('myStyles', function () {
   gulp.src('css/*.scss')
     .pipe(scssPlugin())
     .pipe(gulp.dest('css'))
     .pipe(connect.reload());
+});
+
+gulp.task('prod', function () {
+  return gulp
+    .src('css/*.scss')
+    .pipe(scssPlugin({ outputStyle: 'expanded' }))
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('connect', function() {
@@ -20,3 +33,6 @@ gulp.task('watchMyStyles', function() {
 });
 
 gulp.task('default', ['watchMyStyles', 'connect']);
+
+// uncomment to build prod version of css
+// gulp.task('default', ['prod']);

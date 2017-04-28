@@ -73,6 +73,7 @@
       text-align: center;
       position: relative;
       flex-direction: column;
+      position: relative;
 
       .input-email,
       .input-name {
@@ -135,6 +136,24 @@
         @media (min-width: 768px) {
           margin-right: 17px;
           margin-bottom: 0;
+        }
+      }
+      span {
+        position: absolute;
+        color: white;
+        right: 0;
+        bottom: 0;
+        font-size: 12px;
+        width: 100%;
+        @include font-gotham-book;
+        font-style: italic;
+        bottom: -19px;
+        @media (min-width: 768px) {
+          bottom: -25px;
+          width: initial;
+          display: inline-block;
+          margin-left: 17px;
+          margin-top: 0;
         }
       }
     }

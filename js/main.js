@@ -171,15 +171,7 @@ $(document).ready(function() {
     $(this).parent().addClass('hiw-active');
   })
 
-  // user dropdown menu shown on hover
-  // $('.user-dropdown').hover(function(event) {
-  //   $('.inner-dropdown').css("display", "inline-block");
-  // }, function(event) {
-  //   $('.inner-dropdown').css("display", "none");
-  // });
-
-
-  // Menus
+  // Menus Dropdown
   $('.inner-dropdown').hide();
 
   $('.user-dropdown').mouseenter(function() {
@@ -189,16 +181,6 @@ $(document).ready(function() {
   $('.user-dropdown').mouseleave(function() {
     $('.inner-dropdown', this).animate({opacity: 'hide'}, 'fast');
   });
-
-  // $('.user-dropdown').hover(function() {
-  //   $(this).find('.inner-dropdown').animate({
-  //     opacity: 'show'
-  //   }, 'slow');
-  // }, function() {
-  //   $(this).find('.inner-dropdown').animate({
-  //     opacity: 'hide'
-  //   }, 'fast');
-  // })
 
 
 });
