@@ -42,6 +42,7 @@
     flex-direction: column-reverse;
     @media (min-width: 992px) {
       flex-direction: row;
+      min-height: 340px;
       align-items: center;
       justify-content: space-around;
     }
@@ -53,10 +54,8 @@
       width: 100%;
       order: 2;
 
-      @media (min-width: 768px) {
-        order: 0;
-      }
       @media (min-width: 992px) {
+        order: 0;
         margin: initial;
         width: initial;
       }
@@ -197,7 +196,6 @@
 
       @media (min-width: 992px) {
         order: 0;
-        margin-left: 20px;
       }
       img {
         width: 100%;
@@ -229,16 +227,66 @@
         font-family: 'Open Sans', sans-serif;
       }
 
+      .callout-animation {
+        display: none;
+      }
+
       @media (min-width: 992px) {
         order: 0;
         width: 252px;
         align-self: flex-start;
         text-align: left;
+
+        &.step-1,
+        &.step-2,
+        &.step-3,
+        &.step-4 {
+          position: relative;
+          .callout-animation {
+            position: absolute;
+            right: 250px;
+            top: 55px;
+            display: inline-block;
+            background: transparent;
+            width: 0;
+            height: 0;
+            border-top: 2px solid #ffdf7e;
+            border-left: 2px solid #ffdf7e;
+          }
+        }
       }
+
+      @media (min-width: 1200px) {
+        &.step-1,
+        &.step-2,
+        &.step-3,
+        &.step-4 {
+          .callout-animation {
+            right: 269px;
+            top: 55px;
+          }
+        }
+      }
+
       h5 {
         @include font-gotham-book;
         font-size: 18px;
+        padding-bottom: 24px;
+        padding-top: 10px;
+        margin-bottom: 0;
         color: #212121;
+        @media (min-width: 992px) {
+          &::before {
+            content: ' ';
+            width: 8px;
+            height: 8px;
+            background: #ffdf7a;
+            position: absolute;
+            top: 52px;
+            left: -20px;
+            border-radius: 50%;
+          }
+        }
       }
       img {
         display: none;
@@ -361,7 +409,7 @@
         margin-right: 18px;
         z-index: 1;
         position: relative;
-        bottom: 6px;
+        bottom: -8px;
         &:before {
           content: ' ';
           width: 209px;

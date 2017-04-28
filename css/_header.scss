@@ -19,15 +19,57 @@ header {
       padding-bottom: 0;
     }
 
+    .hide {
+      display: none;
+    }
+
     .user-dropdown {
-      img {
-        width: 36px;
-        height: 36px;
+      cursor: pointer;
+      position: relative;
+      a {
+        text-decoration: none;
+        padding-left: 10px;
+
+        img {
+          margin-right: 10px;
+          width: 36px;
+          height: 36px;
+        }
       }
-      i {
-        color: #9fa9ba;
-        font-size: 11px;
+      ul {
+        @include font-gotham-medium;
+        display: none;
+        font-size: 14px;
+        width: 164px;
+        min-height: 136px;
+        border-radius: 3px;
+        background: #fff;
+        box-shadow: 0 3px 4px rgba(187, 187, 187, 0.44);
+        border: 1px solid #d4dadf;
+        position: absolute;
+        right: 0;
+        padding-top: 15px;
+        top: 41px;
+        z-index: 3;
+
+        li {
+          height: 33px;
+        }
+
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 33px;
+          transition: .3s;
+          color: #777777;
+          padding-top: 6px;
+          &:hover {
+            background-color: #efefef;
+            color: #212121;
+          }
+        }
       }
+
     }
 
     .main-logo {
@@ -147,6 +189,7 @@ header {
       align-items: center;
       width: 100%;
       border-top: 1px solid #d4dadf;
+      z-index: 2;
       @include font-gotham-medium;
 
       @media (min-width: 768px) {
@@ -165,7 +208,6 @@ header {
           justify-content: center;
           align-items: center;
           position: relative;
-          bottom: 1px;
           flex-direction: column;
           transition: .3s;
           border-top: 3px solid #fff;
@@ -173,6 +215,7 @@ header {
           &.mobile-active {
             color: #212121;
             border-top: 3px solid #8bdd0b;
+
             svg path {
               fill: #212121 !important;
             }
@@ -206,6 +249,9 @@ header {
         border: 1px solid #e6eaee;
         background-color: #ffffff;
         color: #212121;
+        a {
+          color: #212121;
+        }
       }
 
       li {
@@ -239,7 +285,7 @@ header {
 
         .account {
           padding: 22px;
-          top: 13px;
+          top: 5px;
         }
         .help {
           line-height: 16px;
@@ -249,11 +295,18 @@ header {
           line-height: 0;
           color: #777;
           @include font-gotham-medium;
-          padding: 15px;
           transition: .3s;
+          padding: 13px 20px;
           text-decoration: none;
-          &:hover {
+          border-radius: 6px 6px 0 0;
+          border: 1px solid #fff;
+          position: relative;
+          top: 5px;
+          &.active {
             color: #212121;
+            box-shadow: inset 0 4px 0 #269eff;
+            border: 1px solid #e6eaee;
+            background-color: #ffffff;
           }
         }
       }
