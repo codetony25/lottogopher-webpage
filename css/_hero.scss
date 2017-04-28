@@ -90,6 +90,7 @@
         }
       }
     }
+
     .owl-dots .owl-dot span {
       background: none repeat scroll 0 0 #fff !important;
       border-radius: 20px !important;
@@ -104,6 +105,8 @@
       position: absolute !important;
       width: 280px !important;
       height: 50px !important;
+      left: 0 !important;
+      right: 0 !important;
       @media (min-width: 786px) {
         width: 100% !important;
       }

@@ -962,7 +962,9 @@ header {
     .hero-container .hero-content .owl-nav {
       position: absolute !important;
       width: 280px !important;
-      height: 50px !important; }
+      height: 50px !important;
+      left: 0 !important;
+      right: 0 !important; }
       @media (min-width: 786px) {
         .hero-container .hero-content .owl-nav {
           width: 100% !important; } }
