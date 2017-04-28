@@ -21,7 +21,7 @@
       margin: 0;
       padding-top: 37px;
       padding-bottom: 24px;
-      @include font-gotham-bold;
+      @include font-gotham-rounded-bold;
       @media (min-width: 480px) {
         font-size: 26px;
       }
@@ -67,8 +67,10 @@
     .ticket-holder {
       transform: scale(.8);
       position: relative;
-      bottom: 45px;
 
+      @media (min-width: 500px) {
+        bottom: 28px;
+      }
       @media (min-width: 768px) {
         bottom: 0;
       }
@@ -136,6 +138,7 @@
 
     .lottery-description {
       background: rgba(#74ce00, 0.9);
+      box-shadow: 5px 8.66px 30px 0px rgba(44, 49, 132, 0.2);
       border-radius: 6px;
       max-width: 234px;
       width: 215px;
@@ -181,7 +184,7 @@
       transition: .3s;
       padding: 9px 0;
       margin-left: 16px;
-      margin-top: -15px;
+      margin-top: -10px;
       @include font-gotham-bold;
       &:hover {
         background: #008dff;
@@ -196,6 +199,7 @@
       position: absolute;
       top: 35%;
       right: 20px;
+      z-index: 2;
     }
     @media (min-width: 992px) {
       top: 25%;

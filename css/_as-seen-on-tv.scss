@@ -47,16 +47,10 @@
       @media (min-width: 768px) {
         flex-direction: row;
         text-align: center;
-        img {
-          transform: scale(1.5);
-        }
       }
 
       @media (min-width: 992px) {
         padding-bottom: 0;
-        img {
-          transform: scale(0.9);
-        }
       }
     }
 

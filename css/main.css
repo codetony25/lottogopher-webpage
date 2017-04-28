@@ -443,32 +443,35 @@ ul {
 
 a {
   color: #2796fd; }
+  a:hover {
+    color: #2796fd;
+    text-decoration: underline; }
 
 .btn.secondary {
   background: none;
   font-size: 14px;
-  font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-family: "Gotham A", "Gotham B";
   font-style: normal;
   font-weight: 700;
   font-weight: bold;
   color: #269eff;
   border-radius: 6px;
-  padding: 12px 16px; }
+  padding: 10px 16px; }
 
 .btn.primary {
   font-size: 14px;
-  font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-family: "Gotham A", "Gotham B";
   font-style: normal;
   font-weight: 700;
   font-weight: bold;
   color: #060000;
   background: #b2f71d;
-  padding: 12px 16px;
+  padding: 10px 16px;
   border-radius: 6px; }
 
 .btn.btn-black-white {
   font-size: 14px;
-  font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-family: "Gotham A", "Gotham B";
   font-style: normal;
   font-weight: 700;
   font-weight: bold;
@@ -670,13 +673,13 @@ header {
         @media (min-width: 768px) {
           header .top-header .main-logo .slogan {
             display: initial;
-            padding-bottom: 5px; } }
+            padding-bottom: 5px;
+            padding-left: 7px; } }
     header .top-header .actions {
       display: flex;
       align-items: center; }
       header .top-header .actions .login-btn,
       header .top-header .actions .signup-btn {
-        order: -2;
         font-size: 12px; }
       @media (min-width: 768px) {
         header .top-header .actions {
@@ -684,15 +687,13 @@ header {
           header .top-header .actions .login-btn,
           header .top-header .actions .signup-btn {
             display: initial;
-            order: 0;
-            font-size: 14px;
-            padding: 12px 16px; } }
+            font-size: 14px; } }
       header .top-header .actions .shopping-cart {
         display: flex;
         align-items: center;
         margin: 0;
-        padding-left: 20px;
-        font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+        padding-right: 20px;
+        font-family: "Gotham A", "Gotham B";
         font-style: normal;
         font-weight: 500; }
         @media (min-width: 768px) {
@@ -701,7 +702,7 @@ header {
             padding-right: 25px; } }
         header .top-header .actions .shopping-cart .shopping-cart-msg {
           display: none;
-          font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+          font-family: "Gotham A", "Gotham B";
           font-style: normal;
           font-weight: 500; }
           @media (min-width: 992px) {
@@ -713,7 +714,7 @@ header {
               margin: 0; } }
           header .top-header .actions .shopping-cart .shopping-cart-msg a {
             color: #777777;
-            font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+            font-family: "Gotham A", "Gotham B";
             font-style: normal;
             font-weight: 500;
             border-bottom: 1px dotted #777;
@@ -740,15 +741,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 5px; }
+    padding-bottom: 8px; }
     header .main-nav .mobile-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding-top: 15px;
       border-top: 1px solid #d4dadf;
-      font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
       font-weight: 500; }
       @media (min-width: 768px) {
@@ -756,26 +756,28 @@ header {
           display: none; } }
       header .main-nav .mobile-nav li {
         text-align: center; }
-        header .main-nav .mobile-nav li i {
-          font-size: 20px; }
         header .main-nav .mobile-nav li a {
           font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
           font-style: normal;
           font-weight: 500;
           text-decoration: none;
-          font-size: 10px;
+          padding-top: 15px;
+          font-size: 12px;
           color: #777;
           display: flex;
           justify-content: center;
           align-items: center;
+          position: relative;
+          bottom: 1px;
           flex-direction: column;
           transition: .3s;
-          border-bottom: 2px solid #fff; }
-          @media (min-width: 480px) {
-            header .main-nav .mobile-nav li a {
-              font-size: 13px; } }
-          header .main-nav .mobile-nav li a:hover {
-            color: #212121; }
+          border-top: 3px solid #fff; }
+          header .main-nav .mobile-nav li a:hover, header .main-nav .mobile-nav li a.mobile-active {
+            color: #212121;
+            border-top: 3px solid #8bdd0b;
+            font-weight: bold; }
+            header .main-nav .mobile-nav li a:hover img path, header .main-nav .mobile-nav li a.mobile-active img path {
+              fill: black !important; }
         header .main-nav .mobile-nav li span {
           margin-top: 8px; }
     header .main-nav .desktop-nav {
@@ -794,19 +796,22 @@ header {
         border: 1px solid #e6eaee;
         background-color: #ffffff;
         color: #212121; }
+      header .main-nav .desktop-nav li {
+        padding: 10px 0 10px 0;
+        position: relative;
+        top: 4px; }
       header .main-nav .desktop-nav li a {
         transition: .3s;
         text-decoration: none;
         font-size: 14px;
         color: #777;
         padding: 15px;
-        font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+        font-family: "Gotham A", "Gotham B";
         font-style: normal;
         font-weight: 500; }
         @media (min-width: 768px) {
           header .main-nav .desktop-nav li a {
-            justify-content: flex-start;
-            padding-right: 30px; } }
+            justify-content: flex-start; } }
     header .main-nav .more-nav {
       display: none; }
       @media (min-width: 768px) {
@@ -824,7 +829,7 @@ header {
             font-size: 14px;
             line-height: 0;
             color: #777;
-            font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+            font-family: "Gotham A", "Gotham B";
             font-style: normal;
             font-weight: 500;
             padding: 15px;
@@ -866,7 +871,7 @@ header {
       font-size: 12px;
       margin: 0;
       padding-bottom: 15px;
-      font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
       font-weight: 500; }
       @media (min-width: 768px) {
@@ -889,8 +894,10 @@ header {
       height: 22px; }
     .hero-container .hero-content .ticket-holder {
       transform: scale(0.8);
-      position: relative;
-      bottom: 45px; }
+      position: relative; }
+      @media (min-width: 500px) {
+        .hero-container .hero-content .ticket-holder {
+          bottom: 28px; } }
       @media (min-width: 768px) {
         .hero-container .hero-content .ticket-holder {
           bottom: 0; } }
@@ -932,6 +939,7 @@ header {
           top: -90px; } }
     .hero-container .hero-content .lottery-description {
       background: rgba(116, 206, 0, 0.9);
+      box-shadow: 5px 8.66px 30px 0px rgba(44, 49, 132, 0.2);
       border-radius: 6px;
       max-width: 234px;
       width: 215px;
@@ -943,7 +951,7 @@ header {
       bottom: 16px; }
       .hero-container .hero-content .lottery-description p {
         margin: 0;
-        font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+        font-family: "Gotham A", "Gotham B";
         font-style: normal;
         font-weight: 500; }
       .hero-container .hero-content .lottery-description h3 {
@@ -951,7 +959,7 @@ header {
         margin: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         padding-bottom: 8px;
-        font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+        font-family: "Gotham A", "Gotham B";
         font-style: normal;
         font-weight: 700; }
       .hero-container .hero-content .lottery-description .time-remaining {
@@ -963,7 +971,7 @@ header {
           font-size: 12px;
           color: #212121;
           line-height: 0;
-          font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+          font-family: "Gotham A", "Gotham B";
           font-style: normal;
           font-weight: 500; }
         .hero-container .hero-content .lottery-description .time-remaining img {
@@ -977,8 +985,8 @@ header {
       transition: .3s;
       padding: 9px 0;
       margin-left: 16px;
-      margin-top: -15px;
-      font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      margin-top: -10px;
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
       font-weight: 700; }
       .hero-container .hero-content .hero-btn:hover {
@@ -989,7 +997,8 @@ header {
       .hero-container .residents-only {
         position: absolute;
         top: 35%;
-        right: 20px; } }
+        right: 20px;
+        z-index: 2; } }
     @media (min-width: 992px) {
       .hero-container .residents-only {
         top: 25%; } }
@@ -999,9 +1008,9 @@ header {
     .hero-container .residents-only .cali-residents-only-msg a {
       font-size: 10px;
       padding-bottom: 0;
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100;
+      font-weight: 400;
       font-style: italic;
       text-decoration: none;
       color: #fff;
@@ -1050,7 +1059,7 @@ header {
         width: 1px;
         display: inline-block; } }
   .main-security .security-description {
-    font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-family: "Gotham A", "Gotham B";
     font-style: normal;
     font-weight: 500;
     color: #212121;
@@ -1059,7 +1068,7 @@ header {
     text-align: center;
     padding-bottom: 23px; }
     @media (min-width: 768px) {
-      .main-security .security-description {
+      .main-security .security-description p {
         text-align: left; } }
     @media (min-width: 992px) {
       .main-security .security-description {
@@ -1107,17 +1116,23 @@ header {
         margin-right: 5px; }
     .main-security .security-description h6 {
       font-size: 18px;
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100; }
+      font-weight: 400; }
       @media (min-width: 768px) {
         .main-security .security-description h6 {
           padding-right: 12px; } }
     .main-security .security-description p {
       font-size: 14px;
       padding-top: 8px;
+      color: #3d3d3d;
       font-family: 'Open Sans', sans-serif;
-      max-width: 455px; }
+      max-width: 455px;
+      text-align: center;
+      line-height: 24px; }
+      @media (min-width: 768px) {
+        .main-security .security-description p {
+          text-align: left; } }
 
 .main-seen-on-tv .container {
   background: #fff;
@@ -1131,7 +1146,7 @@ header {
 .main-seen-on-tv .title {
   text-align: center;
   font-size: 18px;
-  font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-family: "Gotham A", "Gotham B";
   font-style: normal;
   font-weight: 500;
   color: #d4dadf;
@@ -1161,14 +1176,10 @@ header {
     @media (min-width: 768px) {
       .main-seen-on-tv .tv-categories .tv-icon {
         flex-direction: row;
-        text-align: center; }
-        .main-seen-on-tv .tv-categories .tv-icon img {
-          transform: scale(1.5); } }
+        text-align: center; } }
     @media (min-width: 992px) {
       .main-seen-on-tv .tv-categories .tv-icon {
-        padding-bottom: 0; }
-        .main-seen-on-tv .tv-categories .tv-icon img {
-          transform: scale(0.9); } }
+        padding-bottom: 0; } }
 
 .main-how-does-it-work .container {
   background: #fff; }
@@ -1180,25 +1191,24 @@ header {
   text-align: center; }
 
 .main-how-does-it-work .title {
-  font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-  font-style: normal;
-  font-weight: 500;
   padding-top: 15px; }
   .main-how-does-it-work .title h3 {
     text-align: center;
     font-size: 24px;
     padding-bottom: 15px;
-    color: #212121; }
+    color: #212121;
+    font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-style: normal;
+    font-weight: 500; }
   .main-how-does-it-work .title p {
     font-size: 14px;
-    font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-    font-style: normal;
-    font-weight: 100;
     color: #212121;
     text-align: center;
-    font-weight: 100;
     padding-right: 15px;
-    padding-left: 15px; }
+    padding-left: 15px;
+    font-family: "Gotham A", "Gotham B";
+    font-style: normal;
+    font-weight: 400; }
   .main-how-does-it-work .title img {
     margin-bottom: 4px;
     margin-right: 5px; }
@@ -1216,7 +1226,8 @@ header {
     align-self: flex-start;
     padding-top: 40px;
     margin: 0 auto;
-    width: 100%; }
+    width: 100%;
+    order: 0; }
     @media (min-width: 992px) {
       .main-how-does-it-work .middle-container .navigation {
         margin: initial;
@@ -1231,60 +1242,48 @@ header {
         .main-how-does-it-work .middle-container .navigation ul {
           border: none;
           flex-direction: column;
-          width: 220px;
+          width: 280px;
           align-self: flex-start; } }
     .main-how-does-it-work .middle-container .navigation li.hiw-active,
     .main-how-does-it-work .middle-container .navigation li:hover {
-      background: #e6e9ec; }
+      background: url(../img/icons/selected-state.svg) no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      font-size: 15px; }
       @media (min-width: 992px) {
         .main-how-does-it-work .middle-container .navigation li.hiw-active,
         .main-how-does-it-work .middle-container .navigation li:hover {
-          position: relative; }
-          .main-how-does-it-work .middle-container .navigation li.hiw-active:after, .main-how-does-it-work .middle-container .navigation li.hiw-active:before,
-          .main-how-does-it-work .middle-container .navigation li:hover:after,
-          .main-how-does-it-work .middle-container .navigation li:hover:before {
-            left: 100%;
-            top: 50%;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none; }
-          .main-how-does-it-work .middle-container .navigation li.hiw-active:after,
-          .main-how-does-it-work .middle-container .navigation li:hover:after {
-            border-color: rgba(136, 183, 213, 0);
-            border-left-color: #e6e9ec;
-            border-width: 25px;
-            margin-top: -25px; }
-          .main-how-does-it-work .middle-container .navigation li.hiw-active:before,
-          .main-how-does-it-work .middle-container .navigation li:hover:before {
-            border-color: rgba(194, 225, 245, 0);
-            border-left-color: #e6e9ec;
-            border-width: 25px;
-            margin-top: -25px; } }
+          position: relative; } }
       .main-how-does-it-work .middle-container .navigation li.hiw-active a,
       .main-how-does-it-work .middle-container .navigation li:hover a {
-        color: #060000;
-        font-weight: bold; }
+        color: #060000; }
       .main-how-does-it-work .middle-container .navigation li.hiw-active span,
       .main-how-does-it-work .middle-container .navigation li:hover span {
         background: #ffc80a;
         color: #060000; }
-    .main-how-does-it-work .middle-container .navigation li:not(:last-child) a {
-      border-right: 1px solid #d4dadf; }
-      @media (min-width: 992px) {
-        .main-how-does-it-work .middle-container .navigation li:not(:last-child) a {
-          border: none; } }
+    @media (min-width: 992px) {
+      .main-how-does-it-work .middle-container .navigation li:first-child::before {
+        content: ' ';
+        position: absolute;
+        width: 221px;
+        margin-left: 3px;
+        height: 1px;
+        top: 0;
+        border-bottom: 1px solid #e5e9ec; } }
     @media (min-width: 992px) {
       .main-how-does-it-work .middle-container .navigation li {
-        width: 225px;
+        width: 245px;
         display: flex;
         align-items: center;
-        border-top: 1px solid #d4dadf; } }
-    @media (min-width: 992px) {
-      .main-how-does-it-work .middle-container .navigation li:last-child {
-        border-bottom: 1px solid #d4dadf; } }
+        position: relative; }
+        .main-how-does-it-work .middle-container .navigation li::after {
+          content: ' ';
+          position: absolute;
+          width: 221px;
+          margin-left: 3px;
+          height: 1px;
+          bottom: 0;
+          border-bottom: 1px solid #e5e9ec; } }
     .main-how-does-it-work .middle-container .navigation li a {
       display: flex;
       flex-direction: column;
@@ -1292,8 +1291,10 @@ header {
       align-items: center;
       text-align: center;
       font-size: 10px;
+      margin-bottom: -1px;
+      margin-top: -1px;
       color: #b2b2b2;
-      font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
       font-weight: 500;
       padding: 10px;
@@ -1314,10 +1315,15 @@ header {
         .main-how-does-it-work .middle-container .navigation li a {
           flex-direction: row;
           justify-content: flex-start;
+          position: relative;
+          left: 5px;
           align-items: center;
           padding: 15px;
-          font-size: 12px;
-          min-width: 219px; } }
+          font-size: 14px;
+          min-width: 242px;
+          font-family: "Gotham A", "Gotham B";
+          font-style: normal;
+          font-weight: 700; } }
       .main-how-does-it-work .middle-container .navigation li a span {
         display: inline-block;
         margin-bottom: 6px;
@@ -1326,6 +1332,7 @@ header {
         width: 17px;
         height: 17px;
         font-weight: bold;
+        line-height: 18px;
         border-radius: 50%; }
         @media (min-width: 992px) {
           .main-how-does-it-work .middle-container .navigation li a span {
@@ -1356,7 +1363,7 @@ header {
     text-align: center;
     position: relative;
     display: none;
-    font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-family: "Gotham A", "Gotham B";
     font-style: normal;
     font-weight: 500; }
     .main-how-does-it-work .middle-container .instructions.hiw-active {
@@ -1370,12 +1377,11 @@ header {
         align-self: flex-start;
         text-align: left; } }
     .main-how-does-it-work .middle-container .instructions h5 {
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100;
+      font-weight: 400;
       font-size: 18px;
-      color: #212121;
-      font-weight: 100; }
+      color: #212121; }
     .main-how-does-it-work .middle-container .instructions img {
       display: none; }
       @media (min-width: 1200px) {
@@ -1389,7 +1395,7 @@ header {
       padding: 0 15px;
       font-size: 14px;
       font-family: 'Open Sans', sans-serif;
-      color: #777777; }
+      color: #3d3d3d; }
       @media (min-width: 992px) {
         .main-how-does-it-work .middle-container .instructions p {
           padding: 0; } }
@@ -1427,6 +1433,12 @@ header {
         text-align: left; }
         .main-how-does-it-work .lower-container .satisfaction img {
           padding-right: 25px; } }
+    .main-how-does-it-work .lower-container .satisfaction .description h5 {
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      font-weight: 300; }
     @media (min-width: 1200px) {
       .main-how-does-it-work .lower-container .satisfaction {
         margin-left: 30px; } }
@@ -1435,13 +1447,14 @@ header {
       color: #212121;
       padding-bottom: 10px;
       padding-top: 10px;
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100; }
+      font-weight: 400;
+      font-weight: 500; }
     .main-how-does-it-work .lower-container .satisfaction p {
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
-      color: #212121; }
+      color: #3d3d3d; }
   .main-how-does-it-work .lower-container .did-you-know {
     background: #b2f71d;
     border-radius: 6px;
@@ -1480,16 +1493,16 @@ header {
     .main-how-does-it-work .lower-container .did-you-know {
       width: 252px; } }
     .main-how-does-it-work .lower-container .did-you-know h5 {
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100;
+      font-weight: 400;
       font-size: 18px;
-      font-weight: 100;
       padding-top: 10px;
       padding-bottom: 5px; }
     .main-how-does-it-work .lower-container .did-you-know p {
       font-family: 'Open Sans', sans-serif;
-      font-size: 14px; }
+      font-size: 14px;
+      color: #3d3d3d; }
 
 .main-testimonal .container {
   background: url(../img/bg/big-blue-bg.jpg) no-repeat;
@@ -1517,11 +1530,10 @@ header {
       flex-direction: row;
       justify-content: space-around; } }
   .main-testimonal .testimonial-holder .testimonial-box {
-    font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-family: "Gotham A", "Gotham B";
     font-style: normal;
-    font-weight: 100;
-    background: rgba(255, 255, 255, 0.4);
-    padding: 25px;
+    font-weight: 400;
+    padding: 40px;
     border-radius: 20px;
     font-size: 16px;
     font-weight: 100;
@@ -1530,58 +1542,52 @@ header {
     font-weight: 300;
     position: relative; }
     .main-testimonal .testimonial-holder .testimonial-box.first-testimonial {
-      background: rgba(255, 255, 255, 0.25); }
+      background: rgba(255, 255, 255, 0.25);
+      padding-left: 45px; }
+      @media (min-width: 992px) {
+        .main-testimonal .testimonial-holder .testimonial-box.first-testimonial {
+          padding-left: 62px;
+          background: url(/img/bg/left-quote-bubble.svg) no-repeat;
+          background-size: contain; } }
+    .main-testimonal .testimonial-holder .testimonial-box.second-testimonial {
+      background: rgba(255, 255, 255, 0.4);
+      padding-left: 35px;
+      padding-right: 22px; }
+      @media (min-width: 992px) {
+        .main-testimonal .testimonial-holder .testimonial-box.second-testimonial {
+          padding-left: 35px;
+          padding-right: 49px;
+          background: url(/img/bg/right-quote-bubble.svg) no-repeat;
+          background-size: contain; } }
+    .main-testimonal .testimonial-holder .testimonial-box .left-quote {
+      position: absolute;
+      left: -20px;
+      top: 0; }
+    .main-testimonal .testimonial-holder .testimonial-box .right-quote {
+      position: absolute;
+      right: -8px;
+      bottom: 11px; }
     @media (min-width: 992px) {
       .main-testimonal .testimonial-holder .testimonial-box {
         margin-bottom: 0;
-        max-width: 361px;
         line-height: 26px;
-        padding: 25px 40px;
         position: relative;
         z-index: 2; }
         .main-testimonal .testimonial-holder .testimonial-box img {
           width: 17px;
           height: 14px;
           display: inline-block; }
-        .main-testimonal .testimonial-holder .testimonial-box .left-quote {
-          position: absolute;
-          left: 15px;
-          top: 30px; }
-        .main-testimonal .testimonial-holder .testimonial-box .right-quote {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          margin-right: 22px;
-          margin-top: 50px; }
         .main-testimonal .testimonial-holder .testimonial-box.second-testimonial {
-          margin-bottom: 45px; }
-          .main-testimonal .testimonial-holder .testimonial-box.second-testimonial::after {
-            content: ' ';
-            position: absolute;
-            width: 0;
-            height: 0;
-            left: auto;
-            right: -20px;
-            top: 177px;
-            bottom: auto;
-            border: 10px solid;
-            transform: rotate(-90deg);
-            border-color: rgba(255, 255, 255, 0.4) transparent transparent rgba(255, 255, 255, 0.4); }
-        .main-testimonal .testimonial-holder .testimonial-box.first-testimonial::after {
-          content: ' ';
-          position: absolute;
-          width: 0;
-          height: 0;
-          left: -20px;
-          right: auto;
-          top: 177px;
-          bottom: auto;
-          border: 10px solid;
-          transform: rotate(180deg);
-          border-color: rgba(255, 255, 255, 0.25) transparent transparent rgba(255, 255, 255, 0.25); } }
+          margin-bottom: 45px; } }
+    .main-testimonal .testimonial-holder .testimonial-box .border-holder {
+      margin-top: 5px; }
     .main-testimonal .testimonial-holder .testimonial-box p {
+      margin: 0;
+      position: relative;
       font-style: italic;
-      text-align: center; }
+      text-align: center;
+      line-height: 26px;
+      max-width: 320px; }
     .main-testimonal .testimonial-holder .testimonial-box h6 {
       text-align: center;
       font-size: 14px;
@@ -1592,21 +1598,21 @@ header {
       font-size: 12px;
       text-align: center;
       margin: 0;
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100;
+      font-weight: 400;
       font-style: italic; }
-  .main-testimonal .testimonial-holder img {
+  .main-testimonal .testimonial-holder .first-img, .main-testimonal .testimonial-holder .second-img {
     display: none; }
     @media (min-width: 992px) {
-      .main-testimonal .testimonial-holder img {
+      .main-testimonal .testimonial-holder .first-img, .main-testimonal .testimonial-holder .second-img {
         display: inline-block;
         width: 60px;
         height: 60px;
         position: relative;
         top: 85px; } }
     @media (min-width: 1200px) {
-      .main-testimonal .testimonial-holder img {
+      .main-testimonal .testimonial-holder .first-img, .main-testimonal .testimonial-holder .second-img {
         width: 90px;
         height: 90px; } }
   .main-testimonal .testimonial-holder .second-img {
@@ -1619,25 +1625,34 @@ header {
   padding: 15px;
   text-align: center;
   margin: 0 auto;
-  max-width: 662px; }
+  max-width: 662px;
+  text-shadow: 0 0 6px rgba(37, 102, 185, 0.13); }
   .main-testimonal .testimonial-highlight .name {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .main-testimonal .testimonial-highlight .name p {
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 400;
+      font-weight: bold;
+      font-style: italic; }
     .main-testimonal .testimonial-highlight .name .small-bottom-border {
       position: relative;
       bottom: 8px;
       right: 9px; }
   .main-testimonal .testimonial-highlight p {
-    font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-family: "Gotham A", "Gotham B";
     font-style: normal;
-    font-weight: 100;
+    font-weight: 400;
     font-style: italic;
-    font-weight: 100; }
+    font-weight: 100;
+    line-height: 28px; }
   .main-testimonal .testimonial-highlight strong {
-    font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-family: "Gotham A", "Gotham B";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
+    font-weight: bold;
     font-style: italic; }
 
 .main-testimonal .border-holder {
@@ -1659,9 +1674,7 @@ header {
     text-align: center;
     font-size: 22px;
     color: #3d3d3d;
-    font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-    font-style: normal;
-    font-weight: 100;
+    font-weight: 400;
     padding: 15px; }
     .main-support-and-questions .get-started-free h2 a {
       text-decoration: underline; }
@@ -1700,7 +1713,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    margin-top: -25px; }
     .main-support-and-questions .get-started h2 {
       text-align: center;
       font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
@@ -1712,27 +1726,33 @@ header {
       padding: 0 15px; }
     .main-support-and-questions .get-started p {
       text-align: center;
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100;
+      font-weight: 400;
+      line-height: 28px;
       color: #212121;
       font-size: 16px;
-      font-weight: 300;
       max-width: 542px;
       margin: 0 auto;
-      padding-top: 30px;
+      padding-top: 25px;
       padding-bottom: 30px; }
     .main-support-and-questions .get-started .no-commitment {
       padding: 0;
       font-size: 12px;
       color: #b4b4b4;
       padding-top: 5px;
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100;
+      font-weight: 400;
       font-style: italic; }
   .main-support-and-questions .security-content .main-security-img {
-    width: 135px; }
+    width: 135px;
+    bottom: 20px; }
+  .main-support-and-questions .security-description .verified h6 {
+    font-family: "Gotham A", "Gotham B";
+    font-style: normal;
+    font-weight: 400;
+    color: #212121; }
 
 .main-footer .container {
   padding: 0; }
@@ -1774,9 +1794,10 @@ header {
   .main-footer .top-footer p {
     font-size: 14px;
     padding-top: 10px;
-    font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
     font-style: normal;
-    font-weight: 100;
+    font-weight: 500;
+    font-weight: 400;
     color: #212121;
     text-align: center; }
     @media (min-width: 768px) {
@@ -1790,9 +1811,8 @@ header {
     @media (min-width: 1200px) {
       .main-footer .top-footer img {
         display: initial;
-        width: 430px;
-        left: -30px;
-        bottom: -160px; } }
+        bottom: 0;
+        left: 105px; } }
   .main-footer .top-footer .footer-form {
     display: flex;
     align-items: center;
@@ -1846,9 +1866,9 @@ header {
       color: white;
       margin-top: 17px;
       font-size: 12px;
-      font-family: "Gotham Rounded SSm 4r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 100;
+      font-weight: 400;
       font-style: italic; }
       @media (min-width: 768px) {
         .main-footer .top-footer .footer-form span {
@@ -1869,7 +1889,7 @@ header {
       padding: 45px 55px; } }
   .main-footer .middle-footer h3 {
     margin: 0;
-    font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-family: "Gotham A", "Gotham B";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -1910,7 +1930,7 @@ header {
   .main-footer .bottom-footer .ownership {
     padding-top: 5px; }
   .main-footer .bottom-footer .copyright {
-    font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+    font-family: "Gotham A", "Gotham B";
     font-style: normal;
     font-weight: 500;
     font-style: normal;

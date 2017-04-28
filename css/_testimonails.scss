@@ -9,7 +9,7 @@
 
   .title {
     h2 {
-      @include font-gotham-medium;
+      @include font-gotham-rounded-medium;
       font-size: 24px;
       text-align: center;
       color: white;
@@ -32,8 +32,7 @@
 
     .testimonial-box {
       @include font-gotham-book;
-      background: rgba(#fff, 0.4);
-      padding: 25px;
+      padding: 40px;
       border-radius: 20px;
       font-size: 16px;
       font-weight: 100;
@@ -44,13 +43,41 @@
 
       &.first-testimonial {
         background: rgba(#fff, 0.25);
+        padding-left: 45px;
+        @media (min-width: 992px) {
+          padding-left: 62px;
+          background: url(/img/bg/left-quote-bubble.svg) no-repeat;
+          background-size: contain;
+        }
+      }
+
+      &.second-testimonial {
+        background: rgba(#fff, 0.4);
+        padding-left: 35px;
+        padding-right: 22px;
+        @media (min-width: 992px) {
+          padding-left: 35px;
+          padding-right: 49px;
+          background: url(/img/bg/right-quote-bubble.svg) no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .left-quote {
+        position: absolute;
+        left: -20px;
+        top: 0;
+      }
+
+      .right-quote {
+        position: absolute;
+        right: -8px;
+        bottom: 11px;
       }
 
       @media (min-width: 992px) {
         margin-bottom: 0;
-        max-width: 361px;
         line-height: 26px;
-        padding: 25px 40px;
         position: relative;
         z-index: 2;
 
@@ -60,59 +87,23 @@
           display: inline-block;
         }
 
-        .left-quote {
-          position: absolute;
-          left: 15px;
-          top: 30px;
-        }
-
-        .right-quote {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          margin-right: 22px;
-          margin-top: 50px;
-        }
-
         &.second-testimonial {
           margin-bottom: 45px;
-
-          &::after {
-            content: ' ';
-            position: absolute;
-            width: 0;
-            height: 0;
-            left: auto;
-            right: -20px;
-            top: 177px;
-            bottom: auto;
-            border: 10px solid;
-            transform: rotate(-90deg);
-            border-color: rgba(255, 255, 255, 0.4) transparent transparent rgba(255, 255, 255, 0.4);
-          }
-        }
-
-        &.first-testimonial {
-          &::after {
-            content: ' ';
-            position: absolute;
-            width: 0;
-            height: 0;
-            left: -20px;
-            right: auto;
-            top: 177px;
-            bottom: auto;
-            border: 10px solid;
-            transform: rotate(180deg);
-            border-color: rgba(255, 255, 255, 0.25) transparent transparent rgba(255, 255, 255, 0.25);
-          }
         }
 
       }
 
+      .border-holder {
+        margin-top: 5px;
+      }
+
       p {
+        margin: 0;
+        position: relative;
         font-style: italic;
         text-align: center;
+        line-height: 26px;
+        max-width: 320px;
       }
       h6 {
         text-align: center;
@@ -130,7 +121,7 @@
       }
     }
 
-    img {
+    .first-img, .second-img {
       display: none;
 
       @media (min-width: 992px) {
@@ -159,11 +150,19 @@
     text-align: center;
     margin: 0 auto;
     max-width: 662px;
+    text-shadow: 0 0 6px rgba(37, 102, 185, 0.13);
 
     .name {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      p {
+        @include font-gotham-book;
+        font-weight: bold;
+        font-style: italic;
+      }
+
       .small-bottom-border {
         position: relative;
         bottom: 8px;
@@ -175,9 +174,11 @@
       @include font-gotham-book;
       font-style: italic;
       font-weight: 100;
+      line-height: 28px;
     }
     strong {
-      @include font-gotham-bold;
+      @include font-gotham-book;
+      font-weight: bold;
       font-style: italic;
     }
   }

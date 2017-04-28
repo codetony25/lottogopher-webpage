@@ -58,8 +58,10 @@
     text-align: center;
     padding-bottom: 23px;
 
-    @media (min-width: 768px) {
-      text-align: left;
+    p {
+      @media (min-width: 768px) {
+        text-align: left;
+      }
     }
 
     @media (min-width: 992px) {
@@ -75,10 +77,6 @@
 
       h6 {
         padding-right: 15px;
-
-        //@media (min-width: 768px) {
-        //  padding-right: 0;
-        //}
       }
 
       @media (min-width: 480px) {
@@ -136,8 +134,14 @@
     p {
       font-size: 14px;
       padding-top: 8px;
+      color: #3d3d3d;
       font-family: 'Open Sans', sans-serif;
       max-width: 455px;
+      text-align: center;
+      line-height: 24px;
+      @media (min-width: 768px) {
+        text-align: left;
+      }
     }
   }
 }
