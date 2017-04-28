@@ -650,20 +650,11 @@ header {
     header .top-header .main-logo {
       display: flex;
       align-items: center; }
-      header .top-header .main-logo .mobile-logo {
-        width: 35px;
-        height: 35px; }
-        @media (min-width: 480px) {
-          header .top-header .main-logo .mobile-logo {
-            display: none; } }
       header .top-header .main-logo .logo {
-        display: none; }
-        @media (min-width: 480px) {
-          header .top-header .main-logo .logo {
-            display: block;
-            max-width: 180px;
-            width: 100%;
-            max-width: 163px; } }
+        display: block;
+        max-width: 180px;
+        width: 100%;
+        max-width: 163px; }
         @media (min-width: 768px) {
           header .top-header .main-logo .logo {
             padding: 0;
@@ -689,13 +680,16 @@ header {
             display: initial;
             font-size: 14px; } }
       header .top-header .actions .shopping-cart {
-        display: flex;
-        align-items: center;
-        margin: 0;
-        padding-right: 20px;
-        font-family: "Gotham A", "Gotham B";
-        font-style: normal;
-        font-weight: 500; }
+        display: none; }
+        @media (min-width: 520px) {
+          header .top-header .actions .shopping-cart {
+            font-family: "Gotham A", "Gotham B";
+            font-style: normal;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding-right: 20px; } }
         @media (min-width: 768px) {
           header .top-header .actions .shopping-cart {
             padding-left: 0;
@@ -774,8 +768,7 @@ header {
           border-top: 3px solid #fff; }
           header .main-nav .mobile-nav li a:hover, header .main-nav .mobile-nav li a.mobile-active {
             color: #212121;
-            border-top: 3px solid #8bdd0b;
-            font-weight: bold; }
+            border-top: 3px solid #8bdd0b; }
             header .main-nav .mobile-nav li a:hover svg path, header .main-nav .mobile-nav li a.mobile-active svg path {
               fill: #212121 !important; }
         header .main-nav .mobile-nav li span {
