@@ -9,8 +9,7 @@ var autoprefixerOptions = {
 
 gulp.task('myStyles', function () {
   gulp.src('css/*.scss')
-    .pipe(scssPlugin({ outputStyle: 'expanded' }))
-    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(scssPlugin())
     .pipe(gulp.dest('css'))
     .pipe(connect.reload());
 });
