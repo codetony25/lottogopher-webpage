@@ -964,7 +964,8 @@ header {
       width: 280px !important;
       height: 50px !important;
       left: 50% !important;
-      margin-left: -138px !important; }
+      margin-left: -138px !important;
+      margin-bottom: -30px !important; }
       @media (min-width: 786px) {
         .hero-container .hero-content .owl-nav {
           width: 100% !important;
