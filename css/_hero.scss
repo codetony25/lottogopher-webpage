@@ -67,6 +67,7 @@
     .ticket-holder {
       transform: scale(.8);
       position: relative;
+      bottom: 32px;
 
       @media (min-width: 500px) {
         bottom: 28px;

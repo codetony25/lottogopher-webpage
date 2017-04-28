@@ -894,7 +894,8 @@ header {
       height: 22px; }
     .hero-container .hero-content .ticket-holder {
       transform: scale(0.8);
-      position: relative; }
+      position: relative;
+      bottom: 32px; }
       @media (min-width: 500px) {
         .hero-container .hero-content .ticket-holder {
           bottom: 28px; } }
