@@ -109,6 +109,8 @@
       margin-left: -138px !important;
       @media (min-width: 786px) {
         width: 100% !important;
+        left: initial !important;
+        margin-left: initial !important;
       }
     }
     .owl-next img,
