@@ -936,6 +936,46 @@ header {
     width: 100%;
     align-items: center;
     padding-top: 10px; }
+    .hero-container .hero-content .owl-dots {
+      position: absolute !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      display: flex !important;
+      bottom: 5px !important; }
+      @media (min-width: 590px) {
+        .hero-container .hero-content .owl-dots {
+          bottom: -5px !important; } }
+      @media (min-width: 786px) {
+        .hero-container .hero-content .owl-dots {
+          bottom: -33px !important; } }
+    .hero-container .hero-content .owl-dots .owl-dot.active span {
+      background: none repeat scroll 0 0 #fff !important;
+      opacity: 1 !important; }
+    .hero-container .hero-content .owl-dots .owl-dot span {
+      background: none repeat scroll 0 0 #fff !important;
+      border-radius: 20px !important;
+      display: block !important;
+      height: 12px !important;
+      margin: 5px 7px !important;
+      opacity: 0.5 !important;
+      width: 12px !important; }
+    .hero-container .hero-content .owl-nav {
+      position: absolute !important;
+      width: 280px !important;
+      height: 50px !important; }
+      @media (min-width: 786px) {
+        .hero-container .hero-content .owl-nav {
+          width: 100% !important; } }
+    .hero-container .hero-content .owl-next img,
+    .hero-container .hero-content .owl-prev img {
+      width: 20px !important;
+      height: 20px !important; }
+    .hero-container .hero-content .owl-prev {
+      position: absolute !important;
+      left: 1% !important; }
+    .hero-container .hero-content .owl-next {
+      position: absolute !important;
+      right: 1% !important; }
     .hero-container .hero-content .timer-icon {
       width: 22px;
       height: 22px; }
