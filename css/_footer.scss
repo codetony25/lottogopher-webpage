@@ -22,7 +22,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      max-width: 658px;
+      max-width: 720px;
 
       @media (min-width: 1200px) {
         padding-left: 50px;
@@ -74,12 +74,24 @@
       position: relative;
       flex-direction: column;
 
-      .input-email {
+      .input-email,
+      .input-name {
         position: relative;
         width: 100%;
 
         @media (min-width: 768px) {
-          width: 50%;
+          width: 63%;
+          margin-right: 15px;
+        }
+      }
+
+      .input-name {
+        margin-top: -10px;
+        @media (min-width: 768px) {
+          margin-top: 0;
+        }
+        img {
+          width: 15px;
         }
       }
 

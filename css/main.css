@@ -1789,7 +1789,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 658px; }
+    max-width: 720px; }
     @media (min-width: 1200px) {
       .main-footer .top-footer .top-content {
         padding-left: 50px;
@@ -1835,12 +1835,22 @@ header {
     text-align: center;
     position: relative;
     flex-direction: column; }
-    .main-footer .top-footer .footer-form .input-email {
+    .main-footer .top-footer .footer-form .input-email,
+    .main-footer .top-footer .footer-form .input-name {
       position: relative;
       width: 100%; }
       @media (min-width: 768px) {
-        .main-footer .top-footer .footer-form .input-email {
-          width: 50%; } }
+        .main-footer .top-footer .footer-form .input-email,
+        .main-footer .top-footer .footer-form .input-name {
+          width: 63%;
+          margin-right: 15px; } }
+    .main-footer .top-footer .footer-form .input-name {
+      margin-top: -10px; }
+      @media (min-width: 768px) {
+        .main-footer .top-footer .footer-form .input-name {
+          margin-top: 0; } }
+      .main-footer .top-footer .footer-form .input-name img {
+        width: 15px; }
     @media (min-width: 768px) {
       .main-footer .top-footer .footer-form {
         justify-content: space-between;

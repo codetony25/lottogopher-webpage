@@ -70,13 +70,4 @@ $(document).ready(function(){
     $(this).parent().addClass('hiw-active');
   })
 
-  // Fill SVG to black color when active
-  $('.mobile-nav a').hover(function() {
-    console.log('here');
-    var el = $(this);
-    var svg = el.find('img.mobile-svg');
-    console.log(svg);
-    svg.attr('fill', '#212121');
-  });
-
 });
