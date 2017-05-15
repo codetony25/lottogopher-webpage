@@ -1,6 +1,11 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var bs = require('browser-sync').create();
+
+var autoprefixerOptions = {
+  browsers: ['last 4 versions', '> 5%', 'Firefox ESR']
+};
 
 gulp.task('browser-sync', ['sass'], function() {
   bs.init({
@@ -20,12 +25,12 @@ gulp.task('sass', function () {
 gulp.task('prod', function () {
   return gulp
     .src('css/*.scss')
-    .pipe(scssPlugin({ outputStyle: 'expanded' }))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('default', ['prod']);
+// gulp.task('default', ['prod']);
 
 
 gulp.task('watch', ['browser-sync'], function () {

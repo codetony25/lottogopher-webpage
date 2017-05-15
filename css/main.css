@@ -970,7 +970,8 @@ header {
         .hero-container .hero-content .owl-nav {
           width: 100% !important;
           left: initial !important;
-          margin-left: initial !important; } }
+          margin-left: initial !important;
+          margin-bottom: initial !important; } }
     .hero-container .hero-content .owl-next img,
     .hero-container .hero-content .owl-prev img {
       width: 20px !important;
@@ -1453,10 +1454,20 @@ header {
     @media (min-width: 992px) {
       .main-how-does-it-work .middle-container .demonstration {
         order: 0; } }
+    @media (min-width: 1200px) {
+      .main-how-does-it-work .middle-container .demonstration::before {
+        content: ' ';
+        background: url("../img/bg/laptop-dropshadow.png") no-repeat;
+        position: absolute;
+        width: 428px;
+        height: 428px;
+        left: -18px;
+        top: 35px; } }
     .main-how-does-it-work .middle-container .demonstration img {
       width: 100%;
       max-width: 466px;
-      display: inline-block; }
+      display: inline-block;
+      position: relative; }
       @media (min-width: 992px) {
         .main-how-does-it-work .middle-container .demonstration img {
           display: inline-block; } }
