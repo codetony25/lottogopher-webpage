@@ -30,12 +30,12 @@ gulp.task('prod', function () {
     .pipe(gulp.dest('./dist/css'));
 });
 
-// gulp.task('default', ['prod']);
+gulp.task('default', ['prod']);
 
-
-gulp.task('watch', ['browser-sync'], function () {
-  gulp.watch("css/*.scss", ['sass']);
-  gulp.watch("*.html").on('change', bs.reload);
-});
-
-gulp.task('default', ['watch']);
+//
+// gulp.task('watch', ['browser-sync'], function () {
+//   gulp.watch("css/*.scss", ['sass']);
+//   gulp.watch("*.html").on('change', bs.reload);
+// });
+//
+// gulp.task('default', ['watch']);
