@@ -1,0 +1,311 @@
+@import '_mixins.scss';
+
+.main-hero.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.hero-container {
+  width: 100%;
+  min-height: 524px;
+  position: relative;
+  background: url(../img/bg/hero-bg.jpg) no-repeat;
+  background-size: cover;
+
+  .hero-message {
+    text-align: center;
+    padding-bottom: 22px;
+    h1 {
+      color: white;
+      font-size: 22px;
+      margin: 0;
+      padding-top: 37px;
+      padding-bottom: 24px;
+      @include font-gotham-rounded-bold;
+      @media (min-width: 480px) {
+        font-size: 26px;
+      }
+      @media (min-width: 768px) {
+        font-size: 28px;
+      }
+    }
+    p {
+      color: white;
+      font-size: 12px;
+      margin: 0;
+      @include font-gotham-medium;
+      @media (min-width: 620px) {
+        padding-bottom: 15px;
+      }
+      @media (min-width: 768px) {
+        font-size: 14px;
+      }
+    }
+    i {
+      color: white;
+      font-size: 11px;
+    }
+  }
+
+  .hero-down-icon-container {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: initial;
+      a {
+        padding: 25px;
+      }
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    padding-top: 10px;
+
+    .owl-dots {
+      position: absolute !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      display: flex !important;
+      bottom: 5px !important;
+
+      @media (min-width: 590px) {
+        bottom: -5px !important;
+      }
+
+      @media (min-width: 786px) {
+        bottom: -33px !important;
+      }
+    }
+
+    .owl-dots .owl-dot {
+      &.active {
+        span {
+          background: none repeat scroll 0 0 #fff !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    .owl-dots .owl-dot span {
+      background: none repeat scroll 0 0 #fff !important;
+      border-radius: 20px !important;
+      display: block !important;
+      height: 12px !important;
+      margin: 5px 7px !important;
+      opacity: 0.5 !important;
+      width: 12px !important;
+    }
+
+    .owl-nav {
+      position: absolute !important;
+      width: 280px !important;
+      height: 50px !important;
+      left: 50% !important;
+      margin-left: -138px !important;
+      margin-bottom: -30px !important;
+      @media (min-width: 786px) {
+        width: 100% !important;
+        left: initial !important;
+        margin-left: initial !important;
+        margin-bottom: initial !important;
+      }
+    }
+    .owl-next img,
+    .owl-prev img {
+      width: 20px !important;
+      height: 20px !important;
+    }
+
+    .owl-prev {
+      position: absolute !important;
+      left: 1% !important;
+    }
+
+    .owl-next {
+      position: absolute !important;
+      right: 1% !important;
+    }
+
+
+    .timer-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .ticket-holder {
+      transform: scale(.8);
+      position: relative;
+      bottom: 32px;
+
+      @media (min-width: 500px) {
+        bottom: 28px;
+      }
+      @media (min-width: 768px) {
+        bottom: 0;
+      }
+
+      .lottery-ticket .lotto-image {
+        width: 248px;
+        height: 289px;
+      }
+
+      &.super-ball {
+        .lottery-ticket  {
+          height: 289px;
+        }
+      }
+
+      &.mega-ball {
+        .lottery-ticket .lotto-image {
+          @media (min-width: 992px) {
+            position: relative;
+            bottom: 32px;
+          }
+        }
+      }
+
+      @media (min-width: 992px) {
+        bottom: 0;
+      }
+
+      .lottery-ball-img {
+        width: 150px;
+        height: 121px;
+        transform: scale(.7);
+      }
+
+      @media (min-width: 768px) {
+        transform: scale(.85);
+
+        .lottery-ball-img {
+          transform: scale(.7);
+        }
+      }
+
+      @media (min-width: 992px) {
+        transform: scale(1);
+
+        .lottery-ball-img {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .lottery-ticket {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    .lottery-ball-img {
+      position: absolute;
+      left: 30px;
+      top: -80px;
+      z-index: 100;
+
+      @media (min-width: 992px) {
+        left: 35px;
+        top: -90px;
+      }
+    }
+
+    .lottery-description {
+      background: rgba(#74ce00, 0.9);
+      box-shadow: 5px 8.66px 30px 0px rgba(44, 49, 132, 0.2);
+      border-radius: 6px;
+      max-width: 234px;
+      width: 215px;
+      text-align: center;
+      color: white;
+      padding: 20px 24px;
+      left: 16px;
+      position: absolute;
+      bottom: 16px;
+      p {
+        margin: 0;
+        @include font-gotham-medium;
+      }
+      h3 {
+        font-weight: bold;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        padding-bottom: 8px;
+        @include font-gotham-bold;
+      }
+      .time-remaining {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 12px;
+        p {
+          font-size: 12px;
+          color: #212121;
+          line-height: 0;
+          @include font-gotham-medium;
+        }
+        img {
+          padding-right: 7px;
+        }
+      }
+    }
+    .hero-btn {
+      position: absolute;
+      background: #269eff;
+      color: white;
+      width: 214px;
+      margin-left: 14px;
+      transition: .3s;
+      padding: 9px 0;
+      margin-left: 16px;
+      margin-top: -10px;
+      @include font-gotham-bold;
+      &:hover {
+        background: #008dff;
+      }
+    }
+  }
+
+  .residents-only {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      position: absolute;
+      top: 25%;
+      right: 20px;
+      z-index: 2;
+    }
+
+    @media (min-width: 992px) {
+      top: 25%;
+    }
+
+    @media (min-width: 1200px) {
+      top: 50%;
+    }
+
+    .cali-residents-only-msg {
+      a {
+        font-size: 10px;
+        padding-bottom: 0;
+        @include font-gotham-book;
+        font-style: italic;
+        text-decoration: none;
+        color: #fff;
+        opacity: .6;
+        transition: .3s;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

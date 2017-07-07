@@ -1,0 +1,65 @@
+@import '_mixins.scss';
+
+.main-seen-on-tv {
+  .container {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 5px 30px 5px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 18px;
+    @include font-gotham-medium;
+    color: #d4dadf;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .border-holder {
+    text-align: center;
+    width: 100%;
+  }
+
+  .tv-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+
+    .tv-icon {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 55px;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        text-align: center;
+      }
+
+      @media (min-width: 992px) {
+        padding-bottom: 0;
+      }
+    }
+
+  }
+  //.tv-categories {
+  //  display: flex;
+  //  padding: 30px 50px;
+  //  width: 100%;
+  //  justify-content: space-between;
+  //  align-items: center;
+  //}
+}
