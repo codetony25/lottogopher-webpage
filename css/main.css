@@ -988,7 +988,11 @@ header {
 
 .main-hero-checkout {
   background-color: #efefef;
-  padding: 30px !important; }
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+  @media (min-width: 480px) {
+    .main-hero-checkout {
+      padding: 30px !important; } }
 
 .hero-container {
   width: 100%;
@@ -999,8 +1003,9 @@ header {
   overflow: hidden;
   margin: 0 auto;
   padding-bottom: 50px;
-  background: url(../img/checkout/checkoug-hero-bg.png) no-repeat;
-  background-size: cover; }
+  background-image: url(../img/checkout/subtle-jackpot-icons.png), url(../img/checkout/checkout-hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right, left, right; }
   .hero-container .hero-more-info {
     color: #fff;
     font-family: "Gotham A", "Gotham B";
@@ -1010,38 +1015,42 @@ header {
     max-width: 648px;
     margin: 0 auto;
     opacity: 0.9;
-    padding-top: 25px;
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px; }
+    @media (min-width: 480px) {
+      .hero-container .hero-more-info {
+        padding-top: 15px; } }
     @media (min-width: 768px) {
       .hero-container .hero-more-info {
-        padding-top: 45px; } }
+        font-size: 14px; } }
   .hero-container .hero-message {
     text-align: center;
-    padding: 0 22px 22px 22px; }
+    padding: 0 22px;
+    position: absolute;
+    top: 55px; }
     .hero-container .hero-message h1 {
       font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
       font-style: normal;
       font-weight: 500;
       color: white;
-      font-size: 22px;
       margin: 0;
-      padding-top: 37px;
-      padding-bottom: 24px;
       font-size: 28px;
-      line-height: 40px;
-      font-weight: 500; }
+      line-height: 25px;
+      font-weight: 500;
+      font-size: 18px; }
       @media (min-width: 480px) {
         .hero-container .hero-message h1 {
-          font-size: 26px; } }
+          font-size: 26px;
+          line-height: 40px; } }
       @media (min-width: 768px) {
         .hero-container .hero-message h1 {
           font-size: 28px; } }
     .hero-container .hero-message p {
       color: white;
-      font-size: 12px;
+      font-size: 10px;
+      padding-top: 16px;
       opacity: 0.9;
       font-size: 16px;
       margin: 0;
@@ -1049,6 +1058,9 @@ header {
       font-family: "Gotham A", "Gotham B";
       font-style: normal;
       font-weight: 400; }
+      @media (min-width: 480px) {
+        .hero-container .hero-message p {
+          font-size: 16px; } }
     .hero-container .hero-message i {
       color: white;
       font-size: 11px; }
@@ -1065,7 +1077,7 @@ header {
     margin: 0 auto;
     width: 100%;
     align-items: center;
-    padding-top: 10px; }
+    flex-direction: column; }
     .hero-container .hero-content .owl-dots {
       position: absolute !important;
       left: 50% !important;
@@ -1115,11 +1127,15 @@ header {
       width: 22px;
       height: 22px; }
     .hero-container .hero-content .ticket-holder {
-      transform: scale(0.8);
       position: relative; }
       .hero-container .hero-content .ticket-holder .lottery-ticket .lotto-image {
-        width: 248px;
-        height: 289px; }
+        top: 90px;
+        left: -10px;
+        position: relative; }
+        @media (min-width: 480px) {
+          .hero-container .hero-content .ticket-holder .lottery-ticket .lotto-image {
+            top: 65px;
+            left: 0; } }
       .hero-container .hero-content .ticket-holder.super-ball .lottery-ticket {
         height: 289px; }
       @media (min-width: 992px) {
@@ -1127,18 +1143,7 @@ header {
           bottom: 0; } }
       .hero-container .hero-content .ticket-holder .lottery-ball-img {
         width: 150px;
-        height: 121px;
-        transform: scale(0.7); }
-      @media (min-width: 768px) {
-        .hero-container .hero-content .ticket-holder {
-          transform: scale(0.85); }
-          .hero-container .hero-content .ticket-holder .lottery-ball-img {
-            transform: scale(0.7); } }
-      @media (min-width: 992px) {
-        .hero-container .hero-content .ticket-holder {
-          transform: scale(1); }
-          .hero-container .hero-content .ticket-holder .lottery-ball-img {
-            transform: scale(1); } }
+        height: 121px; }
     .hero-container .hero-content .lottery-ticket {
       display: flex;
       flex-direction: column;
@@ -1196,14 +1201,21 @@ header {
       color: #fff;
       text-transform: uppercase;
       transition: .3s;
-      left: -20px;
-      bottom: -15px;
-      width: 282px;
-      height: 49px;
-      font-size: 16px;
+      left: 180px;
+      bottom: 20px;
+      width: 225px;
+      height: 37px;
+      font-size: 12px;
       font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
       font-style: normal;
       font-weight: 700; }
+      @media (min-width: 480px) {
+        .hero-container .hero-content .hero-btn {
+          left: 165px;
+          bottom: 20px;
+          width: 282px;
+          height: 49px;
+          font-size: 16px; } }
       .hero-container .hero-content .hero-btn:hover {
         background: rgba(119, 211, 0, 0.8); }
   .hero-container .residents-only {

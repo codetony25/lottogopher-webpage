@@ -2,7 +2,11 @@
 
 .main-hero-checkout {
   background-color: #efefef;
-  padding: 30px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  @media (min-width: 480px) {
+    padding: 30px !important;
+  }
 }
 
 .hero-container {
@@ -14,8 +18,9 @@
   overflow: hidden;
   margin: 0 auto;
   padding-bottom: 50px;
-  background: url(../img/checkout/checkout-hero-bg.png) no-repeat;
-  background-size: cover;
+  background-image: url(../img/checkout/subtle-jackpot-icons.png), url(../img/checkout/checkout-hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right, left, right;
 
   .hero-more-info {
     color: #fff;
@@ -24,47 +29,56 @@
     max-width: 648px;
     margin: 0 auto;
     opacity: 0.9;
-    padding-top: 25px;
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
+    @media (min-width: 480px) {
+       padding-top: 15px;
+    }
     @media (min-width: 768px) {
-      padding-top: 45px;
+      font-size: 14px;
     }
   }
 
   .hero-message {
     text-align: center;
-    padding: 0 22px 22px 22px;
+    padding: 0 22px;
+    position: absolute;
+    top: 55px;
 
     h1 {
       @include font-gotham-rounded-medium;
       color: white;
-      font-size: 22px;
       margin: 0;
-      padding-top: 37px;
-      padding-bottom: 24px;
       font-size: 28px;
-      line-height: 40px;
+      line-height: 25px;
       font-weight: 500;
+      font-size: 18px;
 
       @media (min-width: 480px) {
         font-size: 26px;
+        line-height: 40px;
       }
 
       @media (min-width: 768px) {
         font-size: 28px;
       }
     }
+
     p {
       color: white;
-      font-size: 12px;
+      font-size: 10px;
+      padding-top: 16px;
       opacity: 0.9;
       font-size: 16px;
       margin: 0;
       line-height: 24px;
       @include font-gotham-book;
+
+      @media (min-width: 480px) {
+        font-size: 16px;
+      }
     }
     i {
       color: white;
@@ -89,7 +103,7 @@
     margin: 0 auto;
     width: 100%;
     align-items: center;
-    padding-top: 10px;
+    flex-direction: column;
 
     .owl-dots {
       position: absolute !important;
@@ -162,12 +176,17 @@
     }
 
     .ticket-holder {
-      transform: scale(.8);
       position: relative;
 
       .lottery-ticket .lotto-image {
-        width: 248px;
-        height: 289px;
+        top: 90px;
+        left: -10px;
+        position: relative;
+
+        @media (min-width: 480px) {
+          top: 65px;
+          left: 0;
+        }
       }
 
       &.super-ball {
@@ -183,23 +202,6 @@
       .lottery-ball-img {
         width: 150px;
         height: 121px;
-        transform: scale(.7);
-      }
-
-      @media (min-width: 768px) {
-        transform: scale(.85);
-
-        .lottery-ball-img {
-          transform: scale(.7);
-        }
-      }
-
-      @media (min-width: 992px) {
-        transform: scale(1);
-
-        .lottery-ball-img {
-          transform: scale(1);
-        }
       }
     }
 
@@ -266,12 +268,20 @@
       color: #fff;
       text-transform: uppercase;
       transition: .3s;
-      left: -20px;
-      bottom: -15px;
-      width: 282px;
-      height: 49px;
-      font-size: 16px;
+      left: 180px;
+      bottom: 20px;
+      width: 225px;
+      height: 37px;
+      font-size: 12px;
       @include font-gotham-rounded-bold;
+
+      @media (min-width: 480px) {
+        left: 165px;
+        bottom: 20px;
+        width: 282px;
+        height: 49px;
+        font-size: 16px;
+      }
 
       &:hover {
         background: rgba(#77d300, 0.8);
