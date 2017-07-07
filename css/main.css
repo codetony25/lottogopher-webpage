@@ -626,13 +626,121 @@ a {
   h3 {
     page-break-after: avoid; } }
 
+.checkout-header {
+  min-height: 70px;
+  background-color: #3475f4;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  @media (min-width: 992px) {
+    .checkout-header {
+      flex-direction: row;
+      justify-content: space-between; } }
+  .checkout-header .jackpot {
+    display: flex;
+    align-items: center;
+    padding: 13px; }
+    .checkout-header .jackpot h2 {
+      color: #ffffff;
+      margin: 0;
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px; }
+      @media (min-width: 968px) {
+        .checkout-header .jackpot h2 {
+          font-size: 36px; } }
+    .checkout-header .jackpot img {
+      width: 75px;
+      height: 48px; }
+  .checkout-header .next-draw {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px; }
+    @media (min-width: 992px) {
+      .checkout-header .next-draw {
+        padding-bottom: 0; } }
+    .checkout-header .next-draw p {
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 500;
+      margin: 0;
+      color: #fff; }
+      .checkout-header .next-draw p span {
+        color: #212121; }
+  .checkout-header .time-left {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px; }
+    @media (min-width: 992px) {
+      .checkout-header .time-left {
+        padding-bottom: 0; } }
+    .checkout-header .time-left p {
+      margin: 0;
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 500;
+      color: #212121;
+      padding-left: 6px; }
+    .checkout-header .time-left img {
+      width: 19px;
+      height: 19px;
+      color: #ffe242; }
+
+.checkout-stepper {
+  background: #fff;
+  display: flex;
+  min-height: 66px;
+  align-items: center;
+  justify-content: space-between; }
+  @media (min-width: 520px) {
+    .checkout-stepper {
+      justify-content: center;
+      height: 112px; } }
+  @media (min-width: 768px) {
+    .checkout-stepper {
+      justify-content: space-around; } }
+  .checkout-stepper .step {
+    display: flex;
+    align-items: center;
+    padding: 0 2px; }
+    @media (min-width: 520px) {
+      .checkout-stepper .step {
+        padding: 0 5px; } }
+    @media (min-width: 768px) {
+      .checkout-stepper .step {
+        padding: 0 10px; } }
+    .checkout-stepper .step p {
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 500;
+      margin: 0;
+      display: none; }
+      @media (min-width: 768px) {
+        .checkout-stepper .step p {
+          display: block; } }
+    .checkout-stepper .step.active p {
+      display: block; }
+    .checkout-stepper .step.active span {
+      padding: 1px 8px;
+      border-radius: 50%;
+      color: #060000;
+      text-transform: uppercase;
+      background-color: #ffc80a; }
+    .checkout-stepper .step span {
+      margin: 10px;
+      padding: 1px 8px;
+      border-radius: 50%;
+      border: 2px solid #e8e9ed; }
+
 header {
   background: #fff;
   padding: 20px 5px 5px 5px; }
   @media (min-width: 768px) {
     header {
       padding: 15px 15px 0 15px;
-      min-height: 117px; } }
+      /*min-height: 117px;*/
+      min-height: 71px; } }
   header .top-header {
     display: flex;
     justify-content: space-between;
@@ -878,28 +986,53 @@ header {
             header .main-nav .more-nav a:hover {
               color: #212121; } }
 
-.main-hero.container {
-  padding-right: 0;
-  padding-left: 0; }
+.main-hero-checkout {
+  background-color: #efefef;
+  padding: 30px !important; }
 
 .hero-container {
   width: 100%;
   min-height: 524px;
+  max-width: 1032px;
+  border-radius: 6px 5px 5px;
   position: relative;
-  background: url(../img/bg/hero-bg.jpg) no-repeat;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  background: url(../img/checkout/checkoug-hero-bg.png) no-repeat;
   background-size: cover; }
+  .hero-container .hero-more-info {
+    color: #fff;
+    font-family: "Gotham A", "Gotham B";
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    max-width: 648px;
+    margin: 0 auto;
+    opacity: 0.9;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+    line-height: 24px; }
+    @media (min-width: 768px) {
+      .hero-container .hero-more-info {
+        padding-top: 45px; } }
   .hero-container .hero-message {
     text-align: center;
-    padding-bottom: 22px; }
+    padding: 0 22px 22px 22px; }
     .hero-container .hero-message h1 {
+      font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-style: normal;
+      font-weight: 500;
       color: white;
       font-size: 22px;
       margin: 0;
       padding-top: 37px;
       padding-bottom: 24px;
-      font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-      font-style: normal;
-      font-weight: 700; }
+      font-size: 28px;
+      line-height: 40px;
+      font-weight: 500; }
       @media (min-width: 480px) {
         .hero-container .hero-message h1 {
           font-size: 26px; } }
@@ -909,16 +1042,13 @@ header {
     .hero-container .hero-message p {
       color: white;
       font-size: 12px;
+      opacity: 0.9;
+      font-size: 16px;
       margin: 0;
+      line-height: 24px;
       font-family: "Gotham A", "Gotham B";
       font-style: normal;
-      font-weight: 500; }
-      @media (min-width: 620px) {
-        .hero-container .hero-message p {
-          padding-bottom: 15px; } }
-      @media (min-width: 768px) {
-        .hero-container .hero-message p {
-          font-size: 14px; } }
+      font-weight: 400; }
     .hero-container .hero-message i {
       color: white;
       font-size: 11px; }
@@ -953,7 +1083,6 @@ header {
       opacity: 1 !important; }
     .hero-container .hero-content .owl-dots .owl-dot span {
       background: none repeat scroll 0 0 #fff !important;
-      border-radius: 20px !important;
       display: block !important;
       height: 12px !important;
       margin: 5px 7px !important;
@@ -987,23 +1116,12 @@ header {
       height: 22px; }
     .hero-container .hero-content .ticket-holder {
       transform: scale(0.8);
-      position: relative;
-      bottom: 32px; }
-      @media (min-width: 500px) {
-        .hero-container .hero-content .ticket-holder {
-          bottom: 28px; } }
-      @media (min-width: 768px) {
-        .hero-container .hero-content .ticket-holder {
-          bottom: 0; } }
+      position: relative; }
       .hero-container .hero-content .ticket-holder .lottery-ticket .lotto-image {
         width: 248px;
         height: 289px; }
       .hero-container .hero-content .ticket-holder.super-ball .lottery-ticket {
         height: 289px; }
-      @media (min-width: 992px) {
-        .hero-container .hero-content .ticket-holder.mega-ball .lottery-ticket .lotto-image {
-          position: relative;
-          bottom: 32px; } }
       @media (min-width: 992px) {
         .hero-container .hero-content .ticket-holder {
           bottom: 0; } }
@@ -1024,9 +1142,7 @@ header {
     .hero-container .hero-content .lottery-ticket {
       display: flex;
       flex-direction: column;
-      position: relative;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px; }
+      position: relative; }
     .hero-container .hero-content .lottery-ball-img {
       position: absolute;
       left: 30px;
@@ -1039,7 +1155,6 @@ header {
     .hero-container .hero-content .lottery-description {
       background: rgba(116, 206, 0, 0.9);
       box-shadow: 5px 8.66px 30px 0px rgba(44, 49, 132, 0.2);
-      border-radius: 6px;
       max-width: 234px;
       width: 215px;
       text-align: center;
@@ -1077,19 +1192,20 @@ header {
           padding-right: 7px; }
     .hero-container .hero-content .hero-btn {
       position: absolute;
-      background: #269eff;
-      color: white;
-      width: 214px;
-      margin-left: 14px;
+      background-color: #77d300;
+      color: #fff;
+      text-transform: uppercase;
       transition: .3s;
-      padding: 9px 0;
-      margin-left: 16px;
-      margin-top: -10px;
-      font-family: "Gotham A", "Gotham B";
+      left: -20px;
+      bottom: -15px;
+      width: 282px;
+      height: 49px;
+      font-size: 16px;
+      font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
       font-style: normal;
       font-weight: 700; }
       .hero-container .hero-content .hero-btn:hover {
-        background: #008dff; }
+        background: rgba(119, 211, 0, 0.8); }
   .hero-container .residents-only {
     display: none; }
     @media (min-width: 768px) {
@@ -2125,3 +2241,15 @@ header {
     color: #777;
     max-width: 700px;
     margin: 0 auto; }
+
+.checkout-footer {
+  background: #fff;
+  padding: 40px 20px;
+  width: 100%;
+  box-shadow: 0 -1px 0 #e6eaee;
+  font-family: "Gotham A", "Gotham B";
+  font-style: normal;
+  font-weight: 400; }
+  .checkout-footer p {
+    text-align: center;
+    font-size: 12px; }

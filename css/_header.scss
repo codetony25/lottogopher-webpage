@@ -1,12 +1,153 @@
 @import '_mixins.scss';
 
+.checkout-header {
+  min-height: 70px;
+  background-color: #3475f4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .jackpot {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+
+    h2 {
+      color: #ffffff;
+      margin: 0;
+      @include font-gotham-bold;
+      font-size: 28px;
+
+      @media (min-width: 968px) {
+        font-size: 36px;
+      }
+    }
+
+    img {
+      width: 75px;
+      height: 48px;
+    }
+  }
+
+  .next-draw {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+
+    @media (min-width: 992px) {
+      padding-bottom: 0;
+    }
+
+    p {
+      @include font-gotham-medium;
+      margin: 0;
+      color: #fff;
+
+      span {
+        color: #212121;
+      }
+    }
+  }
+
+  .time-left {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+
+    @media (min-width: 992px) {
+      padding-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+      @include font-gotham-medium;
+      color: #212121;
+      padding-left: 6px;
+    }
+
+    img {
+      width: 19px;
+      height: 19px;
+      color: #ffe242;
+    }
+  }
+}
+
+.checkout-stepper {
+  background: #fff;
+  display: flex;
+  min-height: 66px;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 520px) {
+    justify-content: center;
+    height: 112px;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-around;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+
+    @media (min-width: 520px) {
+      padding: 0 5px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 10px;
+    }
+
+    p {
+      @include font-gotham-medium;
+      margin: 0;
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+
+    &.active {
+      p {
+        display: block;
+      }
+
+      span {
+        padding: 1px 8px;
+        border-radius: 50%;
+        color: #060000;
+        text-transform: uppercase;
+        background-color: #ffc80a;
+      }
+    }
+
+    span {
+      margin: 10px;
+      padding: 1px 8px;
+      border-radius: 50%;
+      border: 2px solid #e8e9ed;
+    }
+  }
+}
+
 header {
   background: #fff;
   padding: 20px 5px 5px 5px;
 
   @media (min-width: 768px) {
     padding: 15px 15px 0 15px;
-    min-height: 117px;
+    /*min-height: 117px;*/
+    min-height: 71px;
   }
 
   .top-header {

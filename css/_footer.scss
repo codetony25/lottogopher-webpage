@@ -252,3 +252,16 @@
     }
   }
 }
+
+.checkout-footer {
+  background: #fff;
+  padding: 40px 20px;
+  width: 100%;
+  box-shadow: 0 -1px 0 #e6eaee;
+  @include font-gotham-book;
+
+  p {
+    text-align: center;
+    font-size: 12px;
+  }
+}
