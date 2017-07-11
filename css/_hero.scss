@@ -7,69 +7,74 @@
   padding-top: 11px;
   padding-bottom: 34px;
   @media (min-width: 480px) {
-    padding: 65px !important;
+    padding: 30px !important;
   }
 }
 
 .hero-container {
   width: 100%;
   min-height: 524px;
-  max-width: 1032px;
-  border-radius: 0;
   position: relative;
-  overflow: hidden;
   margin: 0 auto;
-  background-image: url(../img/checkout/checkout-hero-bg.png);
+  background-image: url(../img/checkout/subtle-jackpot-icons.png), url(../img/checkout/checkout-hero-bg.png);
   background-repeat: no-repeat;
-  background-position: top right, left, right;
+  background-position: bottom;
+  background-size: cover;
 
   @media (min-width: 480px) {
     font-size: 14px;
-    padding-top: 0px;
     border-radius: 6px 5px 5px;
   }
 
-  @media (min-width: 768px) {
-    min-height: 592px;
+
+
+  @media (min-width: 1200px) {
+    background-size: contain;
   }
 
   .hero-more-info {
-    color: #fff;
-    @include font-gotham-book;
     text-align: center;
-    max-width: 648px;
-    margin: 0 auto;
-    opacity: 0.9;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 12px;
-    line-height: 24px;
-    padding-top: 80px;
-    font-weight: 300;
+    position: relative;
+    bottom: 25px;
 
-    @media (min-width: 768px) {
+    p {
+      color: #fff;
+      @include font-gotham-book;
+      text-align: center;
+      margin: 0 auto;
+      opacity: 0.9;
+      padding-left: 15px;
+      padding-right: 15px;
       font-size: 14px;
-      padding-top: 0px;
+      line-height: 24px;
+      max-width: 648px;
+      font-weight: 300;
+      margin: 0 auto;
+      position: relative;
+      bottom: 30px;
+
+      @media (min-width: 768px) {
+        font-size: 14px;
+        padding-top: 0px;
+      }
     }
   }
 
+
+
   .hero-message {
     text-align: center;
-    padding: 0 22px;
-    position: absolute;
-    top: 27px;
-
-    @media (min-width: 768px) {
-      top: 35px;
-    }
+    position: relative;
+    top: 35px;
 
     h1 {
       @include font-gotham-rounded-medium;
       color: white;
       margin: 0;
-      line-height: 24px;
+      line-height: 34px;
+      padding-left: 15px;
+      padding-right: 15px;
       font-weight: 500;
-      font-size: 18px;
 
       strong {
         @include font-gotham-rounded-bold;
@@ -77,7 +82,6 @@
 
       @media (min-width: 768px) {
         font-size: 24px;
-        line-height: 40px;
       }
     }
 
@@ -87,6 +91,8 @@
       color: white;
       font-size: 10px;
       padding-top: 16px;
+      padding-left: 15px;
+      padding-right: 15px;
       opacity: 0.9;
       font-size: 14px;
       margin: 0;
@@ -120,13 +126,6 @@
     width: 100%;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 50px;
-
-    .jackpot-icon-bg {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
 
     .owl-dots {
       position: absolute !important;
@@ -199,153 +198,37 @@
     }
 
     .ticket-holder {
+      width: 100%;
+      max-width: 578px;
+      min-height: 506px;
+      max-height: 506px;
       position: relative;
-
-      .lottery-ticket .lotto-image {
-        top: 105px;
-        left: -10px;
-        position: relative;
-        height: 350px;
-
-        @media (min-width: 768px) {
-          top: 65px;
-          height: initial;
-        }
-      }
-
-      &.super-ball {
-        .lottery-ticket  {
-          height: 289px;
-        }
-      }
-
-      @media (min-width: 992px) {
-        bottom: 0;
-      }
-
-      .lottery-ball-img {
-        width: 150px;
-        height: 121px;
-      }
-    }
-
-    .lottery-ticket {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .lottery-ball-img {
-      position: absolute;
-      left: 30px;
-      top: -80px;
-      z-index: 100;
-
-      @media (min-width: 992px) {
-        left: 35px;
-        top: -90px;
-      }
-    }
-
-    .lottery-description {
-      background: rgba(#74ce00, 0.9);
-      box-shadow: 5px 8.66px 30px 0px rgba(44, 49, 132, 0.2);
-      max-width: 234px;
-      width: 215px;
+      background-image: url(../img/checkout/free-ticket-offer.png);
+      background-repeat: no-repeat;
+      background-position: calc(50% - 10px) 100%;;
+      background-size: cover;
       text-align: center;
-      color: white;
-      padding: 20px 24px;
-      left: 16px;
-      position: absolute;
-      bottom: 16px;
-      p {
-        margin: 0;
-        @include font-gotham-medium;
-      }
-      h3 {
-        font-weight: bold;
-        margin: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-        padding-bottom: 8px;
-        @include font-gotham-bold;
-      }
-      .time-remaining {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 12px;
-        p {
-          font-size: 12px;
-          color: #212121;
-          line-height: 0;
-          @include font-gotham-medium;
-        }
-        img {
-          padding-right: 7px;
-        }
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 15px;
     }
 
     .hero-btn {
       @include font-gotham-rounded-bold;
-      position: absolute;
       background-color: #77d300;
       color: #fff;
       text-transform: uppercase;
       transition: .3s;
-      padding: 0 !important;
-      left: 80px;
-      width: 235px;
-      height: 49px;
-      font-size: 14px;
+      padding: 12.5px 16px;
+      white-space: pre-wrap;
+      font-size: 16px;
       z-index: 100;
+      position: absolute;
+      bottom: 85px;
 
       @media (min-width: 768px) {
-        font-size: 16px;
-        left: 105px;
-        bottom: 20px;
-        width: 370px;
-      }
-
-      &:hover {
-        background: rgba(#77d300, 0.8);
-      }
-    }
-  }
-
-  .residents-only {
-    display: none;
-
-    @media (min-width: 768px) {
-      display: inline-block;
-      position: absolute;
-      top: 25%;
-      right: 20px;
-      z-index: 2;
-    }
-
-    @media (min-width: 992px) {
-      top: 25%;
-    }
-
-    @media (min-width: 1200px) {
-      top: 50%;
-    }
-
-    .cali-residents-only-msg {
-      a {
-        font-size: 10px;
-        padding-bottom: 0;
-        @include font-gotham-book;
-        font-style: italic;
-        text-decoration: none;
-        color: #fff;
-        opacity: .6;
-        transition: .3s;
-        border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
-        &:hover {
-          opacity: 1;
-        }
+        padding: 12.5px 60px;
       }
     }
   }
