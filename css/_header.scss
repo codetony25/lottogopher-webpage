@@ -18,10 +18,11 @@
     padding: 13px;
 
     h2 {
+      @include font-gotham-bold;
       color: #ffffff;
       margin: 0;
-      @include font-gotham-bold;
       font-size: 28px;
+
 
       @media (min-width: 968px) {
         font-size: 36px;
@@ -47,6 +48,11 @@
       @include font-gotham-medium;
       margin: 0;
       color: #fff;
+      text-align: center;
+
+      @media (min-width: 520px) {
+        text-align: initial;
+      }
 
       span {
         color: #212121;
@@ -83,7 +89,7 @@
   display: flex;
   min-height: 66px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   @media (min-width: 520px) {
     justify-content: center;
@@ -91,7 +97,11 @@
   }
 
   @media (min-width: 768px) {
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 992px) {
+    padding: 0 220px;
   }
 
   .step {
@@ -110,6 +120,7 @@
     p {
       @include font-gotham-medium;
       margin: 0;
+      color: rgba(#060000, .6);
       display: none;
 
       @media (min-width: 768px) {
@@ -120,14 +131,17 @@
     &.active {
       p {
         display: block;
+        color: rgba(#060000, 1);
+        font-weight: 700;
       }
 
       span {
         padding: 1px 8px;
         border-radius: 50%;
-        color: #060000;
+        font-weight: 700;
         text-transform: uppercase;
         background-color: #ffc80a;
+        border: none;
       }
     }
 

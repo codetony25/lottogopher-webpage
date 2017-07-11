@@ -641,11 +641,11 @@ a {
     align-items: center;
     padding: 13px; }
     .checkout-header .jackpot h2 {
-      color: #ffffff;
-      margin: 0;
       font-family: "Gotham A", "Gotham B";
       font-style: normal;
       font-weight: 700;
+      color: #ffffff;
+      margin: 0;
       font-size: 28px; }
       @media (min-width: 968px) {
         .checkout-header .jackpot h2 {
@@ -665,7 +665,11 @@ a {
       font-style: normal;
       font-weight: 500;
       margin: 0;
-      color: #fff; }
+      color: #fff;
+      text-align: center; }
+      @media (min-width: 520px) {
+        .checkout-header .next-draw p {
+          text-align: initial; } }
       .checkout-header .next-draw p span {
         color: #212121; }
   .checkout-header .time-left {
@@ -692,14 +696,17 @@ a {
   display: flex;
   min-height: 66px;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: center; }
   @media (min-width: 520px) {
     .checkout-stepper {
       justify-content: center;
       height: 112px; } }
   @media (min-width: 768px) {
     .checkout-stepper {
-      justify-content: space-around; } }
+      justify-content: space-between; } }
+  @media (min-width: 992px) {
+    .checkout-stepper {
+      padding: 0 220px; } }
   .checkout-stepper .step {
     display: flex;
     align-items: center;
@@ -715,18 +722,22 @@ a {
       font-style: normal;
       font-weight: 500;
       margin: 0;
+      color: rgba(6, 0, 0, 0.6);
       display: none; }
       @media (min-width: 768px) {
         .checkout-stepper .step p {
           display: block; } }
     .checkout-stepper .step.active p {
-      display: block; }
+      display: block;
+      color: #060000;
+      font-weight: 700; }
     .checkout-stepper .step.active span {
       padding: 1px 8px;
       border-radius: 50%;
-      color: #060000;
+      font-weight: 700;
       text-transform: uppercase;
-      background-color: #ffc80a; }
+      background-color: #ffc80a;
+      border: none; }
     .checkout-stepper .step span {
       margin: 10px;
       padding: 1px 8px;
@@ -989,23 +1000,32 @@ header {
 .main-hero-checkout {
   background-color: #efefef;
   padding-left: 0 !important;
-  padding-right: 0 !important; }
+  padding-right: 0 !important;
+  padding-top: 11px;
+  padding-bottom: 34px; }
   @media (min-width: 480px) {
     .main-hero-checkout {
-      padding: 30px !important; } }
+      padding: 65px !important; } }
 
 .hero-container {
   width: 100%;
   min-height: 524px;
   max-width: 1032px;
-  border-radius: 6px 5px 5px;
+  border-radius: 0;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  padding-bottom: 50px;
-  background-image: url(../img/checkout/subtle-jackpot-icons.png), url(../img/checkout/checkout-hero-bg.png);
+  background-image: url(../img/checkout/checkout-hero-bg.png);
   background-repeat: no-repeat;
-  background-position: bottom right, left, right; }
+  background-position: top right, left, right; }
+  @media (min-width: 480px) {
+    .hero-container {
+      font-size: 14px;
+      padding-top: 0px;
+      border-radius: 6px 5px 5px; } }
+  @media (min-width: 768px) {
+    .hero-container {
+      min-height: 592px; } }
   .hero-container .hero-more-info {
     color: #fff;
     font-family: "Gotham A", "Gotham B";
@@ -1018,47 +1038,51 @@ header {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 12px;
-    line-height: 24px; }
-    @media (min-width: 480px) {
-      .hero-container .hero-more-info {
-        padding-top: 15px; } }
+    line-height: 24px;
+    padding-top: 80px;
+    font-weight: 300; }
     @media (min-width: 768px) {
       .hero-container .hero-more-info {
-        font-size: 14px; } }
+        font-size: 14px;
+        padding-top: 0px; } }
   .hero-container .hero-message {
     text-align: center;
     padding: 0 22px;
     position: absolute;
-    top: 55px; }
+    top: 27px; }
+    @media (min-width: 768px) {
+      .hero-container .hero-message {
+        top: 35px; } }
     .hero-container .hero-message h1 {
       font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
       font-style: normal;
       font-weight: 500;
       color: white;
       margin: 0;
-      font-size: 28px;
-      line-height: 25px;
+      line-height: 24px;
       font-weight: 500;
       font-size: 18px; }
-      @media (min-width: 480px) {
-        .hero-container .hero-message h1 {
-          font-size: 26px;
-          line-height: 40px; } }
+      .hero-container .hero-message h1 strong {
+        font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+        font-style: normal;
+        font-weight: 700; }
       @media (min-width: 768px) {
         .hero-container .hero-message h1 {
-          font-size: 28px; } }
+          font-size: 24px;
+          line-height: 40px; } }
     .hero-container .hero-message p {
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 400;
+      font-weight: 300;
       color: white;
       font-size: 10px;
       padding-top: 16px;
       opacity: 0.9;
-      font-size: 16px;
+      font-size: 14px;
       margin: 0;
-      line-height: 24px;
-      font-family: "Gotham A", "Gotham B";
-      font-style: normal;
-      font-weight: 400; }
-      @media (min-width: 480px) {
+      line-height: 24px; }
+      @media (min-width: 768px) {
         .hero-container .hero-message p {
           font-size: 16px; } }
     .hero-container .hero-message i {
@@ -1077,7 +1101,12 @@ header {
     margin: 0 auto;
     width: 100%;
     align-items: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-bottom: 50px; }
+    .hero-container .hero-content .jackpot-icon-bg {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
     .hero-container .hero-content .owl-dots {
       position: absolute !important;
       left: 50% !important;
@@ -1129,13 +1158,14 @@ header {
     .hero-container .hero-content .ticket-holder {
       position: relative; }
       .hero-container .hero-content .ticket-holder .lottery-ticket .lotto-image {
-        top: 90px;
+        top: 105px;
         left: -10px;
-        position: relative; }
-        @media (min-width: 480px) {
+        position: relative;
+        height: 350px; }
+        @media (min-width: 768px) {
           .hero-container .hero-content .ticket-holder .lottery-ticket .lotto-image {
             top: 65px;
-            left: 0; } }
+            height: initial; } }
       .hero-container .hero-content .ticket-holder.super-ball .lottery-ticket {
         height: 289px; }
       @media (min-width: 992px) {
@@ -1196,26 +1226,26 @@ header {
         .hero-container .hero-content .lottery-description .time-remaining img {
           padding-right: 7px; }
     .hero-container .hero-content .hero-btn {
+      font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-style: normal;
+      font-weight: 700;
       position: absolute;
       background-color: #77d300;
       color: #fff;
       text-transform: uppercase;
       transition: .3s;
-      left: 180px;
-      bottom: 20px;
-      width: 225px;
-      height: 37px;
-      font-size: 12px;
-      font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-      font-style: normal;
-      font-weight: 700; }
-      @media (min-width: 480px) {
+      padding: 0 !important;
+      left: 80px;
+      width: 235px;
+      height: 49px;
+      font-size: 14px;
+      z-index: 100; }
+      @media (min-width: 768px) {
         .hero-container .hero-content .hero-btn {
-          left: 165px;
+          font-size: 16px;
+          left: 105px;
           bottom: 20px;
-          width: 282px;
-          height: 49px;
-          font-size: 16px; } }
+          width: 370px; } }
       .hero-container .hero-content .hero-btn:hover {
         background: rgba(119, 211, 0, 0.8); }
   .hero-container .residents-only {
