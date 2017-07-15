@@ -26,8 +26,6 @@
     border-radius: 6px 5px 5px;
   }
 
-
-
   @media (min-width: 1200px) {
     background-size: contain;
   }
@@ -75,13 +73,14 @@
       padding-left: 15px;
       padding-right: 15px;
       font-weight: 500;
+      font-size: 24px;
 
       strong {
         @include font-gotham-rounded-bold;
       }
 
       @media (min-width: 768px) {
-        font-size: 24px;
+        font-size: 28px;
       }
     }
 

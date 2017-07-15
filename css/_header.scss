@@ -109,14 +109,6 @@
     align-items: center;
     padding: 0 2px;
 
-    @media (min-width: 520px) {
-      padding: 0 5px;
-    }
-
-    @media (min-width: 768px) {
-      padding: 0 10px;
-    }
-
     p {
       @include font-gotham-medium;
       margin: 0;
