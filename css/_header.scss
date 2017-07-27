@@ -23,7 +23,6 @@
       margin: 0;
       font-size: 28px;
 
-
       @media (min-width: 968px) {
         font-size: 36px;
       }
@@ -90,6 +89,7 @@
   min-height: 66px;
   align-items: center;
   justify-content: center;
+  border-top: 1px solid #efefef;
 
   @media (min-width: 520px) {
     justify-content: center;
@@ -152,7 +152,6 @@ header {
 
   @media (min-width: 768px) {
     padding: 15px 15px 0 15px;
-    /*min-height: 117px;*/
     min-height: 71px;
   }
 
@@ -161,6 +160,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
+    margin-bottom: 10px;
 
     @media (min-width: 768px) {
       padding-bottom: 0;
