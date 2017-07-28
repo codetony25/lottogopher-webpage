@@ -1021,7 +1021,9 @@ header {
       padding: 30px 70px !important; } }
 
 .hero-btn {
-  font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-style: normal;
+  font-weight: 500;
   font-style: normal;
   font-weight: 700;
   background-color: #77d300;
@@ -1168,7 +1170,7 @@ input::-moz-focus-inner {
   position: relative;
   max-width: 614px;
   margin: 0 auto 35px;
-  height: 310px;
+  height: 280px;
   overflow: auto; }
   .ticket-selection-list li {
     display: flex;
@@ -1180,6 +1182,7 @@ input::-moz-focus-inner {
     .ticket-selection-list li:hover {
       box-shadow: 0 1px 2px #bababa; }
     .ticket-selection-list li.selected {
+      font-size: 18px;
       box-shadow: 0 1px 2px #bababa; }
       .ticket-selection-list li.selected .tix-details h4 {
         font-family: "Gotham A", "Gotham B";
@@ -1189,6 +1192,18 @@ input::-moz-focus-inner {
         font-size: 16px;
         font-weight: 700;
         line-height: 14px; }
+      .ticket-selection-list li.selected .tix-checkbox .checkbox-action .solid {
+        display: initial; }
+      .ticket-selection-list li.selected .tix-checkbox .checkbox-action .line {
+        display: none; }
+      .ticket-selection-list li.selected .tix-checkbox img {
+        cursor: pointer; }
+    .ticket-selection-list li .tix-checkbox .checkbox-action .solid {
+      display: none; }
+    .ticket-selection-list li .tix-checkbox .checkbox-action .line {
+      display: initial; }
+    .ticket-selection-list li .tix-checkbox a {
+      padding: 10px; }
     .ticket-selection-list li .tix-checkbox img {
       cursor: pointer; }
     .ticket-selection-list li .tix-details {
@@ -1257,7 +1272,7 @@ a:hover, a:active, a:focus {
     color: #060000;
     opacity: 1; }
 
-a .selected {
+.selected-amt {
   color: #212121; }
 
 .group-play-wrapper {
@@ -1298,13 +1313,32 @@ a .selected {
     background-position: -2px 1px;
     background-size: 102% 102%; }
   .hero-box-wrapper.new-group {
-    background-image: url(../img/group-flow/group-mega-create.png);
+    position: relative;
+    background-image: url(../img/group-flow/group-private-create-bg.png);
     background-repeat: no-repeat;
     background-position: -2px 1px;
     background-size: 102% 102%; }
+    .hero-box-wrapper.new-group .lock-icon {
+      width: 13px;
+      height: 17px;
+      position: absolute;
+      right: 8px;
+      top: 8px; }
+    .hero-box-wrapper.new-group .create-icon {
+      margin: 24px auto;
+      width: 108px;
+      height: 108px; }
+    .hero-box-wrapper.new-group .ball-icon {
+      max-width: 150px;
+      height: 121px;
+      position: absolute;
+      margin-top: 106px;
+      margin-left: 45px; }
+    .hero-box-wrapper.new-group .ticket-about {
+      right: 26px; }
     .hero-box-wrapper.new-group .ticket-details {
       text-align: center;
-      padding-left: 9px; }
+      padding-left: 20px; }
     .hero-box-wrapper.new-group h4 {
       text-align: center;
       padding-left: 0;

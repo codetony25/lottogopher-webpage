@@ -1,4 +1,150 @@
 $(document).ready(function() {
+  new Clipboard('.btn');
+
+  $('[data-toggle="tooltip"]').tooltip()
+
+  var selectedTicketAmount = 0;
+  /*-------------- GROUP FLOW PAGE --------------*/
+
+  // Switch public and private group page.
+  $('#group-private-btn').on('click', function(e) {
+    e.preventDefault();
+    $('#group-public-btn').removeClass('active');
+    $(this).addClass('active');
+
+    $('.group-flow-public').css('display', 'none');
+    $('.group-flow-private').css('display', 'block');
+  });
+
+  $('#group-public-btn').on('click', function(e) {
+    e.preventDefault();
+    $('#group-private-btn').removeClass('active');
+    $(this).addClass('active');
+
+    $('.group-flow-private').css('display', 'none');
+    $('.group-flow-private-create').css('display', 'none');
+    $('.group-flow-public').css('display', 'block');
+    $('.success-notification').css('display', 'none');
+  });
+
+  $('.create-private-btn').on('click', function(e) {
+    e.preventDefault();
+    $('.group-flow-private').css('display', 'none');
+    $('.group-flow-private-create').css('display', 'block');
+    $('.success-notification').css('display', 'block');
+  });
+
+  $('.create-private-btn-two').on('click', function(e) {
+    e.preventDefault();
+    $('.group-flow-private').css('display', 'none');
+    $('.group-flow-private-create').css('display', 'block');
+    $('.success-notification').css('display', 'block');
+  });
+
+  $('.add-ticket-btn').on('click', function(e) {
+    e.preventDefault();
+    $('.group-step-one').css('display', 'none');
+    $('.group-step-two').css('display', 'block');
+    $('#step-one-btn').removeClass('active').addClass('done');
+    $('#step-two-btn').addClass('active');
+  });
+
+  // Ticket checkbox selection
+  $('.checkbox-action').on('click', function(e) {
+    e.preventDefault();
+    var parentEl = $(this).parent().parent();
+
+    if (!parentEl.hasClass('selected')) {
+      selectedTicketAmount += 1;
+      $('.selected-amt').text(selectedTicketAmount);
+      parentEl.addClass('selected');
+    }
+    else {
+      selectedTicketAmount -= 1;
+      $('.selected-amt').text(selectedTicketAmount);
+      parentEl.removeClass('selected');
+    }
+  });
+
+  $('.selected-tix-add-public').on('click', function(e) {
+    e.preventDefault();
+    $('.group-step-two').css('display', 'none');
+    $('.group-flow-step-three').css('display', 'block');
+    $('#step-two-btn').removeClass('active').addClass('done');
+    $('#step-three-btn').addClass('active');
+    $('.star-amt').text(selectedTicketAmount);
+  });
+
+  $('.selected-tix-add-private').on('click', function(e) {
+    e.preventDefault();
+    $('.group-step-one').css('display', 'none');
+    $('.success-notification').css('display', 'none');
+    $('.group-step-two').css('display', 'block');
+    $('#step-one-btn').removeClass('active').addClass('done');
+    $('#step-two-btn').addClass('active');
+    $('.star-amt').text(selectedTicketAmount);
+  });
+
+  // Select or De-select all Tickets
+  $('.select-all-btn').on('click', function(e) {
+    e.preventDefault();
+
+    var selectType = $(this).attr('data-select-type');
+
+    if (selectType === 'select') {
+      selectedTicketAmount = $('.ticket-selection-list li').length;
+      $(this).text('Deselect all tickets');
+      $(this).attr('data-select-type', 'deselect');
+      $('.ticket-selection-list li').addClass('selected');
+      $('.selected-amt').text(selectedTicketAmount);
+    }
+    else if (selectType === 'deselect') {
+      selectedTicketAmount = 0;
+      $(this).text('Select all tickets');
+      $(this).attr('data-select-type', 'select');
+      $('.ticket-selection-list li').removeClass('selected');
+      $('.selected-amt').text(selectedTicketAmount);
+    }
+  });
+
+  $('#next-group-btn').on('click', function(e) {
+    e.preventDefault();
+
+    var currentActive = $(this).attr('data-current');
+    var nextActive = $(this).attr('data-next');
+    var prevActive = $('#prev-group-btn').attr('data-prev');
+    var activeClass = '.hero-box-wrapper.' + currentActive;
+    var nextClass = '.hero-box-wrapper.' + nextActive;
+
+    $(this).attr('data-current', nextActive);
+    $(this).attr('data-next', prevActive);
+    $('#prev-group-btn').attr('data-prev', currentActive);
+
+    $(activeClass).removeClass('active');
+    $(nextClass).addClass('active');
+  });
+
+  $('#prev-group-btn').on('click', function(e) {
+    e.preventDefault();
+
+    var currentActive = $(this).attr('data-current');
+    var prevActive = $(this).attr('data-prev');
+    var nextActive = $('#next-group-btn').attr('data-next');
+    var activeClass = '.hero-box-wrapper.' + currentActive;
+    var prevClass = '.hero-box-wrapper.' + prevActive;
+
+    // console.log('New Current', prevActive);
+    // console.log('New Previous', nextActive);
+    // console.log('New Next', currentActive);
+
+    $(this).attr('data-current', prevActive);
+    $(this).attr('data-prev', nextActive);
+    $('#next-group-btn').attr('data-next', currentActive);
+
+    $(activeClass).removeClass('active');
+    $(prevClass).addClass('active');
+  })
+  /*-------------- END GROUP FLOW PAGE --------------*/
 
   function resetCalloutAnimation() {
     // reset callout animation
@@ -181,6 +327,5 @@ $(document).ready(function() {
   $('.user-dropdown').mouseleave(function() {
     $('.inner-dropdown', this).animate({opacity: 'hide'}, 'fast');
   });
-
 
 });

@@ -16,7 +16,7 @@
 }
 
 .hero-btn {
-  font-family: "Gotham Rounded SSm 7r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  @include font-gotham-rounded-medium;
   font-style: normal;
   font-weight: 700;
   background-color: #77d300;
@@ -200,8 +200,9 @@ input::-moz-focus-inner {
   position: relative;
   max-width: 614px;
   margin: 0 auto 35px;
-  height: 310px;
+  height: 280px;
   overflow: auto;
+  //padding-bottom: 103px;
 
   li {
     display: flex;
@@ -216,6 +217,7 @@ input::-moz-focus-inner {
     }
 
     &.selected {
+      font-size: 18px;
       box-shadow: 0 1px 2px #bababa;
       .tix-details {
         h4 {
@@ -226,9 +228,33 @@ input::-moz-focus-inner {
           line-height: 14px;
         }
       }
+      .tix-checkbox {
+        .checkbox-action {
+          .solid {
+            display: initial;
+          }
+          .line {
+            display: none;
+          }
+        }
+        img {
+          cursor: pointer;
+        }
+      }
     }
 
     .tix-checkbox {
+      .checkbox-action {
+        .solid {
+          display: none;
+        }
+        .line {
+          display: initial;
+        }
+      }
+      a {
+        padding: 10px;
+      }
       img {
         cursor: pointer;
       }
@@ -322,10 +348,8 @@ a {
   }
 }
 
-a {
-  .selected {
-    color: #212121;
-  }
+.selected-amt {
+  color: #212121;
 }
 
 .group-play-wrapper {
@@ -376,24 +400,46 @@ a {
   }
 
   &.new-group {
-    background-image: url(../img/group-flow/group-mega-create.png);
+    position: relative;
+    background-image: url(../img/group-flow/group-private-create-bg.png);
     background-repeat: no-repeat;
     background-position: -2px 1px;
     background-size: 102% 102%;
 
+    .lock-icon {
+      width: 13px;
+      height: 17px;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    }
+    .create-icon {
+      margin: 24px auto;
+      width: 108px;
+      height: 108px;
+    }
+
+    .ball-icon {
+      max-width: 150px;
+      height: 121px;
+      position: absolute;
+      margin-top: 106px;
+      margin-left: 45px;
+    }
+
+    .ticket-about {
+      right: 26px;
+    }
+
     .ticket-details {
       text-align: center;
-      padding-left: 9px;
+      padding-left: 20px;
     }
 
     h4 {
       text-align: center;
       padding-left: 0;
       opacity: .5;
-    }
-
-    p {
-
     }
   }
 

@@ -72,15 +72,15 @@
 
 <!-- Checkout Stepper .active -->
 <div class="checkout-stepper container">
-    <a href="#" class="step active">
+    <a id="step-one-btn" href="#" class="step active">
         <span>1</span>
         <p>Select group</p>
     </a>
-    <a href="#" class="step">
+    <a id="step-two-btn" href="#" class="step">
         <span>2</span>
         <p>Add tickets</p>
     </a>
-    <a href="#" class="step">
+    <a id="step-three-btn" href="#" class="step">
         <span>3</span>
         <p>Play in group</p>
     </a>
@@ -90,7 +90,7 @@
 <div class="main-hero-checkout container">
 
     <!-- Step 1.3 -->
-    <div class="success-notification">
+    <div class="success-notification" style="display: none;">
         <p style="text-align: center;">
             You have successfully created <strong>All About the Benjamin$</strong>, you can now add tickets to this group.
             <a href="#" data-toggle="modal" data-target="#inviteFriendDialog">Invite your friends to play in group!</a>
@@ -99,104 +99,109 @@
     <div class="hero-container">
 
         <!-- Step 1 -->
-        <div class="group-flow-step-one" style="display: none;">
+        <div class="group-step-one">
             <div class="ticket-selection-header">
                 <h2 class="top md-text text-center">
                     Select which group you would like to play in?
                 </h2>
                 <div class="group-flow-selection">
-                    <a href="#" class="active">
+                    <a id="group-public-btn" href="#" class="active">
                         <span>Public</span>
                     </a>
-                    <a href="#" >
+                    <a id="group-private-btn" href="#">
                         <span>Private</span>
                     </a>
                 </div>
             </div>
-            <div class="group-play-wrapper">
-                <div class="hero-box-wrapper powerball">
-                    <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
-                    <div class="detail-container">
-                        <div class="ticket-details">
-                            <h4>24</h4>
-                            <p>Tickets</p>
+            <div class="group-flow-public">
+                <div class="group-play-wrapper">
+                    <div class="hero-box-wrapper powerball">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details">
+                                <h4>24</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>The FIRST</p>
+                                <p>Powerball Group!</p>
+                            </div>
                         </div>
-                        <div class="ticket-about">
-                            <p>The FIRST</p>
-                            <p>Powerball Group!</p>
+                    </div>
+                    <div class="nav-arrow left">
+                        <a id="prev-group-btn" data-current="mega" data-prev="powerball" href="#">
+                            <img src="./img/group-flow/left-arrow.png" alt="">
+                        </a>
+                    </div>
+                    <div class="hero-box-wrapper mega active">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details">
+                                <h4>100</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>California MEGA</p>
+                                <p>Winners Circle</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-arrow right">
+                        <a id="next-group-btn" data-current="mega" data-next="superlotto" href="#">
+                            <img src="./img/group-flow/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                    <div class="hero-box-wrapper superlotto">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details">
+                                <h4>34</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>SuperLotto</p>
+                                <p>Number OneFirst</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="nav-arrow left">
-                    <a href="#">
-                        <img src="./img/group-flow/left-arrow.png" alt="">
-                    </a>
-                </div>
-                <div class="hero-box-wrapper mega active">
-                    <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
-                    <div class="detail-container">
-                        <div class="ticket-details">
-                            <h4>100</h4>
-                            <p>Tickets</p>
-                        </div>
-                        <div class="ticket-about">
-                            <p>California MEGA</p>
-                            <p>Winners Circle</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav-arrow right">
-                    <a href="#">
-                        <img src="./img/group-flow/right-arrow.png" alt="">
-                    </a>
-                </div>
-                <div class="hero-box-wrapper superlotto">
-                    <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
-                    <div class="detail-container">
-                        <div class="ticket-details">
-                            <h4>34</h4>
-                            <p>Tickets</p>
-                        </div>
-                        <div class="ticket-about">
-                            <p>SuperLotto</p>
-                            <p>Number OneFirst</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="add-ticket-btn btn hero-btn">Add tickets to this group</a>
+                <p style="padding-top: 25px; color: #060000;"><i class="max-text">Max <span style="color: #16b486;">100</span> pooled tickets</i></p>
             </div>
-            <a href="#" class="btn hero-btn">Add tickets to this group</a>
-            <p style="padding-top: 25px;"><i class="max-text">Max <span>100</span> pooled tickets</i></p>
-        </div>
 
-
-        <!-- Step 1.1 -->
-        <div class="group-flow-private" style="display: none;">
-            <div class="group-private">
-                <img src="./img/group-flow/circle-teddy-bear.png" alt="">
-                <p>You have no private groups yet.</p>
-                <a href="#" class="btn hero-btn small">Create Group</a>
+            <!-- Step 1.1 -->
+            <div class="group-flow-private" style="display: none;">
+                <div class="group-private">
+                    <img src="./img/group-flow/circle-teddy-bear.png" alt="">
+                    <p>You have no private groups yet.</p>
+                    <a class="create-private-btn btn hero-btn small">Create Group</a>
+                </div>
+                <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#"><strong>Add private group</a></strong></p>
             </div>
-            <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#">Add private group</a></p>
-        </div>
 
-        <!-- Step 1.3 -->
-        <div class="group-flow-step-one-3" style="display: none;">
-            <div class="group-play-wrapper">
-                <div class="hero-box-wrapper new-group active">
-                    <div class="detail-container">
-                        <div class="ticket-details">
-                            <h4>0</h4>
-                            <p>Tickets</p>
-                        </div>
-                        <div class="ticket-about">
-                            <p>All About the</p>
-                            <p>Benjamin$</p>
+            <!-- Step 1.3 -->
+            <div class="group-flow-private-create" style="display: none;">
+                <div class="group-play-wrapper">
+                    <div class="hero-box-wrapper new-group active">
+                        <img style="cursor: pointer;" data-toggle="modal" data-target="#inviteFriendDialog" class="lock-icon" src="./img/group-flow/private-lock.png" alt="">
+                        <img class="create-icon" src="./img/group-flow/private-circle-bear.png" alt="">
+                        <img class="ball-icon" src="./img/group-flow/group-mega-icon.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details">
+                                <h4>0</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>All About the</p>
+                                <p>Benjamin$</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <a href="#" class="selected-tix-add-private btn hero-btn">Add tickets to this group</a>
+                <p class="group-invite" style="margin-top: 20px;">Have an Invitation Code to a Private Group?
+                    <a href="#">Click here to add private group</a></p>
             </div>
-            <a href="#" class="btn hero-btn">Add tickets to this group</a>
-            <p class="group-invite" style="margin-top: 20px;" >Have an Invitation Code to a Private Group? <a href="#">Add private group</a></p>
         </div>
 
         <!-- Step 2.1 -->
@@ -221,10 +226,13 @@
                             <button class="btn btn-light">View</button>
                         </div>
                         <div class="tix-checkbox">
-                            <img src="./img/group-flow/line-checkbox.png" alt="">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
                         </div>
                     </li>
-                    <li class="selected">
+                    <li>
                         <div class="tix-thumbnail">
                             <img src="./img/group-flow/small-set-mega-millions-tix.png" alt="">
                         </div>
@@ -236,7 +244,10 @@
                             <button class="btn btn-light">View</button>
                         </div>
                         <div class="tix-checkbox">
-                            <img src="./img/group-flow/solid-checkbox.png" alt="">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
                         </div>
                     </li>
                     <li>
@@ -251,7 +262,10 @@
                             <button class="btn btn-light">View</button>
                         </div>
                         <div class="tix-checkbox">
-                            <img src="./img/group-flow/line-checkbox.png" alt="">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
                         </div>
                     </li>
                     <li>
@@ -266,13 +280,17 @@
                             <button class="btn btn-light">View</button>
                         </div>
                         <div class="tix-checkbox">
-                            <img src="./img/group-flow/line-checkbox.png" alt="">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
                         </div>
                     </li>
                 </ul>
-                <img class="btm-img" src="./img/group-flow/bottom-gradient.png" alt="">
+                <!--<img class="btm-img" src="./img/group-flow/bottom-gradient.png" alt="">-->
             </div>
-            <a href="#" class="btn hero-btn">Add <span class="selected">8</span> tickets to this group</a>
+            <a href="#" class="selected-tix-add-public btn hero-btn">Add <span class="selected-amt">0</span> tickets to this group</a>
+             <p style="font-weight: bold; padding-top: 15px;"><a class="select-all-btn" data-select-type="select" href="#">Select all tickets</a></p>
         </div>
 
         <!-- Step 3 -->
@@ -286,7 +304,7 @@
             <div class="group-amt">
                 <p class="ticket-amt">You currently have</p>
                 <div class="star-bg">
-                    <span>8</span>
+                    <span class="star-amt">8</span>
                 </div>
                 <p class="ticket-amt">tickets in this group.</p>
             </div>
@@ -371,8 +389,8 @@
                 <img class="group-icon" src="./img/group-flow/group-icon.png" alt="">
                 <p>Invite your friends with this link to join group:</p>
                 <div class="input-group">
-                    <input value="https://lottogopher.com/0/63d649dd6" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                    <a href="#" class="input-group-addon" id="basic-addon2">
+                    <input id="friend-link" value="https://lottogopher.com/0/63d649dd6" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                    <a href="#" class="input-group-addon" id="basic-addon2" data-delay="5" data-trigger="click" data-toggle="tooltip" data-placement="bottom" title="Copied!" data-clipboard-target="https://lottogopher.com/0/63d649dd6">
                         <img style="height: 15px;" src="./img/group-flow/copy-clip.png" alt="">
                         <span class="copy-text">Copy link</span>
                     </a>
@@ -424,6 +442,7 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 <script src="js/vendors/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 </body>
