@@ -139,7 +139,6 @@ $(document).ready(function() {
     $('#next-group-btn').attr('data-next', currentActive);
     $('#next-group-btn').attr('data-current', prevActive);
 
-
     $(activeClass).removeClass('active');
     $(prevClass).addClass('active');
   })
@@ -217,51 +216,54 @@ $(document).ready(function() {
   var owl = $(".owl-carousel"),
       owlOptions = {
         loop: true,
-        margin: 1,
-        items:1,
-        stagePadding:30,
-        autoHeight:true,
-        responsiveClass:true,
-        autoWidth:true,
-        center:true,
+        margin: 130,
+        items: 1,
+        stagePadding: 50,
+        autoHeight: true,
+        responsiveClass: true,
+        mergeFit: true,
+        autoWidth: true,
+        center: true,
         dots: true,
-        navText: ['<img class="left-arrow-svg" src="./img/icons/left-arrow.svg" alt="">', '<img class="right-arrow-svg" src="./img/icons/right-arrow.svg" alt="">'],
+        navText: ['<img class="left-arrow-svg" src="./img/group-flow/left-arrow.png" alt="">', '<img class="right-arrow-svg" src="./img/group-flow/right-arrow.png" alt="">'],
         responsive:{
           0:{
-            items:1,
+            items:3,
             nav:true,
           },
           480:{
-            items:2,
+            items:3,
             nav:true,
           },
           1200:{
             items:3,
-            loop:false
+            nav: true
           }
         }
       };
 
-  /* Remove Owl Carousel at specific browser width */
-  if ( $(window).width() <= 990 ) {
-    var owlActive = owl.owlCarousel(owlOptions);
-  } else {
-    owl.addClass('off');
-  }
+  var owlActive = owl.owlCarousel(owlOptions);
 
-  $(window).resize(function() {
-    if ( $(window).width() <= 990 ) {
-      if ( $('.owl-carousel').hasClass('off') ) {
-        var owlActive = owl.owlCarousel(owlOptions);
-        owl.removeClass('off');
-      }
-    } else {
-      if ( !$('.owl-carousel').hasClass('off') ) {
-        owl.addClass('off').trigger('destroy.owl.carousel');
-        owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
-      }
-    }
-  });
+  /* Remove Owl Carousel at specific browser width */
+  // if ( $(window).width() <= 990 ) {
+  //   var owlActive = owl.owlCarousel(owlOptions);
+  // } else {
+  //   owl.addClass('off');
+  // }
+
+  // $(window).resize(function() {
+  //   if ( $(window).width() <= 990 ) {
+  //     if ( $('.owl-carousel').hasClass('off') ) {
+  //       var owlActive = owl.owlCarousel(owlOptions);
+  //       owl.removeClass('off');
+  //     }
+  //   } else {
+  //     if ( !$('.owl-carousel').hasClass('off') ) {
+  //       owl.addClass('off').trigger('destroy.owl.carousel');
+  //       owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+  //     }
+  //   }
+  // });
 
   /* Animate scroll down to how it works on arrow down click responsively */
   $('.hero-down-icon-container a').click(function(event) {
