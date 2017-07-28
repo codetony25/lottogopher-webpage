@@ -517,6 +517,36 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
       text-align: left;
     }
   }
+
+  &.active {
+    opacity: 1 !important;
+    border: 1px solid #ffc80a;
+    border-radius: 10px;
+    opacity: .5;
+    box-shadow: 0 3px 4px rgb(187, 187, 187);
+    border: 1px solid #ffc80a;
+    width: 243px;
+    height: 281px;
+    position: relative;
+    z-index: 300;
+
+    .ball-group-icon {
+      margin-top: 100px;
+    }
+
+    .ticket-details {
+      p {
+        color: #269eff;
+      }
+    }
+    .ticket-about {
+      bottom: 12px;
+      right: 9px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 .nav-arrow {

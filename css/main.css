@@ -1403,6 +1403,26 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
       font-weight: 700;
       margin: 0;
       text-align: left; }
+  .hero-box-wrapper.active {
+    opacity: 1 !important;
+    border: 1px solid #ffc80a;
+    border-radius: 10px;
+    opacity: .5;
+    box-shadow: 0 3px 4px #bbbbbb;
+    border: 1px solid #ffc80a;
+    width: 243px;
+    height: 281px;
+    position: relative;
+    z-index: 300; }
+    .hero-box-wrapper.active .ball-group-icon {
+      margin-top: 100px; }
+    .hero-box-wrapper.active .ticket-details p {
+      color: #269eff; }
+    .hero-box-wrapper.active .ticket-about {
+      bottom: 12px;
+      right: 9px; }
+      .hero-box-wrapper.active .ticket-about p {
+        font-size: 16px; }
 
 .nav-arrow {
   position: absolute;
