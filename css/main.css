@@ -1285,16 +1285,15 @@ a:hover, a:active, a:focus {
 body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div {
   opacity: 1 !important;
   border: 1px solid #ffc80a;
-  box-shadow: 0 3px 4px #bbbbbb;
   border-radius: 10px;
   opacity: .5;
-  box-shadow: 0 1px 2px #bababa;
+  box-shadow: 0 3px 4px #bbbbbb;
   border: 1px solid #ffc80a;
   width: 243px;
   height: 281px;
   position: relative;
   z-index: 300;
-  right: 10px; }
+  right: 20px; }
   body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ball-group-icon {
     margin-top: 100px; }
   body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-details p {
