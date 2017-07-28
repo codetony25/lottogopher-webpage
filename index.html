@@ -13,6 +13,7 @@
     <!-- Vendors -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/vendors/owl.carousel.min.css">
     <link rel="stylesheet" href="css/vendors/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6930452/610482/css/fonts.css" />
@@ -21,6 +22,8 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+
 
 <!-- Header -->
 <header>
@@ -69,124 +72,343 @@
 
 <!-- Checkout Stepper .active -->
 <div class="checkout-stepper container">
-    <div class="step active">
+    <a href="#" class="step active">
         <span>1</span>
         <p>Select group</p>
-    </div>
-    <div class="step">
+    </a>
+    <a href="#" class="step">
         <span>2</span>
         <p>Add tickets</p>
-    </div>
-    <div class="step">
+    </a>
+    <a href="#" class="step">
         <span>3</span>
         <p>Play in group</p>
-    </div>
+    </a>
 </div>
 
 <!-- Each Templates - Some are in display none which can be mulipulated later -->
 <div class="main-hero-checkout container">
 
-    <div class="success-notification" style="display: none;">
+    <!-- Step 1.3 -->
+    <div class="success-notification">
         <p style="text-align: center;">
             You have successfully created <strong>All About the Benjamin$</strong>, you can now add tickets to this group.
-            <a href="#">Invite your friends to play in group!</a>
+            <a href="#" data-toggle="modal" data-target="#inviteFriendDialog">Invite your friends to play in group!</a>
         </p>
     </div>
-
-
     <div class="hero-container">
-        <h2 class="top md-text text-center">
-            Select which group you would like to play in?
-        </h2>
-        <div class="group-flow-selection">
-            <a href="#" class="active">
-                <span>Public</span>
-            </a>
-            <a href="#">
-                <span>Private</span>
-            </a>
-        </div>
 
         <!-- Step 1 -->
-        <div class="group-play-wrapper">
-            <div class="hero-box-wrapper powerball">
-                <div class="detail-container">
-                    <div class="ticket-details">
-                        <h4>24</h4>
-                        <p>Tickets</p>
+        <div class="group-flow-step-one" style="display: none;">
+            <div class="ticket-selection-header">
+                <h2 class="top md-text text-center">
+                    Select which group you would like to play in?
+                </h2>
+                <div class="group-flow-selection">
+                    <a href="#" class="active">
+                        <span>Public</span>
+                    </a>
+                    <a href="#" >
+                        <span>Private</span>
+                    </a>
+                </div>
+            </div>
+            <div class="group-play-wrapper">
+                <div class="hero-box-wrapper powerball">
+                    <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
+                    <div class="detail-container">
+                        <div class="ticket-details">
+                            <h4>24</h4>
+                            <p>Tickets</p>
+                        </div>
+                        <div class="ticket-about">
+                            <p>The FIRST</p>
+                            <p>Powerball Group!</p>
+                        </div>
                     </div>
-                    <div class="ticket-about">
-                        <p>The FIRST</p>
-                        <p>Powerball Group!</p>
+                </div>
+                <div class="nav-arrow left">
+                    <a href="#">
+                        <img src="./img/group-flow/left-arrow.png" alt="">
+                    </a>
+                </div>
+                <div class="hero-box-wrapper mega active">
+                    <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
+                    <div class="detail-container">
+                        <div class="ticket-details">
+                            <h4>100</h4>
+                            <p>Tickets</p>
+                        </div>
+                        <div class="ticket-about">
+                            <p>California MEGA</p>
+                            <p>Winners Circle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-arrow right">
+                    <a href="#">
+                        <img src="./img/group-flow/right-arrow.png" alt="">
+                    </a>
+                </div>
+                <div class="hero-box-wrapper superlotto">
+                    <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
+                    <div class="detail-container">
+                        <div class="ticket-details">
+                            <h4>34</h4>
+                            <p>Tickets</p>
+                        </div>
+                        <div class="ticket-about">
+                            <p>SuperLotto</p>
+                            <p>Number OneFirst</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="nav-arrow left">
-                <a href="#">
-                    <img src="./img/group-flow/left-arrow.png" alt="">
-                </a>
-            </div>
-            <div class="hero-box-wrapper mega active">
-                <div class="detail-container">
-                    <div class="ticket-details">
-                        <h4>100</h4>
-                        <p>Tickets</p>
-                    </div>
-                    <div class="ticket-about">
-                        <p>California MEGA</p>
-                        <p>Winners Circle</p>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-arrow right">
-                <a href="#">
-                    <img src="./img/group-flow/right-arrow.png" alt="">
-                </a>
-            </div>
-            <div class="hero-box-wrapper superlotto">
-                <div class="detail-container">
-                    <div class="ticket-details">
-                        <h4>34</h4>
-                        <p>Tickets</p>
-                    </div>
-                    <div class="ticket-about">
-                        <p>SuperLotto</p>
-                        <p>Number OneFirst</p>
-                    </div>
-                </div>
-            </div>
+            <a href="#" class="btn hero-btn">Add tickets to this group</a>
+            <p style="padding-top: 25px;"><i class="max-text">Max <span>100</span> pooled tickets</i></p>
         </div>
-        <a href="#" class="btn-attention">Add tickets to this group</a>
-        <i class="max-text">Max <span>100</span> pooled tickets</i>
+
 
         <!-- Step 1.1 -->
-        <div class="group-private" style="display: none;">
-            <img src="./img/group-flow/circle-teddy-bear.png" alt="">
-            <p>You have no private groups yet.</p>
-            <a href="#" class="btn-attention lowercase">Create Group</a>
+        <div class="group-flow-private" style="display: none;">
+            <div class="group-private">
+                <img src="./img/group-flow/circle-teddy-bear.png" alt="">
+                <p>You have no private groups yet.</p>
+                <a href="#" class="btn hero-btn small">Create Group</a>
+            </div>
+            <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#">Add private group</a></p>
         </div>
-        <p class="group-invite" style="display: none;">Have an Invitation Code to a Private Group? <a href="#">Add private group</a></p>
 
         <!-- Step 1.3 -->
-        <div class="group-play-wrapper" style="display: none;">
-            <div class="hero-box-wrapper new-group active">
-                <div class="detail-container">
-                    <div class="ticket-details">
-                        <h4>0</h4>
-                        <p>Tickets</p>
-                    </div>
-                    <div class="ticket-about">
-                        <p>All About the</p>
-                        <p>Benjamin$</p>
+        <div class="group-flow-step-one-3" style="display: none;">
+            <div class="group-play-wrapper">
+                <div class="hero-box-wrapper new-group active">
+                    <div class="detail-container">
+                        <div class="ticket-details">
+                            <h4>0</h4>
+                            <p>Tickets</p>
+                        </div>
+                        <div class="ticket-about">
+                            <p>All About the</p>
+                            <p>Benjamin$</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <a href="#" class="btn hero-btn">Add tickets to this group</a>
+            <p class="group-invite" style="margin-top: 20px;" >Have an Invitation Code to a Private Group? <a href="#">Add private group</a></p>
         </div>
-        <a href="#" class="btn-attention" style="display: none;">Add tickets to this group</a>
-        <p class="group-invite" style="margin-top: 20px; display: none;">Have an Invitation Code to a Private Group? <a href="#">Add private group</a></p>
-    </div>
 
+        <!-- Step 2.1 -->
+        <div class="group-step-two" style="display: none;">
+            <div class="ticket-selection-header">
+                <h2 class="top md-text text-center">
+                    Select which tickets you have available to add to
+                    <a href="#" class="info-text">California MEGA Winners Circle</a> Group
+                </h2>
+            </div>
+            <div class="ticket-selection-container">
+                <ul class="ticket-selection-list">
+                    <li>
+                        <div class="tix-thumbnail">
+                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
+                        </div>
+                        <div class="tix-details">
+                            <h4>Mega Millions Ticket</h4>
+                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
+                        </div>
+                        <div class="tix-action">
+                            <button class="btn btn-light">View</button>
+                        </div>
+                        <div class="tix-checkbox">
+                            <img src="./img/group-flow/line-checkbox.png" alt="">
+                        </div>
+                    </li>
+                    <li class="selected">
+                        <div class="tix-thumbnail">
+                            <img src="./img/group-flow/small-set-mega-millions-tix.png" alt="">
+                        </div>
+                        <div class="tix-details">
+                            <h4>MEGA Millions Set of 8</h4>
+                            <p><strong>3</strong> of <strong>8</strong> Active Tickets  •  Ticket Subscription: <strong>Yes</strong></p>
+                        </div>
+                        <div class="tix-action">
+                            <button class="btn btn-light">View</button>
+                        </div>
+                        <div class="tix-checkbox">
+                            <img src="./img/group-flow/solid-checkbox.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tix-thumbnail">
+                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
+                        </div>
+                        <div class="tix-details">
+                            <h4>Mega Millions Ticket</h4>
+                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
+                        </div>
+                        <div class="tix-action">
+                            <button class="btn btn-light">View</button>
+                        </div>
+                        <div class="tix-checkbox">
+                            <img src="./img/group-flow/line-checkbox.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tix-thumbnail">
+                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
+                        </div>
+                        <div class="tix-details">
+                            <h4>Mega Millions Ticket</h4>
+                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
+                        </div>
+                        <div class="tix-action">
+                            <button class="btn btn-light">View</button>
+                        </div>
+                        <div class="tix-checkbox">
+                            <img src="./img/group-flow/line-checkbox.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <img class="btm-img" src="./img/group-flow/bottom-gradient.png" alt="">
+            </div>
+            <a href="#" class="btn hero-btn">Add <span class="selected">8</span> tickets to this group</a>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="group-flow-step-three" style="display: none;">
+            <div class="group-circle-logo">
+                <img src="./img/group-flow/group-mega-icon.png" alt="">
+            </div>
+            <h2>
+                Congratulations! Your now playing in <a href="#">California Mega Winners Circle</a> Group.
+            </h2>
+            <div class="group-amt">
+                <p class="ticket-amt">You currently have</p>
+                <div class="star-bg">
+                    <span>8</span>
+                </div>
+                <p class="ticket-amt">tickets in this group.</p>
+            </div>
+            <p class="small-paragraph"><strong>Good Luck!</strong> Remember to check your account to see if you won!</p>
+            <a href="#" class="btn hero-btn">Go to my dashboard</a>
+            <p class="skinny-paragraph">Brag to your friends!</p>
+
+            <div class="modal-footer">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn fb-social-icon">
+                        <i class="fa fa-facebook"></i>
+                    </button>
+                    <button type="button" class="btn fb-social-text">Share on Facebook</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn fb-social-icon" style="background: #6ca0c1;">
+                        <i class="fa fa-twitter"></i>
+                    </button>
+                    <button type="button" class="btn fb-social-text" style="background: #74abd0;">Tweet on Twitter</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Show button to activate Upgrade Account Modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upgradeAccountDialog">-->
+    <!--Upgrade Account Modal-->
+<!--</button>-->
+
+<!-- UPGRADE ACCOUNT MODAL -->
+<div class="modal fade" id="upgradeAccountDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog upgrade-account" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">Upgrade Account</h5>
+                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="group-icon" src="./img/group-flow/trophy-icon.png" alt="">
+                <p class="slogan">Your account is limited to <strong>solo tickets</strong> per drawing, to <strong>play tickets in groups</strong>,
+                    <a href="#">upgrade now</a></p>
+                <h6 class="big-red-text">No Restrictions - Unlimited Play!</h6>
+                <p>Become a full member today and you’ll be able to...</p>
+                <div class="upgrade-features">
+                    <ul>
+                        <li>
+                            <img src="./img/group-flow/small-tickets-icon.png" />
+                            <p>Order Tickets for All Lottery Games</p>
+                        </li>
+                        <li>
+                            <img src="./img/group-flow/small-security-icon.png" />
+                            <p>Join Public or Create Private Lottery Pools</p>
+                        </li>
+                        <li>
+                            <img src="./img/group-flow/small-certificate-icon.png" />
+                            <p>Order Tickets for All Lottery Games</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn hero-btn" style="text-transform: initial">Upgrade Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- INVITE FRIEND MODAL -->
+<div class="modal fade" id="inviteFriendDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">Invite Your Friends</h5>
+                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="group-icon" src="./img/group-flow/group-icon.png" alt="">
+                <p>Invite your friends with this link to join group:</p>
+                <div class="input-group">
+                    <input value="https://lottogopher.com/0/63d649dd6" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                    <a href="#" class="input-group-addon" id="basic-addon2">
+                        <img style="height: 15px;" src="./img/group-flow/copy-clip.png" alt="">
+                        <span class="copy-text">Copy link</span>
+                    </a>
+                </div>
+                <p>or you can share this invitation code:</p>
+                <h6 class="friend-code">63d649dd6</h6>
+                <div class="invite-form form-group">
+                    <label>
+                        <img src="./img/group-flow/small-email-icon.png" alt="">
+                        Invite by Email
+                    </label>
+                    <br />
+                    <input type="email" class="email-input form-control" placeholder="List of invite email addresses, separated by commas">
+                    <button type="submit" class="btn email-btn">Send Email</button>
+                </div>
+                <p><a href="#">Import your friend’s list.</a> We will never save or spam the email addresses of your friends.</p>
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn fb-social-icon">
+                        <i class="fa fa-facebook"></i>
+                    </button>
+                    <button type="button" class="btn fb-social-text">Share group on Facebook</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn fb-social-icon" style="background: #6ca0c1;">
+                        <i class="fa fa-twitter"></i>
+                    </button>
+                    <button type="button" class="btn fb-social-text" style="background: #74abd0;">Tweet group on Twitter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Footer -->
 <footer class="checkout-footer">

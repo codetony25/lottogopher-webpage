@@ -108,6 +108,15 @@
     display: flex;
     align-items: center;
     padding: 0 2px;
+    cursor: pointer;
+
+    span {
+      margin: 10px;
+      padding: 1px 8px;
+      border-radius: 50%;
+      border: 2px solid #e8e9ed;
+      color: rgba(#060000, .6);
+    }
 
     p {
       @include font-gotham-medium;
@@ -132,16 +141,26 @@
         border-radius: 50%;
         font-weight: 700;
         text-transform: uppercase;
+        color: #212121;
         background-color: #ffc80a;
         border: none;
       }
     }
 
-    span {
-      margin: 10px;
-      padding: 1px 8px;
-      border-radius: 50%;
-      border: 2px solid #e8e9ed;
+    &.done {
+      p {
+        color: rgba(#060000, 1);
+        font-weight: 700;
+      }
+      span {
+        padding: 1px 8px;
+        border-radius: 50%;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        background-color: #77d300;
+        border: none;
+      }
     }
   }
 }
