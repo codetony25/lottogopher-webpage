@@ -217,7 +217,7 @@ $(document).ready(function() {
       owlOptions = {
         loop: true,
         margin: 130,
-        items: 1,
+        items: 3,
         stagePadding: 50,
         autoHeight: true,
         responsiveClass: true,

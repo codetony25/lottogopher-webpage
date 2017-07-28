@@ -56,8 +56,6 @@
   background: white;
   padding-bottom: 30px;
 
-
-
   .step {
     h2 {
       font-size: 24px;
@@ -371,13 +369,15 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   height: 281px;
   position: relative;
   z-index: 300;
-  right: 20px;
+  //right: 20px;
 
   .ball-group-icon {
     margin-top: 100px;
   }
 
   .ticket-details {
+    bottom: 9px;
+    left: 9px;
     p {
       color: #269eff;
     }
@@ -399,39 +399,38 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 .hero-box-wrapper {
   position: relative;
   display: flex;
-  min-width: 200px;
-  min-height: 232px;
+  min-width: 243px;
+  min-height: 243px;
   opacity: .5;
   cursor: pointer;
   border-radius: 6px 5px 5px;
   box-shadow: 0 1px 2px #bababa;
   margin: 30px auto;
 
-
   .ball-group-icon {
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 80px;
   }
 
   &.powerball {
     background-image: url(../img/group-flow/group-eagle-bg.png);
     background-repeat: no-repeat;
     background-position: -2px 1px;
-    background-size: 102% 102%;
+    background-size: cover;
   }
 
   &.mega {
     background-image: url(../img/group-flow/group-flag-bg.png);
     background-repeat: no-repeat;
     background-position: -2px 1px;
-    background-size: 102% 102%;
+    background-size: cover;
   }
 
   &.superlotto {
     background-image: url(../img/group-flow/group-money-bg.png);
     background-repeat: no-repeat;
     background-position: -2px 1px;
-    background-size: 102% 102%;
+    background-size: cover;
   }
 
   &.new-group {
@@ -480,8 +479,8 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 
   .ticket-details {
     position: absolute;
-    bottom: 9px;
-    left: 9px;
+    bottom: 2px;
+    left: 27px;
     padding-left: 0;
 
     h4 {
@@ -505,7 +504,7 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 
   .ticket-about {
     position: absolute;
-    bottom: 22px;
+    bottom: 15px;
     right: 15px;
 
     p {

@@ -1292,12 +1292,14 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   width: 243px;
   height: 281px;
   position: relative;
-  z-index: 300;
-  right: 20px; }
+  z-index: 300; }
   body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ball-group-icon {
     margin-top: 100px; }
-  body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-details p {
-    color: #269eff; }
+  body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-details {
+    bottom: 9px;
+    left: 9px; }
+    body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-details p {
+      color: #269eff; }
   body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-about {
     bottom: 12px;
     right: 9px; }
@@ -1311,8 +1313,8 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 .hero-box-wrapper {
   position: relative;
   display: flex;
-  min-width: 200px;
-  min-height: 232px;
+  min-width: 243px;
+  min-height: 243px;
   opacity: .5;
   cursor: pointer;
   border-radius: 6px 5px 5px;
@@ -1320,22 +1322,22 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   margin: 30px auto; }
   .hero-box-wrapper .ball-group-icon {
     margin: 0 auto;
-    margin-top: 70px; }
+    margin-top: 80px; }
   .hero-box-wrapper.powerball {
     background-image: url(../img/group-flow/group-eagle-bg.png);
     background-repeat: no-repeat;
     background-position: -2px 1px;
-    background-size: 102% 102%; }
+    background-size: cover; }
   .hero-box-wrapper.mega {
     background-image: url(../img/group-flow/group-flag-bg.png);
     background-repeat: no-repeat;
     background-position: -2px 1px;
-    background-size: 102% 102%; }
+    background-size: cover; }
   .hero-box-wrapper.superlotto {
     background-image: url(../img/group-flow/group-money-bg.png);
     background-repeat: no-repeat;
     background-position: -2px 1px;
-    background-size: 102% 102%; }
+    background-size: cover; }
   .hero-box-wrapper.new-group {
     position: relative;
     background-image: url(../img/group-flow/group-private-create-bg.png);
@@ -1369,8 +1371,8 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
       opacity: .5; }
   .hero-box-wrapper .ticket-details {
     position: absolute;
-    bottom: 9px;
-    left: 9px;
+    bottom: 2px;
+    left: 27px;
     padding-left: 0; }
     .hero-box-wrapper .ticket-details h4 {
       font-family: "Gotham A", "Gotham B";
@@ -1392,7 +1394,7 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
       text-transform: uppercase; }
   .hero-box-wrapper .ticket-about {
     position: absolute;
-    bottom: 22px;
+    bottom: 15px;
     right: 15px; }
     .hero-box-wrapper .ticket-about p {
       font-family: "Gotham A", "Gotham B";
