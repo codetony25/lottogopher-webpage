@@ -118,6 +118,7 @@ $(document).ready(function() {
 
     $(this).attr('data-current', nextActive);
     $(this).attr('data-next', prevActive);
+    $('#prev-group-btn').attr('data-current', nextActive)
     $('#prev-group-btn').attr('data-prev', currentActive);
 
     $(activeClass).removeClass('active');
@@ -133,13 +134,11 @@ $(document).ready(function() {
     var activeClass = '.hero-box-wrapper.' + currentActive;
     var prevClass = '.hero-box-wrapper.' + prevActive;
 
-    // console.log('New Current', prevActive);
-    // console.log('New Previous', nextActive);
-    // console.log('New Next', currentActive);
-
     $(this).attr('data-current', prevActive);
     $(this).attr('data-prev', nextActive);
     $('#next-group-btn').attr('data-next', currentActive);
+    $('#next-group-btn').attr('data-current', prevActive);
+
 
     $(activeClass).removeClass('active');
     $(prevClass).addClass('active');
