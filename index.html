@@ -88,7 +88,10 @@
 
 <!-- Each Templates - Some are in display none which can be mulipulated later -->
 <div class="main-hero-checkout container">
-
+    <!-- Show button to activate Upgrade Account Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upgradeAccountDialog">
+        Upgrade Account Modal
+    </button>
     <!-- Step 1.3 -->
     <div class="success-notification" style="display: none;">
         <p style="text-align: center;">
@@ -203,7 +206,7 @@
                 <div class="group-private">
                     <img src="./img/group-flow/circle-teddy-bear.png" alt="">
                     <p>You have no private groups yet.</p>
-                    <a class="create-private-btn btn hero-btn small">Create Group</a>
+                    <a style="text-transform: none" class="btn hero-btn small">Create Group</a>
                 </div>
                 <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#"><strong>Add private group</a></strong></p>
             </div>
@@ -244,6 +247,12 @@
             <div class="ticket-selection-container">
                 <ul class="ticket-selection-list">
                     <li>
+                        <div class="tix-checkbox">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
+                        </div>
                         <div class="tix-thumbnail">
                             <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
                         </div>
@@ -254,14 +263,14 @@
                         <div class="tix-action">
                             <button class="btn btn-light">View</button>
                         </div>
+                    </li>
+                    <li>
                         <div class="tix-checkbox">
                             <a class="checkbox-action" href="#">
                                 <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
                                 <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
                             </a>
                         </div>
-                    </li>
-                    <li>
                         <div class="tix-thumbnail">
                             <img src="./img/group-flow/small-set-mega-millions-tix.png" alt="">
                         </div>
@@ -272,14 +281,14 @@
                         <div class="tix-action">
                             <button class="btn btn-light">View</button>
                         </div>
+                    </li>
+                    <li>
                         <div class="tix-checkbox">
                             <a class="checkbox-action" href="#">
                                 <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
                                 <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
                             </a>
                         </div>
-                    </li>
-                    <li>
                         <div class="tix-thumbnail">
                             <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
                         </div>
@@ -290,14 +299,14 @@
                         <div class="tix-action">
                             <button class="btn btn-light">View</button>
                         </div>
+                    </li>
+                    <li>
                         <div class="tix-checkbox">
                             <a class="checkbox-action" href="#">
                                 <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
                                 <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
                             </a>
                         </div>
-                    </li>
-                    <li>
                         <div class="tix-thumbnail">
                             <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
                         </div>
@@ -307,16 +316,9 @@
                         </div>
                         <div class="tix-action">
                             <button class="btn btn-light">View</button>
-                        </div>
-                        <div class="tix-checkbox">
-                            <a class="checkbox-action" href="#">
-                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
-                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
-                            </a>
                         </div>
                     </li>
                 </ul>
-                <!--<img class="btm-img" src="./img/group-flow/bottom-gradient.png" alt="">-->
             </div>
             <a href="#" class="selected-tix-add-public btn hero-btn">Add <span class="selected-amt">0</span> tickets to this group</a>
              <p style="font-weight: bold; padding-top: 15px;"><a class="select-all-btn" data-select-type="select" href="#">Select all tickets</a></p>
@@ -358,11 +360,6 @@
         </div>
     </div>
 </div>
-
-<!-- Show button to activate Upgrade Account Modal -->
-<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upgradeAccountDialog">-->
-    <!--Upgrade Account Modal-->
-<!--</button>-->
 
 <!-- UPGRADE ACCOUNT MODAL -->
 <div class="modal fade" id="upgradeAccountDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">

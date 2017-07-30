@@ -1181,8 +1181,14 @@ input::-moz-focus-inner {
     transition: .3s; }
     .ticket-selection-list li:hover {
       box-shadow: 0 1px 2px #bababa; }
+    .ticket-selection-list li h4 {
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 14px;
+      font-weight: 700; }
     .ticket-selection-list li.selected {
-      font-size: 18px;
       box-shadow: 0 1px 2px #bababa; }
       .ticket-selection-list li.selected .tix-details h4 {
         font-family: "Gotham A", "Gotham B";
@@ -1190,8 +1196,7 @@ input::-moz-focus-inner {
         font-weight: 500;
         color: #269eff;
         font-size: 16px;
-        font-weight: 700;
-        line-height: 14px; }
+        font-weight: 700; }
       .ticket-selection-list li.selected .tix-checkbox .checkbox-action .solid {
         display: initial; }
       .ticket-selection-list li.selected .tix-checkbox .checkbox-action .line {
@@ -1221,7 +1226,10 @@ input::-moz-focus-inner {
       @media (min-width: 768px) {
         .ticket-selection-list li .tix-action {
           display: initial;
-          padding-right: 65px; } }
+          padding-right: 40px; } }
+    .ticket-selection-list li .tix-thumbnail {
+      width: 80px;
+      padding-left: 20px; }
 
 a:hover, a:active, a:focus {
   text-decoration: none; }
@@ -1326,23 +1334,19 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   .hero-box-wrapper.powerball {
     background-image: url(../img/group-flow/group-eagle-bg.png);
     background-repeat: no-repeat;
-    background-position: -2px 1px;
     background-size: cover; }
   .hero-box-wrapper.mega {
     background-image: url(../img/group-flow/group-flag-bg.png);
     background-repeat: no-repeat;
-    background-position: -2px 1px;
     background-size: cover; }
   .hero-box-wrapper.superlotto {
     background-image: url(../img/group-flow/group-money-bg.png);
     background-repeat: no-repeat;
-    background-position: -2px 1px;
     background-size: cover; }
   .hero-box-wrapper.new-group {
     position: relative;
     background-image: url(../img/group-flow/group-private-create-bg.png);
     background-repeat: no-repeat;
-    background-position: -2px 1px;
     background-size: 102% 102%; }
     .hero-box-wrapper.new-group .lock-icon {
       width: 13px;
@@ -1709,7 +1713,7 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   line-height: 19px; }
 
 .modal-dialog.upgrade-account .upgrade-features {
-  margin: 35px 0; }
+  margin: 35px 5px; }
   .modal-dialog.upgrade-account .upgrade-features ul {
     display: flex;
     align-items: flex-start;

@@ -200,7 +200,6 @@ input::-moz-focus-inner {
   margin: 0 auto 35px;
   height: 280px;
   overflow: auto;
-  //padding-bottom: 103px;
 
   li {
     display: flex;
@@ -214,8 +213,14 @@ input::-moz-focus-inner {
       box-shadow: 0 1px 2px #bababa;
     }
 
+    h4 {
+      @include font-gotham-medium;
+      font-size: 16px;
+      line-height: 14px;
+      font-weight: 700;
+    }
+
     &.selected {
-      font-size: 18px;
       box-shadow: 0 1px 2px #bababa;
       .tix-details {
         h4 {
@@ -223,7 +228,6 @@ input::-moz-focus-inner {
           color: #269eff;
           font-size: 16px;
           font-weight: 700;
-          line-height: 14px;
         }
       }
       .tix-checkbox {
@@ -278,10 +282,16 @@ input::-moz-focus-inner {
 
       @media (min-width: 768px) {
         display: initial;
-        padding-right: 65px;
+        padding-right: 40px;
       }
     }
+
+    .tix-thumbnail {
+      width: 80px;
+      padding-left: 20px;
+    }
   }
+
 }
 
 a {
@@ -415,21 +425,18 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   &.powerball {
     background-image: url(../img/group-flow/group-eagle-bg.png);
     background-repeat: no-repeat;
-    background-position: -2px 1px;
     background-size: cover;
   }
 
   &.mega {
     background-image: url(../img/group-flow/group-flag-bg.png);
     background-repeat: no-repeat;
-    background-position: -2px 1px;
     background-size: cover;
   }
 
   &.superlotto {
     background-image: url(../img/group-flow/group-money-bg.png);
     background-repeat: no-repeat;
-    background-position: -2px 1px;
     background-size: cover;
   }
 
@@ -437,7 +444,6 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
     position: relative;
     background-image: url(../img/group-flow/group-private-create-bg.png);
     background-repeat: no-repeat;
-    background-position: -2px 1px;
     background-size: 102% 102%;
 
     .lock-icon {
@@ -894,7 +900,7 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
     line-height: 19px;
   }
   .upgrade-features {
-    margin: 35px 0;
+    margin: 35px 5px;
 
     ul {
       display: flex;
