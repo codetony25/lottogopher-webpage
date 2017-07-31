@@ -22,6 +22,7 @@ gulp.task('sass', function () {
     .pipe(bs.reload({stream: true}));
 });
 
+
 // gulp.task('prod', function () {
 //   return gulp
 //     .src('css/*.scss')
@@ -31,7 +32,6 @@ gulp.task('sass', function () {
 // });
 //
 // gulp.task('default', ['prod']);
-
 
 gulp.task('watch', ['browser-sync'], function () {
   gulp.watch("css/*.scss", ['sass']);

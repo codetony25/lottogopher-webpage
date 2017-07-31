@@ -549,15 +549,13 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
     }
 
     .ticket-details {
-      bottom: 9px;
-      left: 12px;
       p {
         color: #269eff;
       }
     }
     .ticket-about {
       bottom: 12px;
-      right: 12px;
+      right: 9px;
       p {
         font-size: 16px;
       }
@@ -911,46 +909,12 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
     line-height: 19px;
   }
   .upgrade-features {
-    position: relative;
     margin: 35px 5px;
-    padding: 20px 0 60px;
-    border: 1px solid #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 6px;
-
-    @media (min-width: 768px) {
-      padding: 60px 0;
-    }
-
-    .top-features {
-      background: #fff;
-      position: relative;
-      padding: 0 16px;
-      bottom: 50px;
-
-      @media (min-width: 768px) {
-        bottom: initial;
-        top: -30px;
-        position: absolute;
-      }
-
-    }
-
-    .bottom-features {
-      position: absolute;
-      background: #fff;
-      bottom: -26px;
-      padding: 0 16px;
-    }
 
     ul {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      padding: 0;
 
       @media (min-width: 500px) {
         padding: 0 20px;

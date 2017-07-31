@@ -1694,18 +1694,6 @@ input::-moz-focus-inner {
   padding-left: 20px;
 }
 
-.active-text {
-  font-family: "Gotham A", "Gotham B";
-  font-style: normal;
-  font-weight: 500;
-  color: #060000;
-  font-size: 14px;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 16px;
-  margin-top: 25px;
-}
-
 a:hover, a:active, a:focus {
   text-decoration: none;
 }
@@ -1772,10 +1760,6 @@ a:hover, a:active, a:focus {
   opacity: 1;
 }
 
-.selected-amt {
-  color: #212121;
-}
-
 .group-play-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1808,8 +1792,8 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 }
 
 body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-details {
-  bottom: 8px;
-  left: 27px;
+  bottom: 9px;
+  left: 9px;
 }
 
 body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-details p {
@@ -1818,7 +1802,7 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 
 body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-about {
   bottom: 12px;
-  right: 12px;
+  right: 9px;
 }
 
 body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-about p {
@@ -1902,7 +1886,7 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 
 .hero-box-wrapper.new-group .ticket-details {
   text-align: center;
-  padding-left: 8px;
+  padding-left: 20px;
 }
 
 .hero-box-wrapper.new-group h4 {
@@ -1913,7 +1897,7 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 
 .hero-box-wrapper .ticket-details {
   position: absolute;
-  bottom: 8px;
+  bottom: 2px;
   left: 27px;
   padding-left: 0;
 }
@@ -2035,83 +2019,6 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 
 .max-text span {
   color: #16b486;
-}
-
-.group-private {
-  border-radius: 10px;
-  background-color: #f2f6f9;
-  padding: 20px 30px;
-  max-width: 241px;
-  margin: 0 auto;
-  margin-top: 38px;
-  padding-bottom: 25px;
-  margin-bottom: 38px;
-}
-
-.group-private img {
-  margin: 15px 0;
-}
-
-.group-private p {
-  font-family: "Gotham A", "Gotham B";
-  font-style: normal;
-  font-weight: 500;
-  color: #212121;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  margin-bottom: 25px;
-}
-
-.group-private .group-invite {
-  font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-  font-style: normal;
-  font-weight: 500;
-  opacity: 0.9;
-  font-size: 16px;
-  line-height: 16px;
-  color: #212121;
-}
-
-.group-private .group-invite a {
-  color: #269eff;
-  font-weight: 500;
-}
-
-.success-notification {
-  font-family: "Open Sans";
-  font-size: 12px;
-  line-height: 20px;
-  border-radius: 3px;
-  border: 1px solid #bbe8f1;
-  background-color: #d9edf7;
-  padding: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  bottom: 15px;
-}
-
-.success-notification p {
-  margin: 0;
-}
-
-.success-notification strong {
-  color: #060000;
-  font-weight: 700;
-}
-
-.success-notification a {
-  color: #269eff;
-  font-weight: 700;
-  text-decoration: underline;
 }
 
 .modal-dialog {
@@ -2425,6 +2332,9 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 
 .modal-dialog.upgrade-account .upgrade-features {
   margin: 35px 5px;
+    border-radius: 5px;
+    padding: 40px;
+    border: 1px solid #f2f2f2;
 }
 
 .modal-dialog.upgrade-account .upgrade-features ul {
@@ -2471,39 +2381,6 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 
 .modal-dialog.upgrade-account .upgrade-features ul li img {
   margin-bottom: 10px;
-}
-
-.group-flow-step-three {
-  margin-top: 56px;
-  padding: 0 15px;
-}
-
-.group-circle-logo {
-  width: 127px;
-  height: 123px;
-  background-image: url(../img/group-flow/group-rounded-bg.png);
-  background-repeat: no-repeat;
-  margin: 0 auto;
-}
-
-.group-circle-logo img {
-  text-align: center;
-  margin-top: 40px;
-  position: relative;
-  right: 10px;
-}
-
-h2 {
-  font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-  font-style: normal;
-  font-weight: 500;
-  text-shadow: 0 1px 0 #ffffff;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 38px;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-top: 36px;
 }
 
 .group-amt {
@@ -2588,45 +2465,6 @@ h2 {
   margin: 0 auto;
   position: relative;
   bottom: 170px;
-}
-
-.view-ticket-footer {
-  width: 497px;
-  height: 191px;
-  background-color: #f1faff;
-}
-
-.view-ticket-footer .ticket-amt {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  color: #212121;
-  font-size: 13px;
-}
-
-.view-ticket-footer .ticket-amt.bold {
-  font-weight: 700;
-}
-
-.view-ticket-footer .star-amt {
-  font-size: 18px;
-  font-weight: 700;
-  font-family: "Open Sans", sans-serif;
-  width: 37px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 37px;
-}
-
-.view-ticket.modal-dialog {
-  max-width: 497px;
-  width: 100%;
 }
 
 .main-footer .container {

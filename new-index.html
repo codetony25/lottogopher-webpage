@@ -85,9 +85,9 @@
 </div>
 
 <!--&lt;!&ndash; Show button to activate Upgrade Account Modal &ndash;&gt;-->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upgradeAccountDialog">
-Upgrade Account Modal
-</button>
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upgradeAccountDialog">-->
+<!--Upgrade Account Modal-->
+<!--</button>-->
 
 <!-- Each Templates - Some are in display none which can be mulipulated later -->
 <div class="main-hero-checkout container">
@@ -205,7 +205,7 @@ Upgrade Account Modal
                 <div class="group-private">
                     <img src="./img/group-flow/circle-teddy-bear.png" alt="">
                     <p>You have no private groups yet.</p>
-                    <a style="text-transform: none" class="create-private-btn btn hero-btn small">Create Group</a>
+                    <a style="text-transform: none" class="btn hero-btn small">Create Group</a>
                 </div>
                 <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#"><strong>Add private group</a></strong></p>
             </div>
@@ -366,7 +366,7 @@ Upgrade Account Modal
 <!-- UPGRADE ACCOUNT MODAL -->
 <div class="modal fade" id="upgradeAccountDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog upgrade-account" role="document">
-        <div class="modal-content" style="padding-bottom: 30px;">
+        <div class="modal-content">
             <div class="modal-header">
                 <h5 class="text-center">Upgrade Account</h5>
                 <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -377,11 +377,9 @@ Upgrade Account Modal
                 <img class="group-icon" src="./img/group-flow/trophy-icon.png" alt="">
                 <p class="slogan">Your account is limited to <strong>solo tickets</strong> per drawing, to <strong>play tickets in groups</strong>,
                     <a href="#">upgrade now</a></p>
+                <h6 class="big-red-text">No Restrictions - Unlimited Play!</h6>
+                <p>Become a full member today and you’ll be able to...</p>
                 <div class="upgrade-features">
-                    <div class="top-features">
-                        <h6 class="big-red-text">No Restrictions - Unlimited Play!</h6>
-                        <p>Become a full member today and you’ll be able to...</p>
-                    </div>
                     <ul>
                         <li>
                             <img src="./img/group-flow/small-tickets-icon.png" />
@@ -396,10 +394,10 @@ Upgrade Account Modal
                             <p>Order Tickets for All Lottery Games</p>
                         </li>
                     </ul>
-                    <div class="bottom-features">
-                        <button class="btn hero-btn" style="text-transform: initial">Upgrade Now</button>
-                    </div>
                 </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn hero-btn" style="text-transform: initial">Upgrade Now</button>
             </div>
         </div>
     </div>

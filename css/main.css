@@ -1231,6 +1231,17 @@ input::-moz-focus-inner {
       width: 80px;
       padding-left: 20px; }
 
+.active-text {
+  font-family: "Gotham A", "Gotham B";
+  font-style: normal;
+  font-weight: 500;
+  color: #060000;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 16px;
+  margin-top: 25px; }
+
 a:hover, a:active, a:focus {
   text-decoration: none; }
 
@@ -1422,11 +1433,14 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
     z-index: 300; }
     .hero-box-wrapper.active .ball-group-icon {
       margin-top: 100px; }
-    .hero-box-wrapper.active .ticket-details p {
-      color: #269eff; }
+    .hero-box-wrapper.active .ticket-details {
+      bottom: 9px;
+      left: 12px; }
+      .hero-box-wrapper.active .ticket-details p {
+        color: #269eff; }
     .hero-box-wrapper.active .ticket-about {
       bottom: 12px;
-      right: 9px; }
+      right: 12px; }
       .hero-box-wrapper.active .ticket-about p {
         font-size: 16px; }
 
@@ -1713,11 +1727,38 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   line-height: 19px; }
 
 .modal-dialog.upgrade-account .upgrade-features {
-  margin: 35px 5px; }
+  position: relative;
+  margin: 35px 5px;
+  padding: 20px 0 60px;
+  border: 1px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 6px; }
+  @media (min-width: 768px) {
+    .modal-dialog.upgrade-account .upgrade-features {
+      padding: 60px 0; } }
+  .modal-dialog.upgrade-account .upgrade-features .top-features {
+    background: #fff;
+    position: relative;
+    padding: 0 16px;
+    bottom: 50px; }
+    @media (min-width: 768px) {
+      .modal-dialog.upgrade-account .upgrade-features .top-features {
+        bottom: initial;
+        top: -30px;
+        position: absolute; } }
+  .modal-dialog.upgrade-account .upgrade-features .bottom-features {
+    position: absolute;
+    background: #fff;
+    bottom: -26px;
+    padding: 0 16px; }
   .modal-dialog.upgrade-account .upgrade-features ul {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 0; }
     @media (min-width: 500px) {
       .modal-dialog.upgrade-account .upgrade-features ul {
         padding: 0 20px; } }
@@ -1740,74 +1781,81 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
 .group-flow-step-three {
   margin-top: 56px;
   padding: 0 15px; }
-  .group-flow-step-three .group-circle-logo {
-    width: 127px;
-    height: 123px;
-    background-image: url(../img/group-flow/group-rounded-bg.png);
-    background-repeat: no-repeat;
-    margin: 0 auto; }
-    .group-flow-step-three .group-circle-logo img {
-      text-align: center;
-      margin-top: 40px;
-      position: relative;
-      right: 10px; }
-  .group-flow-step-three h2 {
-    font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-    font-style: normal;
-    font-weight: 500;
-    text-shadow: 0 1px 0 #ffffff;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 38px;
-    max-width: 700px;
-    margin: 0 auto;
-    padding-top: 36px; }
-  .group-flow-step-three .group-amt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px; }
-  .group-flow-step-three .ticket-amt {
-    color: #212121;
-    display: inline-block;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-    margin: 0;
-    position: relative; }
-  .group-flow-step-three .star-bg {
-    background-image: url(../img/group-flow/small-star-icon.png);
-    background-repeat: no-repeat;
-    width: 44px;
-    height: 44px;
-    color: white;
-    font-size: 20px;
-    color: #ffffff;
-    margin: 0 8px;
-    display: flex !important;
-    align-items: center;
-    justify-content: center; }
-  .group-flow-step-three .small-paragraph {
-    font-family: "Gotham A", "Gotham B";
-    font-style: normal;
-    font-weight: 500;
-    opacity: 0.9;
-    color: #060000;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 300;
-    margin-top: 20px;
-    margin-bottom: 30px; }
-  .group-flow-step-three .skinny-paragraph {
-    font-family: "Gotham A", "Gotham B";
-    font-style: normal;
-    font-weight: 500;
-    margin-top: 30px;
-    text-shadow: 0 1px 0 #ffffff;
-    color: #212121;
-    font-size: 14px;
-    font-weight: 300; }
+
+.group-circle-logo {
+  width: 127px;
+  height: 123px;
+  background-image: url(../img/group-flow/group-rounded-bg.png);
+  background-repeat: no-repeat;
+  margin: 0 auto; }
+  .group-circle-logo img {
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    right: 10px; }
+
+h2 {
+  font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+  font-style: normal;
+  font-weight: 500;
+  text-shadow: 0 1px 0 #ffffff;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 36px; }
+
+.group-amt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px; }
+
+.ticket-amt {
+  color: #212121;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0;
+  position: relative; }
+
+.star-bg {
+  background-image: url(../img/group-flow/small-star-icon.png);
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+  color: white;
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 8px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center; }
+
+.small-paragraph {
+  font-family: "Gotham A", "Gotham B";
+  font-style: normal;
+  font-weight: 500;
+  opacity: 0.9;
+  color: #060000;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 30px; }
+
+.skinny-paragraph {
+  font-family: "Gotham A", "Gotham B";
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 30px;
+  text-shadow: 0 1px 0 #ffffff;
+  color: #212121;
+  font-size: 14px;
+  font-weight: 300; }
 
 .owl-nav {
   display: flex;
@@ -1817,6 +1865,31 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   margin: 0 auto;
   position: relative;
   bottom: 170px; }
+
+.view-ticket-footer {
+  width: 497px;
+  height: 191px;
+  background-color: #f1faff; }
+  .view-ticket-footer .ticket-amt {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #212121;
+    font-size: 13px; }
+    .view-ticket-footer .ticket-amt.bold {
+      font-weight: 700; }
+  .view-ticket-footer .star-amt {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    width: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 37px; }
+
+.view-ticket.modal-dialog {
+  max-width: 497px;
+  width: 100%; }
 
 .main-footer .container {
   padding: 0; }
