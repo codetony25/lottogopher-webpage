@@ -41,7 +41,6 @@
                 </div>
                 <button class="btn secondary login-btn hide">Login</button>
                 <button class="btn primary signup-btn hide">Sign up free</button>
-
                 <div class="user-dropdown">
                     <ul class="show-dropdown">
                         <li>
@@ -70,7 +69,7 @@
 
 <!-- Checkout Stepper .active -->
 <div class="checkout-stepper container">
-    <a id="step-one-btn" href="#" class="step active">
+    <a id="step-one-btn" href="./index.html" class="step active">
         <span>1</span>
         <p>Select group</p>
     </a>
@@ -95,22 +94,97 @@
                     Select which group you would like to play in?
                 </h2>
                 <div class="group-flow-selection">
-                    <a id="group-public-btn" href="#" class="active">
+                    <a id="group-public-btn" href="./index.html" class="active">
                         <span>Public</span>
                     </a>
-                    <a id="group-private-btn" href="#">
+                    <a id="group-private-btn" href="./group-flow-step-1-1.html">
                         <span>Private</span>
                     </a>
                 </div>
             </div>
-            <!-- Step 1.1 -->
-            <div class="group-flow-private">
-                <div class="group-private">
-                    <img src="./img/group-flow/circle-teddy-bear.png" alt="">
-                    <p>You have no private groups yet.</p>
-                    <a style="text-transform: none" class="btn hero-btn small" data-toggle="modal" data-target="#addPublicGroupDialog">Create Group</a>
+            <div class="group-flow-public">
+                <div class="group-play-wrapper owl-carousel">
+                    <div class="hero-box-wrapper mega">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
+                                <h4>100</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>California MEGA</p>
+                                <p>Winners Circle</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-box-wrapper powerball">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
+                                <h4>24</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>The FIRST</p>
+                                <p>Powerball Group!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-box-wrapper superlotto">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
+                                <h4>34</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>SuperLotto</p>
+                                <p>Number OneFirst</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-box-wrapper mega">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
+                                <h4>100</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>California MEGA</p>
+                                <p>Winners Circle</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-box-wrapper powerball">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
+                                <h4>24</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>The FIRST</p>
+                                <p>Powerball Group!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-box-wrapper superlotto">
+                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
+                        <div class="detail-container">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
+                                <h4>34</h4>
+                                <p>Tickets</p>
+                            </div>
+                            <div class="ticket-about">
+                                <p>SuperLotto</p>
+                                <p>Number OneFirst</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#" data-toggle="modal" data-target="#addPrivateGroupDialog"><strong>Add private group</a></strong></p>
+                <a href="./group-flow-step-2.html" class="btn hero-btn">Add tickets to this group</a>
+                <p style="padding-top: 25px; color: #060000;"><i class="max-text">Max <span style="color: #16b486;">100</span> pooled tickets</i></p>
             </div>
         </div>
     </div>
@@ -152,58 +226,6 @@
                     <div class="bottom-features">
                         <button class="btn hero-btn" style="text-transform: initial">Upgrade Now</button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Invite Friend Modal -->
-<div class="modal fade" id="inviteFriendDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">Invite Your Friends</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="group-icon" src="./img/group-flow/group-icon.png" alt="">
-                <p>Invite your friends with this link to join group:</p>
-                <div class="input-group">
-                    <input id="friend-link" value="https://lottogopher.com/0/63d649dd6" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                    <a href="#" class="input-group-addon" id="basic-addon2" data-delay="5" data-trigger="click" data-toggle="tooltip" data-placement="bottom" title="Copied!" data-clipboard-target="https://lottogopher.com/0/63d649dd6">
-                        <img style="height: 15px;" src="./img/group-flow/copy-clip.png" alt="">
-                        <span class="copy-text">Copy link</span>
-                    </a>
-                </div>
-                <p>or you can share this invitation code:</p>
-                <h6 class="friend-code">63d649dd6</h6>
-                <div class="invite-form form-group">
-                    <label>
-                        <img src="./img/group-flow/small-email-icon.png" alt="">
-                        Invite by Email
-                    </label>
-                    <br />
-                    <input type="email" class="email-input form-control" placeholder="List of invite email addresses, separated by commas">
-                    <button type="submit" class="btn email-btn">Send Email</button>
-                </div>
-                <p><a href="#">Import your friend’s list.</a> We will never save or spam the email addresses of your friends.</p>
-            </div>
-
-            <div class="modal-footer">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn fb-social-icon">
-                        <i class="fa fa-facebook"></i>
-                    </button>
-                    <button type="button" class="btn fb-social-text">Share group on Facebook</button>
-                </div>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn fb-social-icon" style="background: #6ca0c1;">
-                        <i class="fa fa-twitter"></i>
-                    </button>
-                    <button type="button" class="btn fb-social-text" style="background: #74abd0;">Tweet group on Twitter</button>
                 </div>
             </div>
         </div>
@@ -377,91 +399,6 @@
         </div>
     </div>
 </div>
-
-<!-- Add Private Group MODAL -->
-<div class="modal fade" id="addPrivateGroupDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog add-group private" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">Add Private Group</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="private-name-input">
-                    <label for="private-group-link">Invitation Code</label>
-                    <input id="private-group-link" placeholder="Enter Invitation Code" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="action">
-                    <button type="button" data-dismiss="modal" class="create-private-btn btn hero-btn">Add Group</button>
-                    <button style="color: #3d3d3d; border-radius: 6px; background: #dedede;" type="button" class="btn hero-btn">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Create a new Group MODAL -->
-<div class="modal fade" id="addPublicGroupDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog add-group public" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">Create New Group</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="private-name-input">
-                    <label for="private-group-link">Group Name</label>
-                    <input id="private-group-link" placeholder="Enter group name" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                </div>
-                <div class="private-name-select form-group">
-                    <label for="lottery-game">Lottery Game</label>
-                    <select class="form-control" name="lottery-select" id="lottery-game">
-                        <option selected disabled>Select Lottery Game</option>
-                        <option value="0">Mega Millions</option>
-                        <option value="1">Super LottoPlus</option>
-                        <option value="2">Power Ball</option>
-                    </select>
-                </div>
-                <div class="private-name-container pooled-tix">
-                    <p class="label">Max Number of Pooled Tickets</p>
-                    <div class="private-name-radio">
-                        <div class="radio-item">
-                            <div class="cutout left"></div>
-                            <input type="radio" checked="checked" name="radio" id="radio">
-                            <label class="checked tix-check-num" for="radio">25</label>
-                            <div class="cutout right"></div>
-                        </div>
-                        <div class="radio-item">
-                            <div class="cutout left"></div>
-                            <input type="radio" name="radio" id="radio2">
-                            <label class="tix-check-num" for="radio2">50</label>
-                            <div class="cutout right"></div>
-                        </div>
-                        <div class="radio-item">
-                            <div class="cutout left"></div>
-                            <input type="radio" name="radio" id="radio3">
-                            <label class="tix-check-num" for="radio3">100</label>
-                            <div class="cutout right"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="action">
-                    <button type="button" class="create-private-btn btn hero-btn" data-dismiss="modal">Create Group</button>
-                    <button style="color: #3d3d3d; border-radius: 6px; background: #dedede;" type="button" class="btn hero-btn">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <!-- Footer -->
 <footer class="checkout-footer">

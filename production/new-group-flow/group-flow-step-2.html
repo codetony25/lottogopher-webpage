@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LottoGopher - Home Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendors/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendors/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6930452/610482/css/fonts.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="top-header">
+            <div class="main-logo">
+                <img class="logo" src="./img/logos/logo.svg" alt="main lottogopher logo">
+                <img class="slogan" src="./img/logos/slogan.svg" alt="main lottogopher slogan">
+            </div>
+            <div class="actions">
+                <div class="shopping-cart">
+                    <p class="shopping-cart-msg">Your shopping cart is empty, <a href="#">order some tickets</a></p>
+                    <div class="icon-container">
+                        <a href="#"><img src="./img/icons/cart.svg" alt=""></a>
+                        <span class="amount">0</span>
+                    </div>
+                </div>
+                <button class="btn secondary login-btn hide">Login</button>
+                <button class="btn primary signup-btn hide">Sign up free</button>
+
+                <div class="user-dropdown">
+                    <ul class="show-dropdown">
+                        <li>
+                            <a href="#">
+                                <img src="./img/icons/green-gopher.png" alt="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6"><defs><style>.cls-1 { fill: #bdc4d0; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M933.7 250.761l-4.442 3.924a1.073 1.073 0 0 1-1.519 0l-4.442-3.924a1 1 0 0 1 0-1.436.989.989 0 0 1 1.48 0l3.722 3.293 3.721-3.293a.989.989 0 0 1 1.48 0 1 1 0 0 1 0 1.436z" transform="translate(-923 -249)"/></svg>
+                            </a>
+                            <ul class="inner-dropdown">
+                                <li>
+                                    <a href="#">Account Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#">My tickets</a>
+                                </li>
+                                <li>
+                                    <a href="#">Log out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Checkout Stepper .active -->
+<div class="checkout-stepper container">
+    <a id="step-one-btn" href="./index.html" class="step done">
+        <span>1</span>
+        <p>Select group</p>
+    </a>
+    <a id="step-two-btn" href="#" class="step active">
+        <span>2</span>
+        <p>Add tickets</p>
+    </a>
+    <a id="step-three-btn" href="#" class="step">
+        <span>3</span>
+        <p>Play in group</p>
+    </a>
+</div>
+
+<!-- Each Templates - Some are in display none which can be mulipulated later -->
+<div class="main-hero-checkout container">
+    <div class="hero-container">
+
+        <!-- Step 2 -->
+        <div class="group-step-two">
+            <div class="ticket-selection-header">
+                <h2 class="top md-text text-center">
+                    Select which tickets you have available to add to
+                    <a href="#" class="info-text">California MEGA Winners Circle</a> Group
+                </h2>
+            </div>
+            <div class="ticket-selection-container">
+                <ul class="ticket-selection-list">
+                    <li>
+                        <div class="tix-checkbox">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
+                        </div>
+                        <div class="tix-thumbnail">
+                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
+                        </div>
+                        <div class="tix-details">
+                            <h4>Mega Millions Ticket</h4>
+                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
+                        </div>
+                        <div class="tix-action">
+                            <button class="btn btn-light" data-toggle="modal" data-target="#viewTicketDialog">View</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tix-checkbox">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
+                        </div>
+                        <div class="tix-thumbnail">
+                            <img src="./img/group-flow/small-set-mega-millions-tix.png" alt="">
+                        </div>
+                        <div class="tix-details">
+                            <h4>MEGA Millions Set of 8</h4>
+                            <p><strong>3</strong> of <strong>8</strong> Active Tickets  •  Ticket Subscription: <strong>Yes</strong></p>
+                        </div>
+                        <div class="tix-action">
+                            <button class="btn btn-light" data-toggle="modal" data-target="#viewTicketDialog">View</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tix-checkbox">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
+                        </div>
+                        <div class="tix-thumbnail">
+                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
+                        </div>
+                        <div class="tix-details">
+                            <h4>Mega Millions Ticket</h4>
+                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
+                        </div>
+                        <div class="tix-action">
+                            <button class="btn btn-light" data-toggle="modal" data-target="#viewTicketDialog">View</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tix-checkbox">
+                            <a class="checkbox-action" href="#">
+                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
+                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
+                            </a>
+                        </div>
+                        <div class="tix-thumbnail">
+                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
+                        </div>
+                        <div class="tix-details">
+                            <h4>Mega Millions Ticket</h4>
+                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
+                        </div>
+                        <div class="tix-action">
+                            <button class="btn btn-light" data-toggle="modal" data-target="#viewTicketDialog">View</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <a style="font-size: 14px; margin-bottom: 20px; background-color: #dedede; padding: 10px 35px;" class="select-all-btn btn btn-light" data-select-type="select" href="#">Select All</a>
+            </div>
+            <a href="./group-flow-step-3.html" class="btn hero-btn">Add <span class="selected-amt">0</span> tickets to this group</a>
+            <p class="active-text">Only active tickets will play in group.</p>
+        </div>
+    </div>
+</div>
+
+<!-- View Tickets MODAL -->
+<div class="modal fade" id="viewTicketDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog view-ticket" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">Your tickets</h5>
+                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Tix #</th>
+                        <th>Your Numbers</th>
+                        <th>Draw Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="tix-num">1</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-date">Fri Nov 2</td>
+                    </tr>
+                    <tr>
+                        <td class="tix-num">2</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-date">Fri Nov 2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <div class="group-amt">
+                    <p class="ticket-amt">You currently have</p>
+                    <div class="star-bg">
+                        <span class="star-amt">8</span>
+                    </div>
+                    <p class="ticket-amt bold">single tickets.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="checkout-footer">
+    <p>Customer Support: email <a href="mailto:service@lottogopher.com">service@lottogopher.com</a> or call
+        <a href="#">866-LOTTO-GO</a></p>
+    <p><strong>&copy; 2017 LottoGopher.com</strong></p>
+    <p>We do not provide any form of online gambline. Our company does not offer - nor participate in - any type of lottery or sweepstakes. <br /> LottoGopher's services are not affiliated with, endorsed by or approved by the California State Lottery.</p>
+</footer>
+
+<!-- Bootstrap Minified JavaScript -->
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+<script src="js/vendors/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -21,7 +21,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="modal-open">
 
 <!-- Header -->
 <header>
@@ -70,7 +70,7 @@
 
 <!-- Checkout Stepper .active -->
 <div class="checkout-stepper container">
-    <a id="step-one-btn" href="#" class="step active">
+    <a id="step-one-btn" href="./index.html" class="step active">
         <span>1</span>
         <p>Select group</p>
     </a>
@@ -184,7 +184,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="add-ticket-btn btn hero-btn">Add tickets to this group</a>
+                <a href="./group-flow-step-2.html" class="btn hero-btn">Add tickets to this group</a>
                 <p style="padding-top: 25px; color: #060000;"><i class="max-text">Max <span style="color: #16b486;">100</span> pooled tickets</i></p>
             </div>
         </div>
@@ -192,14 +192,14 @@
 </div>
 
 <!-- UPGRADE ACCOUNT MODAL -->
-<div class="modal fade" id="upgradeAccountDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade in" id="upgradeAccountDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="display: block;">
     <div class="modal-dialog upgrade-account" role="document">
         <div class="modal-content" style="padding-bottom: 30px;">
             <div class="modal-header">
                 <h5 class="text-center">Upgrade Account</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <a href="./index.html" style="float: right" type="button" class="close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </a>
             </div>
             <div class="modal-body">
                 <img class="group-icon" src="./img/group-flow/trophy-icon.png" alt="">
@@ -227,174 +227,6 @@
                     <div class="bottom-features">
                         <button class="btn hero-btn" style="text-transform: initial">Upgrade Now</button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- View Tickets MODAL -->
-<div class="modal fade" id="viewTicketDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog view-ticket" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">Your tickets</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Tix #</th>
-                        <th>Your Numbers</th>
-                        <th>Draw Date</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="tix-num">1</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-date">Fri Nov 2</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">2</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-date">Fri Nov 2</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <div class="group-amt">
-                    <p class="ticket-amt">You currently have</p>
-                    <div class="star-bg">
-                        <span class="star-amt">8</span>
-                    </div>
-                    <p class="ticket-amt bold">single tickets.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- View Group Details Tickets MODAL -->
-<div class="modal fade" id="viewGroupDetailDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog view-ticket" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">California MEGA Winners Circle</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Tix #</th>
-                        <th>Current Pooled Tickets</th>
-                        <th >Username</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="tix-num">1</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">luckysarah</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">2</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">joejoe45</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">3</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">alan</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">4</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">mcmurphy</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">5</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">alan</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">6</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">mcmurphy</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <div class="group-amt">
-                    <p class="ticket-amt">You currently have</p>
-                    <div class="star-bg">
-                        <span class="star-amt">33</span>
-                    </div>
-                    <p class="ticket-amt bold">pooled tickets.</p>
                 </div>
             </div>
         </div>
