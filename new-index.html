@@ -85,9 +85,9 @@
 </div>
 
 <!--&lt;!&ndash; Show button to activate Upgrade Account Modal &ndash;&gt;-->
-<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upgradeAccountDialog">-->
-<!--Upgrade Account Modal-->
-<!--</button>-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upgradeAccountDialog">
+    Upgrade Account Modal
+</button>
 
 <!-- Each Templates - Some are in display none which can be mulipulated later -->
 <div class="main-hero-checkout container">
@@ -120,7 +120,7 @@
                     <div class="hero-box-wrapper mega">
                         <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
                         <div class="detail-container">
-                            <div class="ticket-details">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
                                 <h4>100</h4>
                                 <p>Tickets</p>
                             </div>
@@ -133,7 +133,7 @@
                     <div class="hero-box-wrapper powerball">
                         <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
                         <div class="detail-container">
-                            <div class="ticket-details">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
                                 <h4>24</h4>
                                 <p>Tickets</p>
                             </div>
@@ -146,7 +146,7 @@
                     <div class="hero-box-wrapper superlotto">
                         <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
                         <div class="detail-container">
-                            <div class="ticket-details">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
                                 <h4>34</h4>
                                 <p>Tickets</p>
                             </div>
@@ -159,7 +159,7 @@
                     <div class="hero-box-wrapper mega">
                         <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
                         <div class="detail-container">
-                            <div class="ticket-details">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
                                 <h4>100</h4>
                                 <p>Tickets</p>
                             </div>
@@ -172,7 +172,7 @@
                     <div class="hero-box-wrapper powerball">
                         <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
                         <div class="detail-container">
-                            <div class="ticket-details">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
                                 <h4>24</h4>
                                 <p>Tickets</p>
                             </div>
@@ -185,7 +185,7 @@
                     <div class="hero-box-wrapper superlotto">
                         <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
                         <div class="detail-container">
-                            <div class="ticket-details">
+                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
                                 <h4>34</h4>
                                 <p>Tickets</p>
                             </div>
@@ -205,9 +205,9 @@
                 <div class="group-private">
                     <img src="./img/group-flow/circle-teddy-bear.png" alt="">
                     <p>You have no private groups yet.</p>
-                    <a style="text-transform: none" class="btn hero-btn small">Create Group</a>
+                    <a style="text-transform: none" class="btn hero-btn small" data-toggle="modal" data-target="#addPublicGroupDialog">Create Group</a>
                 </div>
-                <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#"><strong>Add private group</a></strong></p>
+                <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#" data-toggle="modal" data-target="#addPrivateGroupDialog"><strong>Add private group</a></strong></p>
             </div>
 
             <!-- Step 1.3 -->
@@ -231,7 +231,7 @@
                 </div>
                 <a href="#" class="selected-tix-add-private btn hero-btn">Add tickets to this group</a>
                 <p class="group-invite" style="margin-top: 20px;">Have an Invitation Code to a Private Group?
-                    <a href="#">Click here to add private group</a></p>
+                    <a href="#" data-toggle="modal" data-target="#addPrivateGroupDialog">Click here to add private group</a></p>
             </div>
         </div>
 
@@ -366,7 +366,7 @@
 <!-- UPGRADE ACCOUNT MODAL -->
 <div class="modal fade" id="upgradeAccountDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog upgrade-account" role="document">
-        <div class="modal-content">
+        <div class="modal-content" style="padding-bottom: 30px;">
             <div class="modal-header">
                 <h5 class="text-center">Upgrade Account</h5>
                 <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -377,9 +377,11 @@
                 <img class="group-icon" src="./img/group-flow/trophy-icon.png" alt="">
                 <p class="slogan">Your account is limited to <strong>solo tickets</strong> per drawing, to <strong>play tickets in groups</strong>,
                     <a href="#">upgrade now</a></p>
-                <h6 class="big-red-text">No Restrictions - Unlimited Play!</h6>
-                <p>Become a full member today and you’ll be able to...</p>
                 <div class="upgrade-features">
+                    <div class="top-features">
+                        <h6 class="big-red-text">No Restrictions - Unlimited Play!</h6>
+                        <p>Become a full member today and you’ll be able to...</p>
+                    </div>
                     <ul>
                         <li>
                             <img src="./img/group-flow/small-tickets-icon.png" />
@@ -394,10 +396,10 @@
                             <p>Order Tickets for All Lottery Games</p>
                         </li>
                     </ul>
+                    <div class="bottom-features">
+                        <button class="btn hero-btn" style="text-transform: initial">Upgrade Now</button>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn hero-btn" style="text-transform: initial">Upgrade Now</button>
             </div>
         </div>
     </div>
@@ -467,37 +469,246 @@
             </div>
             <div class="modal-body">
                 <table>
+                    <thead>
                     <tr>
                         <th>Tix #</th>
                         <th>Your Numbers</th>
                         <th>Draw Date</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>
+                        <td class="tix-num">1</td>
+                        <td class="tix-ticket">
                             <span>08</span>
                             <span>13</span>
                             <span>56</span>
                             <span>42</span>
                             <span>18</span>
-                            <span>07</span>
+                            <span class="mega-num">07</span>
                         </td>
-                        <td>Fri Nov 2</td>
+                        <td class="tix-date">Fri Nov 2</td>
                     </tr>
+                    <tr>
+                        <td class="tix-num">2</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-date">Fri Nov 2</td>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
-            <div class="modal-footer view-ticket-footer">
+            <div class="modal-footer">
                 <div class="group-amt">
                     <p class="ticket-amt">You currently have</p>
                     <div class="star-bg">
                         <span class="star-amt">8</span>
                     </div>
-                    <p class="ticket-amt bold">tickets in this group.</p>
+                    <p class="ticket-amt bold">single tickets.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- View Group Details Tickets MODAL -->
+<div class="modal fade" id="viewGroupDetailDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog view-ticket" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">California MEGA Winners Circle</h5>
+                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Tix #</th>
+                        <th>Current Pooled Tickets</th>
+                        <th >Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="tix-num">1</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-username">luckysarah</td>
+                    </tr>
+                    <tr>
+                        <td class="tix-num">2</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-username">joejoe45</td>
+                    </tr>
+                    <tr>
+                        <td class="tix-num">3</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-username">alan</td>
+                    </tr>
+                    <tr>
+                        <td class="tix-num">4</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-username">mcmurphy</td>
+                    </tr>
+                    <tr>
+                        <td class="tix-num">5</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-username">alan</td>
+                    </tr>
+                    <tr>
+                        <td class="tix-num">6</td>
+                        <td class="tix-ticket">
+                            <span>08</span>
+                            <span>13</span>
+                            <span>56</span>
+                            <span>42</span>
+                            <span>18</span>
+                            <span class="mega-num">07</span>
+                        </td>
+                        <td class="tix-username">mcmurphy</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <div class="group-amt">
+                    <p class="ticket-amt">You currently have</p>
+                    <div class="star-bg">
+                        <span class="star-amt">33</span>
+                    </div>
+                    <p class="ticket-amt bold">pooled tickets.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Private Group MODAL -->
+<div class="modal fade" id="addPrivateGroupDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog add-group private" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">Add Private Group</h5>
+                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="private-name-input">
+                    <label for="private-group-link">Invitation Code</label>
+                    <input id="private-group-link" placeholder="Enter Invitation Code" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="action">
+                    <button type="button" data-dismiss="modal" class="create-private-btn btn hero-btn">Add Group</button>
+                    <button style="color: #3d3d3d; border-radius: 6px; background: #dedede;" type="button" class="btn hero-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Create a new Group MODAL -->
+<div class="modal fade" id="addPublicGroupDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog add-group public" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">Create New Group</h5>
+                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="private-name-input">
+                    <label for="private-group-link">Group Name</label>
+                    <input id="private-group-link" placeholder="Enter group name" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+                <div class="private-name-select form-group">
+                    <label for="lottery-game">Lottery Game</label>
+                    <select class="form-control" name="lottery-select" id="lottery-game">
+                        <option selected disabled>Select Lottery Game</option>
+                        <option value="0">Mega Millions</option>
+                        <option value="1">Super LottoPlus</option>
+                        <option value="2">Power Ball</option>
+                    </select>
+                </div>
+                <div class="private-name-container pooled-tix">
+                    <p class="label">Max Number of Pooled Tickets</p>
+                    <div class="private-name-radio">
+                        <div class="radio-item">
+                            <div class="cutout left"></div>
+                            <input type="radio" checked="checked" name="radio" id="radio">
+                            <label class="checked tix-check-num" for="radio">25</label>
+                            <div class="cutout right"></div>
+                        </div>
+                        <div class="radio-item">
+                            <div class="cutout left"></div>
+                            <input type="radio" name="radio" id="radio2">
+                            <label class="tix-check-num" for="radio2">50</label>
+                            <div class="cutout right"></div>
+                        </div>
+                        <div class="radio-item">
+                            <div class="cutout left"></div>
+                            <input type="radio" name="radio" id="radio3">
+                            <label class="tix-check-num" for="radio3">100</label>
+                            <div class="cutout right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="action">
+                    <button type="button" class="create-private-btn btn hero-btn" data-dismiss="modal">Create Group</button>
+                    <button style="color: #3d3d3d; border-radius: 6px; background: #dedede;" type="button" class="btn hero-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Footer -->
 <footer class="checkout-footer">

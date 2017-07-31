@@ -1316,14 +1316,14 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
     margin-top: 100px; }
   body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-details {
     bottom: 9px;
-    left: 9px; }
+    left: 27px; }
     body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-details p {
       color: #269eff; }
   body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-about {
     bottom: 12px;
     right: 9px; }
     body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height > div > div.owl-item.active.center > div .ticket-about p {
-      font-size: 16px; }
+      font-size: 15px; }
 
 body > div.main-hero-checkout.container > div.hero-container > div.group-step-one > div.group-flow-public > div > div.owl-stage-outer.owl-height {
   min-height: 320px !important;
@@ -1387,14 +1387,14 @@ body > div.main-hero-checkout.container > div.hero-container > div.group-step-on
   .hero-box-wrapper .ticket-details {
     position: absolute;
     bottom: 2px;
-    left: 27px;
+    left: 45px;
     padding-left: 0; }
     .hero-box-wrapper .ticket-details h4 {
       font-family: "Gotham A", "Gotham B";
       font-style: normal;
       font-weight: 500;
       color: #d4dadf;
-      font-size: 44px;
+      font-size: 35px;
       font-weight: 900;
       margin: 0;
       line-height: 40px; }
@@ -1866,30 +1866,218 @@ h2 {
   position: relative;
   bottom: 170px; }
 
-.view-ticket-footer {
-  width: 497px;
-  height: 191px;
-  background-color: #f1faff; }
-  .view-ticket-footer .ticket-amt {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    color: #212121;
-    font-size: 13px; }
-    .view-ticket-footer .ticket-amt.bold {
-      font-weight: 700; }
-  .view-ticket-footer .star-amt {
-    font-size: 18px;
-    font-weight: 700;
-    font-family: "Open Sans", sans-serif;
-    width: 37px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 37px; }
-
 .view-ticket.modal-dialog {
   max-width: 497px;
   width: 100%; }
+  .view-ticket.modal-dialog .modal-footer {
+    width: 100%;
+    max-width: 497px;
+    height: 191px;
+    background-color: #f1faff; }
+    .view-ticket.modal-dialog .modal-footer .ticket-amt {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      color: #212121;
+      font-size: 13px; }
+      .view-ticket.modal-dialog .modal-footer .ticket-amt.bold {
+        font-weight: 700; }
+    .view-ticket.modal-dialog .modal-footer .star-amt {
+      font-size: 18px;
+      font-weight: 700;
+      font-family: "Open Sans", sans-serif;
+      width: 37px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 37px; }
+  .view-ticket.modal-dialog .modal-body {
+    padding: 0; }
+    .view-ticket.modal-dialog .modal-body table {
+      width: 100%; }
+      .view-ticket.modal-dialog .modal-body table tr th {
+        font-family: "Gotham A", "Gotham B";
+        font-style: normal;
+        font-weight: 500;
+        text-align: center;
+        color: #363636;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 24px;
+        text-transform: uppercase; }
+        .view-ticket.modal-dialog .modal-body table tr th:first-child {
+          padding-left: 15px; }
+      .view-ticket.modal-dialog .modal-body table tr td {
+        font-family: "Gotham A", "Gotham B";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        padding: 14px 0; }
+        .view-ticket.modal-dialog .modal-body table tr td:first-child {
+          padding-left: 15px; }
+        .view-ticket.modal-dialog .modal-body table tr td.tix-ticket {
+          color: #363636;
+          width: 164px;
+          display: inline-flex;
+          justify-content: space-between;
+          align-items: center; }
+          .view-ticket.modal-dialog .modal-body table tr td.tix-ticket .mega-num {
+            color: #e85141; }
+        .view-ticket.modal-dialog .modal-body table tr td.tix-check-num {
+          opacity: 0.6;
+          color: #777777; }
+        .view-ticket.modal-dialog .modal-body table tr td.tix-date {
+          color: #777777;
+          font-weight: 300; }
+        .view-ticket.modal-dialog .modal-body table tr td.tix-username {
+          color: #269eff;
+          font-size: 14px;
+          font-weight: 500; }
+    .view-ticket.modal-dialog .modal-body tbody tr:nth-child(even) {
+      background-color: #f9f9f9; }
+
+.modal-dialog.add-group {
+  width: 100%;
+  max-width: 497px; }
+  .modal-dialog.add-group .pooled-tix {
+    padding-top: 20px; }
+  .modal-dialog.add-group.public .private-name-input,
+  .modal-dialog.add-group.public .private-name-radio {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important; }
+  .modal-dialog.add-group .private-name-radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 274px;
+    /*Hide the radio button:*/
+    /*Then, style the label so it looks like however you want:*/ }
+    .modal-dialog.add-group .private-name-radio .radio-item {
+      position: relative;
+      overflow: hidden;
+      max-width: 81px; }
+    .modal-dialog.add-group .private-name-radio .cutout {
+      border-radius: 1000px;
+      width: 100%;
+      height: 40%;
+      position: absolute;
+      top: 14px;
+      background: #fff;
+      border: 2px solid #d6d6d6;
+      z-index: 1; }
+      .modal-dialog.add-group .private-name-radio .cutout.left {
+        left: -72px; }
+      .modal-dialog.add-group .private-name-radio .cutout.right {
+        left: 72px; }
+    .modal-dialog.add-group .private-name-radio .tix-check-num {
+      font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-style: normal;
+      font-weight: 500;
+      color: #838383;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 43px; }
+    .modal-dialog.add-group .private-name-radio input {
+      display: none; }
+    .modal-dialog.add-group .private-name-radio label {
+      font-family: "Gotham Rounded SSm 5r", "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+      font-style: normal;
+      font-weight: 500;
+      border: 2px solid #d6d6d6;
+      background-color: #ffffff;
+      line-height: 45px;
+      text-align: center;
+      font-size: 40pt;
+      color: #c1c1c1;
+      cursor: pointer;
+      position: relative;
+      top: -1px;
+      left: 1px;
+      font-size: 20px;
+      font-weight: 500;
+      z-index: 0;
+      width: 81px;
+      height: 45px;
+      vertical-align: middle; }
+      .modal-dialog.add-group .private-name-radio label.checked {
+        background: #77c825;
+        color: white !important; }
+    .modal-dialog.add-group .private-name-radio input:checked + label:before {
+      opacity: 1; }
+  .modal-dialog.add-group .modal-body {
+    text-align: left; }
+    .modal-dialog.add-group .modal-body .private-name-select,
+    .modal-dialog.add-group .modal-body .private-name-container {
+      width: 100%;
+      max-width: 386px;
+      margin: 0 auto; }
+      .modal-dialog.add-group .modal-body .private-name-select select,
+      .modal-dialog.add-group .modal-body .private-name-container select {
+        height: 48px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+        border-radius: 2px;
+        opacity: .8;
+        border: 3px solid rgba(0, 0, 0, 0.16);
+        background-color: #feffff; }
+    .modal-dialog.add-group .modal-body label,
+    .modal-dialog.add-group .modal-body .label {
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 500;
+      padding-left: 3px;
+      padding-bottom: 3px;
+      color: #333333;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 19px; }
+    .modal-dialog.add-group .modal-body .private-name-input {
+      width: 100%;
+      max-width: 386px;
+      margin: 0 auto;
+      padding-bottom: 35px;
+      padding-top: 10px; }
+      .modal-dialog.add-group .modal-body .private-name-input input {
+        font-family: "Gotham A", "Gotham B";
+        font-style: normal;
+        font-weight: 500;
+        border-radius: 2px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+        width: 100%;
+        min-height: 48px;
+        border-radius: 3px;
+        border: 3px solid rgba(0, 0, 0, 0.16);
+        background-color: #feffff;
+        color: #343434;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        margin: 0 auto; }
+    .modal-dialog.add-group .modal-body select {
+      font-family: "Gotham A", "Gotham B";
+      font-style: normal;
+      font-weight: 500;
+      color: #343434;
+      background-color: #feffff;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24px; }
+  .modal-dialog.add-group .modal-footer {
+    background-color: #f1faff;
+    width: 100%;
+    min-height: 121px; }
+    .modal-dialog.add-group .modal-footer .action {
+      display: flex;
+      max-width: 497px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto; }
+      .modal-dialog.add-group .modal-footer .action .hero-btn {
+        text-transform: none;
+        font-size: 14px;
+        padding: 12.5px 16px; }
+        .modal-dialog.add-group .modal-footer .action .hero-btn:first-child {
+          margin-right: 12px; }
 
 .main-footer .container {
   padding: 0; }

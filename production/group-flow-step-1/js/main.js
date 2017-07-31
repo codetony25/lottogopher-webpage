@@ -6,45 +6,8 @@ $(document).ready(function() {
   var selectedTicketAmount = 0;
   /*-------------- GROUP FLOW PAGE --------------*/
 
-  // Switch public and private group page.
-  $('#group-private-btn').on('click', function(e) {
-    e.preventDefault();
-    $('#group-public-btn').removeClass('active');
-    $(this).addClass('active');
-
-    $('.group-flow-public').css('display', 'none');
-    $('.group-flow-private').css('display', 'block');
-  });
-
-  $('#group-public-btn').on('click', function(e) {
-    e.preventDefault();
-    $('#group-private-btn').removeClass('active');
-    $(this).addClass('active');
-
-    $('.group-flow-private').css('display', 'none');
-    $('.group-flow-private-create').css('display', 'none');
-    $('.group-flow-public').css('display', 'block');
-    $('.success-notification').css('display', 'none');
-  });
-
-  $('.create-private-btn').on('click', function(e) {
-    e.preventDefault();
-    $('.group-flow-private').css('display', 'none');
-    $('.group-flow-private-create').css('display', 'block');
-    $('.success-notification').css('display', 'block');
-  });
-
-  $('.create-private-btn-two').on('click', function(e) {
-    e.preventDefault();
-    $('.group-flow-private').css('display', 'none');
-    $('.group-flow-private-create').css('display', 'block');
-    $('.success-notification').css('display', 'block');
-  });
-
   $('.add-ticket-btn').on('click', function(e) {
     e.preventDefault();
-    $('.group-step-one').css('display', 'none');
-    $('.group-step-two').css('display', 'block');
     $('#step-one-btn').removeClass('active').addClass('done');
     $('#step-two-btn').addClass('active');
   });
@@ -145,7 +108,6 @@ $(document).ready(function() {
 
   $('.radio-item label').on('click', function(e) {
     if ($(this).hasClass('checked')) {
-      $('.radio-item label').removeClass('checked');
       return;
     }
     else {
