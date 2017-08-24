@@ -24,686 +24,70 @@
 <body>
 
 <!-- Header -->
-<header>
-    <div class="container">
+<header style="padding: 0 !important; min-height: 75px; padding-top: 5px !important;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
         <div class="top-header">
             <div class="main-logo">
-                <img class="logo" src="./img/logos/logo.svg" alt="main lottogopher logo">
-                <img class="slogan" src="./img/logos/slogan.svg" alt="main lottogopher slogan">
-            </div>
-            <div class="actions">
-                <div class="shopping-cart">
-                    <p class="shopping-cart-msg">Your shopping cart is empty, <a href="#">order some tickets</a></p>
-                    <div class="icon-container">
-                        <a href="#"><img src="./img/icons/cart.svg" alt=""></a>
-                        <span class="amount">0</span>
-                    </div>
-                </div>
-                <button class="btn secondary login-btn hide">Login</button>
-                <button class="btn primary signup-btn hide">Sign up free</button>
-
-                <div class="user-dropdown">
-                    <ul class="show-dropdown">
-                        <li>
-                            <a href="#">
-                                <img src="./img/icons/green-gopher.png" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6"><defs><style>.cls-1 { fill: #bdc4d0; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M933.7 250.761l-4.442 3.924a1.073 1.073 0 0 1-1.519 0l-4.442-3.924a1 1 0 0 1 0-1.436.989.989 0 0 1 1.48 0l3.722 3.293 3.721-3.293a.989.989 0 0 1 1.48 0 1 1 0 0 1 0 1.436z" transform="translate(-923 -249)"/></svg>
-                            </a>
-                            <ul class="inner-dropdown">
-                                <li>
-                                    <a href="#">Account Settings</a>
-                                </li>
-                                <li>
-                                    <a href="#">My tickets</a>
-                                </li>
-                                <li>
-                                    <a href="#">Log out</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <a href="#">
+                    <img style="width: 180px;" class="logo" src="./img/logos/logo.png" alt="main lottogopher logo">
+                </a>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Checkout Stepper .active -->
-<div class="checkout-stepper container">
-    <a id="step-one-btn" href="#" class="step active">
-        <span>1</span>
-        <p>Select group</p>
-    </a>
-    <a id="step-two-btn" href="#" class="step">
-        <span>2</span>
-        <p>Add tickets</p>
-    </a>
-    <a id="step-three-btn" href="#" class="step">
-        <span>3</span>
-        <p>Play in group</p>
-    </a>
-</div>
-
-<!--&lt;!&ndash; Show button to activate Upgrade Account Modal &ndash;&gt;-->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upgradeAccountDialog">
-    Upgrade Account Modal
-</button>
-
-<!-- Each Templates - Some are in display none which can be mulipulated later -->
-<div class="main-hero-checkout container">
-    <!-- Step 1.3 -->
-    <div class="success-notification" style="display: none;">
-        <p style="text-align: center;">
-            You have successfully created <strong>All About the Benjamin$</strong>, you can now add tickets to this group.
-            <a href="#" data-toggle="modal" data-target="#inviteFriendDialog">Invite your friends to play in group!</a>
-        </p>
-    </div>
-    <div class="hero-container">
-
-        <!-- Step 1 -->
-        <div class="group-step-one">
-            <div class="ticket-selection-header">
-                <h2 class="top md-text text-center">
-                    Select which group you would like to play in?
-                </h2>
-                <div class="group-flow-selection">
-                    <a id="group-public-btn" href="#" class="active">
-                        <span>Public</span>
-                    </a>
-                    <a id="group-private-btn" href="#">
-                        <span>Private</span>
-                    </a>
-                </div>
+<div class="main-body">
+    <div class="container" style="background-image: linear-gradient(to bottom, #ededed 0%, #fff 20%) !important; background-repeat: no-repeat !important;">
+        <div class="top-landing-header">
+            <div class="heading-text">
+                <h1 style="font-size: 40px;">Experience the Most Powerful Tool for Player Your Favorite California Lotteries!</h1>
+                <p style="font-size: 22px;">Check out LottoGopher and receive a free MegaMillions ticket on us. It's free and only takes seconds to redeem.</p>
             </div>
-            <div class="group-flow-public">
-                <div class="group-play-wrapper owl-carousel">
-                    <div class="hero-box-wrapper mega">
-                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
-                        <div class="detail-container">
-                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
-                                <h4>100</h4>
-                                <p>Tickets</p>
-                            </div>
-                            <div class="ticket-about">
-                                <p>California MEGA</p>
-                                <p>Winners Circle</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-box-wrapper powerball">
-                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
-                        <div class="detail-container">
-                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
-                                <h4>24</h4>
-                                <p>Tickets</p>
-                            </div>
-                            <div class="ticket-about">
-                                <p>The FIRST</p>
-                                <p>Powerball Group!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-box-wrapper superlotto">
-                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
-                        <div class="detail-container">
-                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
-                                <h4>34</h4>
-                                <p>Tickets</p>
-                            </div>
-                            <div class="ticket-about">
-                                <p>SuperLotto</p>
-                                <p>Number OneFirst</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-box-wrapper mega">
-                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-mega-icon.png" alt="">
-                        <div class="detail-container">
-                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
-                                <h4>100</h4>
-                                <p>Tickets</p>
-                            </div>
-                            <div class="ticket-about">
-                                <p>California MEGA</p>
-                                <p>Winners Circle</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-box-wrapper powerball">
-                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-power-ball.png" alt="">
-                        <div class="detail-container">
-                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
-                                <h4>24</h4>
-                                <p>Tickets</p>
-                            </div>
-                            <div class="ticket-about">
-                                <p>The FIRST</p>
-                                <p>Powerball Group!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-box-wrapper superlotto">
-                        <img class="ball-group-icon" style="max-width: 150px; max-height: 121px;" src="./img/group-flow/group-super-lotto.png" alt="">
-                        <div class="detail-container">
-                            <div class="ticket-details" data-toggle="modal" data-target="#viewGroupDetailDialog">
-                                <h4>34</h4>
-                                <p>Tickets</p>
-                            </div>
-                            <div class="ticket-about">
-                                <p>SuperLotto</p>
-                                <p>Number OneFirst</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="add-ticket-btn btn hero-btn">Add tickets to this group</a>
-                <p style="padding-top: 25px; color: #060000;"><i class="max-text">Max <span style="color: #16b486;">100</span> pooled tickets</i></p>
-            </div>
-
-            <!-- Step 1.1 -->
-            <div class="group-flow-private" style="display: none;">
-                <div class="group-private">
-                    <img src="./img/group-flow/circle-teddy-bear.png" alt="">
-                    <p>You have no private groups yet.</p>
-                    <a style="text-transform: none" class="btn hero-btn small" data-toggle="modal" data-target="#addPublicGroupDialog">Create Group</a>
-                </div>
-                <p class="group-invite">Have an Invitation Code to a Private Group? <a href="#" data-toggle="modal" data-target="#addPrivateGroupDialog"><strong>Add private group</a></strong></p>
-            </div>
-
-            <!-- Step 1.3 -->
-            <div class="group-flow-private-create" style="display: none;">
-                <div class="group-play-wrapper">
-                    <div class="hero-box-wrapper new-group active">
-                        <img style="cursor: pointer;" data-toggle="modal" data-target="#inviteFriendDialog" class="lock-icon" src="./img/group-flow/private-lock.png" alt="">
-                        <img class="create-icon" src="./img/group-flow/private-circle-bear.png" alt="">
-                        <img class="ball-icon" src="./img/group-flow/group-mega-icon.png" alt="">
-                        <div class="detail-container">
-                            <div class="ticket-details">
-                                <h4>0</h4>
-                                <p>Tickets</p>
-                            </div>
-                            <div class="ticket-about">
-                                <p>All About the</p>
-                                <p>Benjamin$</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="selected-tix-add-private btn hero-btn">Add tickets to this group</a>
-                <p class="group-invite" style="margin-top: 20px;">Have an Invitation Code to a Private Group?
-                    <a href="#" data-toggle="modal" data-target="#addPrivateGroupDialog">Click here to add private group</a></p>
+            <img src="./img/logos/bear.png" alt="">
+        </div>
+        <a href="#">
+            <img class="redeem" src="./img/logos/redeem-free-ticket-btn.png" alt="">
+        </a>
+        <div class="mid-border" style="border-bottom: 1px solid #d9d9d9; max-width: 970px; margin: 0 auto;"></div>
+        <div class="ball-list">
+            <ul>
+                <li>
+                    <img src="./img/logos/graph-icon.png" alt="">
+                    <p>Grab Quick Picks in a flash and strategize your combinations with our Lotto Picker.</p>
+                </li>
+                <li>
+                    <img src="./img/logos/radar-icon.png" alt="">
+                    <p>Be a better informed player with our unique analytics tools.</p>
+                </li>
+                <li>
+                    <img src="./img/logos/tix-icon.png" alt="">
+                    <p>Enjoy more chances to win by creating or joining a group.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="bear-ball-info">
+            <a href="#">
+                <img src="./img/logos/bear-ball.png" alt="">
+            </a>
+            <div class="did-you-know">
+                <h3 style="font-weight: bold; line-height: 45px;">Did you know...</h3>
+                <p style="font-size: 22px; color: #9B9B9B;">Over the last 1,000 MegaMillions Draws, the number 2 hsa been pulled more times than any other number?</p>
             </div>
         </div>
-
-        <!-- Step 2.1 -->
-        <div class="group-step-two" style="display: none;">
-            <div class="ticket-selection-header">
-                <h2 class="top md-text text-center">
-                    Select which tickets you have available to add to
-                    <a href="#" class="info-text">California MEGA Winners Circle</a> Group
-                </h2>
-            </div>
-            <div class="ticket-selection-container">
-                <ul class="ticket-selection-list">
-                    <li>
-                        <div class="tix-checkbox">
-                            <a class="checkbox-action" href="#">
-                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
-                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
-                            </a>
-                        </div>
-                        <div class="tix-thumbnail">
-                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
-                        </div>
-                        <div class="tix-details">
-                            <h4>Mega Millions Ticket</h4>
-                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
-                        </div>
-                        <div class="tix-action">
-                            <button class="btn btn-light" data-toggle="modal" data-target="#viewTicketDialog">View</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tix-checkbox">
-                            <a class="checkbox-action" href="#">
-                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
-                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
-                            </a>
-                        </div>
-                        <div class="tix-thumbnail">
-                            <img src="./img/group-flow/small-set-mega-millions-tix.png" alt="">
-                        </div>
-                        <div class="tix-details">
-                            <h4>MEGA Millions Set of 8</h4>
-                            <p><strong>3</strong> of <strong>8</strong> Active Tickets  •  Ticket Subscription: <strong>Yes</strong></p>
-                        </div>
-                        <div class="tix-action">
-                            <button class="btn btn-light" data-toggle="modal" data-target="#viewTicketDialog">View</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tix-checkbox">
-                            <a class="checkbox-action" href="#">
-                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
-                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
-                            </a>
-                        </div>
-                        <div class="tix-thumbnail">
-                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
-                        </div>
-                        <div class="tix-details">
-                            <h4>Mega Millions Ticket</h4>
-                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
-                        </div>
-                        <div class="tix-action">
-                            <button class="btn btn-light" data-toggle="modal" data-target="#viewTicketDialog">View</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tix-checkbox">
-                            <a class="checkbox-action" href="#">
-                                <img class="solid" src="./img/group-flow/solid-checkbox.png" alt="">
-                                <img class="line" src="./img/group-flow/line-checkbox.png" alt="">
-                            </a>
-                        </div>
-                        <div class="tix-thumbnail">
-                            <img src="./img/group-flow/small-mega-millions-tix.png" alt="">
-                        </div>
-                        <div class="tix-details">
-                            <h4>Mega Millions Ticket</h4>
-                            <p><strong>1</strong> Active Ticket &middot; Ticket Subscription: <strong>No</strong></p>
-                        </div>
-                        <div class="tix-action">
-                            <button class="btn btn-light" data-toggle="modal" data-target="#viewTicketDialog">View</button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <a style="font-size: 14px; margin-bottom: 20px; background-color: #dedede; padding: 10px 35px;" class="select-all-btn btn btn-light" data-select-type="select" href="#">Select All</a>
-            </div>
-            <a href="#" class="selected-tix-add-public btn hero-btn">Add <span class="selected-amt">0</span> tickets to this group</a>
-            <p class="active-text">Only active tickets will play in group.</p>
+        <div class="mid-border" style="border-bottom: 1px solid #d9d9d9; max-width: 970px; margin: 0 auto; padding: 30px 0 !important;"></div>
+        <div class="join-free-info" style="padding-top: 40px;">
+            <h3 style="text-align: center; font-size: 40px; padding: 0 15px; font-weight: bold; margin-bottom: 30px;">Join LottoGopher for Free</h3>
+            <p style="font-size: 22px; padding-bottom: 38px;">Discover the online tool that has helped thousands up their game when palying California lotteries - and get free MegaMillions Ticket on us!</p>
+            <a href="#" style="padding-bottom: 50px;">
+                <img style="max-width: 300px; margin: 0 auto;" src="./img/logos/redeem-ticket-btn.png" alt="">
+            </a>
         </div>
-
-        <!-- Step 3 -->
-        <div class="group-flow-step-three" style="display: none;">
-            <div class="group-circle-logo">
-                <img src="./img/group-flow/group-mega-icon.png" alt="">
-            </div>
-            <h2>
-                Congratulations! Your now playing in <a href="#">California Mega Winners Circle</a> Group.
-            </h2>
-            <div class="group-amt">
-                <p class="ticket-amt">You currently have</p>
-                <div class="star-bg">
-                    <span class="star-amt">8</span>
-                </div>
-                <p class="ticket-amt">tickets in this group.</p>
-            </div>
-            <p class="small-paragraph"><strong>Good Luck!</strong> Remember to check your account to see if you won!</p>
-            <a href="#" class="btn hero-btn">Go to my dashboard</a>
-            <p class="skinny-paragraph">Brag to your friends!</p>
-
-            <div class="modal-footer">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn fb-social-icon">
-                        <i class="fa fa-facebook"></i>
-                    </button>
-                    <button type="button" class="btn fb-social-text">Share on Facebook</button>
-                </div>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn fb-social-icon" style="background: #6ca0c1;">
-                        <i class="fa fa-twitter"></i>
-                    </button>
-                    <button type="button" class="btn fb-social-text" style="background: #74abd0;">Tweet on Twitter</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- UPGRADE ACCOUNT MODAL -->
-<div class="modal fade" id="upgradeAccountDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog upgrade-account" role="document">
-        <div class="modal-content" style="padding-bottom: 30px;">
-            <div class="modal-header">
-                <h5 class="text-center">Upgrade Account</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="group-icon" src="./img/group-flow/trophy-icon.png" alt="">
-                <p class="slogan">Your account is limited to <strong>solo tickets</strong> per drawing, to <strong>play tickets in groups</strong>,
-                    <a href="#">upgrade now</a></p>
-                <div class="upgrade-features">
-                    <div class="top-features">
-                        <h6 class="big-red-text">No Restrictions - Unlimited Play!</h6>
-                        <p>Become a full member today and you’ll be able to...</p>
-                    </div>
-                    <ul>
-                        <li>
-                            <img src="./img/group-flow/small-tickets-icon.png" />
-                            <p>Order Tickets for All Lottery Games</p>
-                        </li>
-                        <li>
-                            <img src="./img/group-flow/small-security-icon.png" />
-                            <p>Join Public or Create Private Lottery Pools</p>
-                        </li>
-                        <li>
-                            <img src="./img/group-flow/small-certificate-icon.png" />
-                            <p>Order Tickets for All Lottery Games</p>
-                        </li>
-                    </ul>
-                    <div class="bottom-features">
-                        <button class="btn hero-btn" style="text-transform: initial">Upgrade Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Invite Friend Modal -->
-<div class="modal fade" id="inviteFriendDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">Invite Your Friends</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="group-icon" src="./img/group-flow/group-icon.png" alt="">
-                <p>Invite your friends with this link to join group:</p>
-                <div class="input-group">
-                    <input id="friend-link" value="https://lottogopher.com/0/63d649dd6" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                    <a href="#" class="input-group-addon" id="basic-addon2" data-delay="5" data-trigger="click" data-toggle="tooltip" data-placement="bottom" title="Copied!" data-clipboard-target="https://lottogopher.com/0/63d649dd6">
-                        <img style="height: 15px;" src="./img/group-flow/copy-clip.png" alt="">
-                        <span class="copy-text">Copy link</span>
-                    </a>
-                </div>
-                <p>or you can share this invitation code:</p>
-                <h6 class="friend-code">63d649dd6</h6>
-                <div class="invite-form form-group">
-                    <label>
-                        <img src="./img/group-flow/small-email-icon.png" alt="">
-                        Invite by Email
-                    </label>
-                    <br />
-                    <input type="email" class="email-input form-control" placeholder="List of invite email addresses, separated by commas">
-                    <button type="submit" class="btn email-btn">Send Email</button>
-                </div>
-                <p><a href="#">Import your friend’s list.</a> We will never save or spam the email addresses of your friends.</p>
-            </div>
-
-            <div class="modal-footer">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn fb-social-icon">
-                        <i class="fa fa-facebook"></i>
-                    </button>
-                    <button type="button" class="btn fb-social-text">Share group on Facebook</button>
-                </div>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn fb-social-icon" style="background: #6ca0c1;">
-                        <i class="fa fa-twitter"></i>
-                    </button>
-                    <button type="button" class="btn fb-social-text" style="background: #74abd0;">Tweet group on Twitter</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- View Tickets MODAL -->
-<div class="modal fade" id="viewTicketDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog view-ticket" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">Your tickets</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Tix #</th>
-                        <th>Your Numbers</th>
-                        <th>Draw Date</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="tix-num">1</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-date">Fri Nov 2</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">2</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-date">Fri Nov 2</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <div class="group-amt">
-                    <p class="ticket-amt">You currently have</p>
-                    <div class="star-bg">
-                        <span class="star-amt">8</span>
-                    </div>
-                    <p class="ticket-amt bold">single tickets.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- View Group Details Tickets MODAL -->
-<div class="modal fade" id="viewGroupDetailDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog view-ticket" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">California MEGA Winners Circle</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Tix #</th>
-                        <th>Current Pooled Tickets</th>
-                        <th >Username</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="tix-num">1</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">luckysarah</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">2</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">joejoe45</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">3</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">alan</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">4</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">mcmurphy</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">5</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">alan</td>
-                    </tr>
-                    <tr>
-                        <td class="tix-num">6</td>
-                        <td class="tix-ticket">
-                            <span>08</span>
-                            <span>13</span>
-                            <span>56</span>
-                            <span>42</span>
-                            <span>18</span>
-                            <span class="mega-num">07</span>
-                        </td>
-                        <td class="tix-username">mcmurphy</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <div class="group-amt">
-                    <p class="ticket-amt">You currently have</p>
-                    <div class="star-bg">
-                        <span class="star-amt">33</span>
-                    </div>
-                    <p class="ticket-amt bold">pooled tickets.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Add Private Group MODAL -->
-<div class="modal fade" id="addPrivateGroupDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog add-group private" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">Add Private Group</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="private-name-input">
-                    <label for="private-group-link">Invitation Code</label>
-                    <input id="private-group-link" placeholder="Enter Invitation Code" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="action">
-                    <button type="button" data-dismiss="modal" class="create-private-btn btn hero-btn">Add Group</button>
-                    <button style="color: #3d3d3d; border-radius: 6px; background: #dedede;" type="button" class="btn hero-btn">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Create a new Group MODAL -->
-<div class="modal fade" id="addPublicGroupDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog add-group public" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="text-center">Create New Group</h5>
-                <button style="float: right" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="private-name-input">
-                    <label for="private-group-link">Group Name</label>
-                    <input id="private-group-link" placeholder="Enter group name" type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                </div>
-                <div class="private-name-select form-group">
-                    <label for="lottery-game">Lottery Game</label>
-                    <select class="form-control" name="lottery-select" id="lottery-game">
-                        <option selected disabled>Select Lottery Game</option>
-                        <option value="0">Mega Millions</option>
-                        <option value="1">Super LottoPlus</option>
-                        <option value="2">Power Ball</option>
-                    </select>
-                </div>
-                <div class="private-name-container pooled-tix">
-                    <p class="label">Max Number of Pooled Tickets</p>
-                    <div class="private-name-radio">
-                        <div class="radio-item">
-                            <div class="cutout left"></div>
-                            <input type="radio" checked="checked" name="radio" id="radio">
-                            <label class="checked tix-check-num" for="radio">25</label>
-                            <div class="cutout right"></div>
-                        </div>
-                        <div class="radio-item">
-                            <div class="cutout left"></div>
-                            <input type="radio" name="radio" id="radio2">
-                            <label class="tix-check-num" for="radio2">50</label>
-                            <div class="cutout right"></div>
-                        </div>
-                        <div class="radio-item">
-                            <div class="cutout left"></div>
-                            <input type="radio" name="radio" id="radio3">
-                            <label class="tix-check-num" for="radio3">100</label>
-                            <div class="cutout right"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="action">
-                    <button type="button" class="create-private-btn btn hero-btn" data-dismiss="modal">Create Group</button>
-                    <button style="color: #3d3d3d; border-radius: 6px; background: #dedede;" type="button" class="btn hero-btn">Cancel</button>
-                </div>
+        <div class="lottery-info">
+            <p>Play These California Lottery Games</p>
+            <div class="container">
+                <img style="padding: 15px;" src="./img/logos/powerball.png" alt="">
+                <img style="padding: 15px;" src="./img/logos/mega-millions.png" alt="">
+                <img style="padding: 15px;" src="./img/logos/super-lotto-plus.png" alt="">
             </div>
         </div>
     </div>
@@ -711,11 +95,43 @@
 
 
 <!-- Footer -->
-<footer class="checkout-footer">
-    <p>Customer Support: email <a href="mailto:service@lottogopher.com">service@lottogopher.com</a> or call
-        <a href="#">866-LOTTO-GO</a></p>
-    <p><strong>&copy; 2017 LottoGopher.com</strong></p>
-    <p>We do not provide any form of online gambline. Our company does not offer - nor participate in - any type of lottery or sweepstakes. <br /> LottoGopher's services are not affiliated with, endorsed by or approved by the California State Lottery.</p>
+<footer class="checkout-footer" >
+    <div class="container" style="max-width: 500px; margin: 0 auto; padding: 0 15px; align-items: center; justify-content: center; margin: 0 auto;">
+        <div style="padding-bottom: 10px; display: flex; justify-content: space-between; max-width: 162px;" class="social-icons text-center">
+            <a href="#">
+                <img src="./img/logos/twitter.png" alt="">
+            </a>
+
+            <a href="#">
+                <img src="./img/logos/facebook.png" alt="">
+            </a>
+
+            <a href="#">
+                <img src="./img/logos/instagram.png" alt="">
+            </a>
+
+            <a href="#">
+                <img src="./img/logos/pintrest.png" alt="">
+            </a>
+
+            <a href="#">
+                <img src="./img/logos/youtube.png" alt="">
+            </a>
+
+        </div>
+        <p>Customer Support: email <a href="mailto:service@lottogopher.com">service@lottogopher.com</a> or call
+        <a href="#">LottoGopher is 100% safe and secure with 224-BIT SSL encryption on all tractions</a></p>
+        <div style="padding-bottom: 10px;" class="security-icon text-center">
+            <img src="./img/logos/authorize.png" alt="">
+            <img src="./img/logos/verify.png" alt="">
+            <img src="./img/logos/trusted.png" alt="">
+        </div>
+        <p>LottoGopher is 100% sdafe and secure with 224-BIT SSL encryption on all transactions</p>
+        <p><strong>&copy; 2017 LottoGopher.com</strong></p>
+        <div style="minWidth: 280">
+            <p>LottoGopher is a messenger service lincensed to do business with the state of California. LottoGopher services are not affiliated with, endored by or approved by the California State Lottory. All other marks, logos and branchs are the property of their respective owners.</p>
+        </div>
+    </div>
 </footer>
 
 <!-- Bootstrap Minified JavaScript -->
